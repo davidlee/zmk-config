@@ -1,52 +1,128 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-/* Uncomment this block if using an encoder */
-//&encoder {
-//    status = "okay";
-//};
+#include "../zmk-nodefree-config/helper.h"
+#include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
 
-/ {
-    keymap {
-        compatible = "zmk,keymap";
+#define ___ &trans
 
-        default_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB  |  Q   |  W   |  E   |  R   |  T   |   Y   |  U    |  I   |  O   |   P   | BSPC  |
-            // |  ESC  |  A   |  S   |  D   |  F   |  G   |   H   |  J    |  K   |  L   |   ;   |  '    |
-            // | SHIFT |  Z   |  X   |  C   |  V   |  B   |   N   |  M    |  ,   |  .   |   /   |  RET  |
-            // |       | LCTL | LALT | LGUI | LOWR |     SPACE    |  RAIS | LARW | DARW | UARW  |  RARW |
-            bindings = <
-                &kp TAB  &kp Q    &kp W &kp E &kp R &kp T  &kp Y   &kp U  &kp I    &kp O   &kp P    &kp BSPC
-                &kp ESC  &kp A    &kp S &kp D &kp F &kp G  &kp H   &kp J  &kp K    &kp L   &kp SEMI &kp SQT
-                &kp LSHFT &kp Z    &kp X &kp C &kp V &kp B  &kp N   &kp M  &kp COMMA &kp DOT &kp SLASH &kp RET
-                &trans   &kp LCTL &kp LALT &kp LGUI &mo 1 &trans &kp SPACE &mo 2 &kp LEFT &kp DOWN &kp UP &kp RIGHT
-            >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
+#define DEF 0  // layer shortcuts, must match order in which they are defined below
+#define NUM 1
+#define NAV 2
+#define MED 3
 
-        lower {
-            bindings = <
-                &kp LS(GRAVE) &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5) &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0) &kp DEL
-                &kp DEL &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp UNDER &kp PLUS &kp LBRC &kp RBRC &kp PIPE
-                &trans &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp LS(HASH) &kp LS(BSLH) &kp HOME &kp END &trans
-                &trans &trans &trans &trans &trans &trans &trans &trans &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
-            >;
-        };
+#define MEH LC(LA(LSHFT))
 
-        raise {
-            bindings = <
-                &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BSPC
-                &kp DEL &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH
-                &trans &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp HASH &kp BSLH &kp PG_UP &kp PG_DN &trans
-                &sys_reset &bootloader &trans &trans &trans &trans &trans &trans &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
-            >;
-        };
-    };
-};
+/* macros */ 
+
+/* custom behaviors */
+
+// homerow mods
+ZMK_BEHAVIOR(hrm, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <125>;
+    bindings = <&kp>, <&kp>;
+)
+
+
+// tap: sticky shift | double tap: capsword
+// ZMK_BEHAVIOR(ss_cw, tap_dance,
+//     tapping-term-ms = <200>;
+//     bindings = <&sk LSHFT>, <&caps_word>;
+// )
+
+// // tap: backspace | shift + tap: delete | hold: num layer
+// ZMK_BEHAVIOR(bs_del_num, mod_morph,
+//     bindings = <&lt NUM BSPC>, <&kp DEL>;
+//     mods = <(MOD_LSFT|MOD_RSFT)>;
+// )
+
+// // windows sleep macro
+// ZMK_BEHAVIOR(win_sleep, macro,
+//     wait-ms = <100>;
+//     tap-ms = <5>;
+//     bindings = <&kp LG(X) &kp U &kp S>;
+// )
+
+// combos
+// #undef COMBO_TERM
+// #define COMBO_TERM 40  // default 30ms
+
+// ZMK_COMBO(combo_copy,   &kp LC(C),  LB2 LB3, ALL)  // Ctrl + C, active on all layers
+// ZMK_COMBO(combo_paste,  &kp LC(V),  LB1 LB2, ALL)  // Ctrl + V, active on all layers
+
+
+/* keymap */
+
+ZMK_LAYER(default_layer,
+    //  ---    pinky       ring        middle      index         >>        <<            index          middle       ring        pinky        ---   
+    &kp GRAVE   &kp Q       &kp W       &kp F       &kp P         &kp B     &kp J         &kp L          &kp U        &kp Y       &kp SEMI     &kp BSPC
+    &mt MEH ESC &hrm LCTL A &hrm LALT R &hrm LCMD S &hrm LSHFT T  &kp G     &kp M         &hrm RSHFT N   &hrm LCMD E  &hrm LALT I &hrm LCTRL O &kp SQT
+    &kp LSHFT   &kp Z       &kp X       &kp C       &kp D         &kp V     &kp K         &kp H          &kp COMMA    &kp DOT     &kp SLASH    &kp RET
+    ---         ---         ---         &kp TAB     &lt NUM SPACE &kp ESC   &lt NAV GRAVE &mt LSHFT BSPC &lt MED PIPE ---         ---          ---
+)
+
+ZMK_LAYER(num_layer,
+    //  ---    pinky     ring      middle      index       >>        <<        index     middle       ring        pinky        ---   
+    &kp TAB    &kp EXCL  &kp AT    &kp HASH    &kp UNDER   &kp LPAR  &kp RPAR  &kp N7    &kp N8       &kp N9      &kp COLON     &kp AMPS
+    &kp GRAVE  &kp LCTRL &kp LALT  &kp LCMD    &kp LSHFT   &kp LBRC  &kp RBRC  &kp N4    &kp N5       &kp N6      &kp N0        &kp PLUS
+    &kp GT     &kp BSLH  &kp LBKT  &kp RBKT    &kp MINUS   &kp EQUAL &kp COLON &kp N1    &kp N2       &kp N3      &kp SLASH     &kp ENT
+    ---        ---       ---       &kp MINUS   ---         &kp LT    &kp N0    ---       &kp DOT      ---         ---           ---
+)
+
+ZMK_LAYER(nav_layer,
+    //  ---    pinky       ring        middle      index         >>        <<            index        middle       ring        pinky        ---   
+    ---        ---         ---         ---         ---           ---       ---           &kp HOME     &kp PG_DN    &kp PG_UP   &kp END      ---
+    &caps_word &kp LCTRL   &kp LALT    &kp LCMD    &kp LSHFT     ---       ---           &kp LEFT     &kp DOWN     &kp UP      &kp RIGHT    ---
+    &kp CAPS   &kp LG(Z)   &kp LG(X)   &kp LG(C)   &kp LG(V)     &kp LG(V) ---           &kp LG(LBRC) &kp LG(MINUS) &kp LG(EQUALS) &kp LG(RBRC) ---
+    ---        ---         ---         &kp TAB     &kp SPACE     ---       ---           ---          ---          ---         ---          ---
+)
+
+ZMK_LAYER(med_layer,
+    //  ---    pinky       ring        middle       index         >>        <<            index        middle       ring         pinky        ---   
+    ---        &kp C_PP    ---         &kp C_STOP   &kp C_PLAY    ---       ---           &kp C_PREV   &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT   ---
+    ---        ---         &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT ---           &kp LSHFT    &kp LCMD     &kp LALT     &kp LCTRL    --- 
+    ---        ---         ---         ---          ---           ---       ---           &kp C_PP     &kp C_VOL_DN &kp C_VOL_UP &kp C_PP     ---
+    ---        ---         ---         ---          ---           ---       ---           ---          ---          ---         ---          ---
+)
+
+// / {
+//     keymap {
+//         compatible = "zmk,keymap";
+
+//         default_layer {
+//             // -----------------------------------------------------------------------------------------
+//             // |  TAB  |  Q   |  W   |  E   |  R   |  T   |   Y   |  U    |  I   |  O   |   P   | BSPC  |
+//             // |  ESC  |  A   |  S   |  D   |  F   |  G   |   H   |  J    |  K   |  L   |   ;   |  '    |
+//             // | SHIFT |  Z   |  X   |  C   |  V   |  B   |   N   |  M    |  ,   |  .   |   /   |  RET  |
+//             // |       | LCTL | LALT | LGUI | LOWR |     SPACE    |  RAIS | LARW | DARW | UARW  |  RARW |
+//             bindings = <
+//                 &kp TAB  &kp Q    &kp W &kp E &kp R &kp T  &kp Y   &kp U  &kp I    &kp O   &kp P    &kp BSPC
+//                 &kp ESC  &kp A    &kp S &kp D &kp F &kp G  &kp H   &kp J  &kp K    &kp L   &kp SEMI &kp SQT
+//                 &kp LSHFT &kp Z    &kp X &kp C &kp V &kp B  &kp N   &kp M  &kp COMMA &kp DOT &kp SLASH &kp RET
+//                 &trans   &kp LCTL &kp LALT &kp LGUI &mo 1 &trans &kp SPACE &mo 2 &kp LEFT &kp DOWN &kp UP &kp RIGHT
+//             >;
+//             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+//         };
+
+//         lower {
+//             bindings = <
+//                 &kp LS(GRAVE) &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5) &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0) &kp DEL
+//                 &kp DEL &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp UNDER &kp PLUS &kp LBRC &kp RBRC &kp PIPE
+//                 &trans &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp LS(HASH) &kp LS(BSLH) &kp HOME &kp END &trans
+//                 &trans &trans &trans &trans &trans &trans &trans &trans &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
+//             >;
+//         };
+
+//         raise {
+//             bindings = <
+//                 &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BSPC
+//                 &kp DEL &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH
+//                 &trans &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp HASH &kp BSLH &kp PG_UP &kp PG_DN &trans
+//                 &sys_reset &bootloader &trans &trans &trans &trans &trans &trans &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
+//             >;
+//         };
+//     };
+// };
