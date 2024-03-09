@@ -42,8 +42,16 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     hold-trigger-key-positions = <KEYS_L THUMBS>;
 )    
     
-ZMK_COMBO(combo_lbrc, &kp LBKT, LB3, LB2, ALL) 
-ZMK_COMBO(combo_rbrc, &kp RBKT, LB2, LB1, ALL) 
+
+ZMK_COMBO(combo_l_bracket, &kp LBKT, LB3 LB2, ALL) 
+ZMK_COMBO(combo_r_bracket, &kp RBKT, LB2 LB1, ALL)
+ZMK_COMBO(combo_l_paren, &kp LPAR, LT3 LT2, ALL)
+ZMK_COMBO(combo_r_paren, &kp RPAR, LT2 LT1, ALL)
+
+    
+ZMK_COMBO(combo_bs_word, &kp LA(BSPC), RM1 RM2, ALL)
+ZMK_COMBO(combo_del, &kp DEL, RM3 RM4, ALL)
+ZMK_COMBO(combo_esc, &kp ESC, LM3 LM4, ALL)
 
     
 /* keymap */
@@ -53,7 +61,7 @@ ZMK_COMBO(combo_rbrc, &kp RBKT, LB2, LB1, ALL)
 #define SFT_ENT &mt LSHFT ENTER
 #define SFT_BSP &mt LSHFT BSPC
 
-#define NAV_GRV &lt NAV GRAVE
+#define NAV_KEY &mo NAV // TODO maybe layer tap
 #define SPC_NUM &lt NUM SPACE
 #define ENT_MED &lt MED ENT
 
@@ -71,6 +79,7 @@ ZMK_COMBO(combo_rbrc, &kp RBKT, LB2, LB1, ALL)
 #define COPY  &kp LG(C)
 #define PASTE &kp LG(V)
 
+
 #define HML_A &hml LCTRL A
 #define HML_R &hml LALT  R
 #define HML_S &hml LCMD  S
@@ -86,7 +95,7 @@ ZMK_LAYER(default_layer,
     &kp GRAVE   &kp Q  &kp W  &kp F    &kp P    &kp B    &kp J   &kp L    &kp U      &kp Y    &kp SEMI  &kp BSPC
     ESC_MEH     HML_A  HML_R  HML_S    HML_T    &kp G    &kp M   HMR_N    HMR_E      HMR_I    HMR_O     SQT_MEH
     &kp LSHFT   &kp Z  &kp X  &kp C    &kp D    &kp V    &kp K   &kp H    &kp COMMA  &kp DOT  &kp SLASH SFT_ENT
-    ___         ___    ___    CMD_TAB  SPC_NUM  &kp ESC  NAV_GRV SFT_BSP  &kp ENTER  ___      ___       ___
+    ___         ___    ___    CMD_TAB  SPC_NUM  &kp ESC  NAV_KEY SFT_BSP  &kp ENTER  ___      ___       ___
 )
 
 ZMK_LAYER(num_layer,
