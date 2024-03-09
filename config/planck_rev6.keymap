@@ -17,6 +17,8 @@
 #define MED 3
 #define PTR 4
 
+#define QUICK_TAP_MS 175
+
 /* key aliases */
 
 #define ___ &trans
@@ -41,12 +43,12 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <KEYS_L THUMBS>;
 )    
-    
+   
 
-ZMK_COMBO(combo_l_bracket, &kp LBKT, LB3 LB2, ALL) 
-ZMK_COMBO(combo_r_bracket, &kp RBKT, LB2 LB1, ALL)
-ZMK_COMBO(combo_l_paren, &kp LPAR, LT3 LT2, ALL)
-ZMK_COMBO(combo_r_paren, &kp RPAR, LT2 LT1, ALL)
+// ZMK_COMBO(combo_l_bracket, &kp LBKT, LB3 LB2, ALL) 
+// ZMK_COMBO(combo_r_bracket, &kp RBKT, LB2 LB1, ALL)
+// ZMK_COMBO(combo_l_paren, &kp LPAR, LT3 LT2, ALL)
+// ZMK_COMBO(combo_r_paren, &kp RPAR, LT2 LT1, ALL)
 
     
 ZMK_COMBO(combo_bs_word, &kp LA(BSPC), RM1 RM2, ALL)
@@ -63,9 +65,9 @@ ZMK_COMBO(combo_esc, &kp ESC, LM3 LM4, ALL)
 
 #define NAV_KEY &mo NAV // TODO maybe layer tap
 #define SPC_NUM &lt NUM SPACE
-#define ENT_MED &lt MED ENT
 
 #define ESC_MEH &mt MEH ESC
+#define ESC_PTR &kp ESC
 #define SQT_MEH &mt MEH SQT
 #define CMD_TAB &mt LCMD TAB
 
@@ -79,6 +81,7 @@ ZMK_COMBO(combo_esc, &kp ESC, LM3 LM4, ALL)
 #define COPY  &kp LG(C)
 #define PASTE &kp LG(V)
 
+#define EMDASH &kp LA(MINUS)
 
 #define HML_A &hml LCTRL A
 #define HML_R &hml LALT  R
@@ -90,6 +93,10 @@ ZMK_COMBO(combo_esc, &kp ESC, LM3 LM4, ALL)
 #define HMR_I &hmr LALT  I
 #define HMR_O &hmr LCTRL O
 
+/* karabiner tokens */
+#define DICTATION &kp F21
+#define APPLE_FN  &kp F24
+
 
 ZMK_LAYER(default_layer,
     &kp GRAVE   &kp Q  &kp W  &kp F    &kp P    &kp B    &kp J   &kp L    &kp U      &kp Y    &kp SEMI  &kp BSPC
@@ -99,28 +106,26 @@ ZMK_LAYER(default_layer,
 )
 
 ZMK_LAYER(num_layer,
-    &kp TAB    &kp EXCL  &kp AT    &kp HASH   &kp UNDER  &kp LPAR  &kp RPAR  &kp N7  &kp N8   &kp N9  &kp COLON  &kp AMPS
-    &kp GRAVE  ___       ___       ___        ___        &kp LBRC  &kp RBRC  &kp N4  &kp N5   &kp N6  &kp N0     &kp PLUS
-    &kp GT     &kp BSLH  &kp LBKT  &kp RBKT   &kp MINUS  &kp EQUAL &kp COLON &kp N1  &kp N2   &kp N3  &kp SLASH  &kp ENTER
-    ___        ___       ___       &kp MINUS  ___        &kp LT    &kp N0    ___     &kp DOT  ___     ___        ___
+    &kp TAB    &kp EXCL  &kp AT    &kp HASH   &kp UNDER &kp LPAR  &kp RPAR  &kp N7  &kp N8   &kp N9  &kp COLON  &kp AMPS
+    &kp GT     &kp MINUS &kp EQUAL &kp LBKT   &kp RBKT  &kp LBRC  &kp RBRC  &kp N4  &kp N5   &kp N6  &kp N0     &kp PLUS
+    &caps_word &kp BSLH  &kp PRCNT &kp DLLR   &kp STAR  &kp PIPE  &kp CARET &kp N1  &kp N2   &kp N3  &kp SLASH  &kp ENTER
+    ___        ___       ___       EMDASH     ___       &kp LT    &kp N0    ___     &kp DOT  ___     ___        ___
 )
-
-//  &kp LCTRL &kp LALT  &kp LCMD   &kp LSHFT 
 
 ZMK_LAYER(nav_layer,
-    ___        &kp F1  &kp F2  &kp F3  &kp F4    &kp F5     &kp F6   &kp HOME  &kp PG_DN    &kp PG_UP   &kp END     ___
-    &caps_word &kp F7  &kp F8  &kp F9  &kp F10   &kp F11    &kp F12  &kp LEFT  &kp DOWN     &kp UP      &kp RIGHT   ___
-    &kp CAPS   UNDO    CUT     COPY    PASTE     PASTE      ___      BACK      ZOOM_OUT     ZOOM_IN     FORWARD     ___
-    &sys_reset ___     ___     &kp TAB &kp SPACE ___        ___      ___       ___          ___         ___         ___
+    &kp CAPS   &kp F1     &kp F2       &kp F3       &kp F4     &kp F5   &kp F6   &kp HOME  &kp PG_DN &kp PG_UP &kp END   ___
+    DICTATION  &kp F7     &kp F8       &kp F9       &kp F10    &kp F11  &kp F12  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT ___
+    APPLE_FN   &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT ___      &kp C_PP BACK      ZOOM_OUT  ZOOM_IN   FORWARD   APPLE_FN
+    &sys_reset ___        ___          &kp TAB      &kp SPACE  ___      ___      ___       ___       ___       ___       ___
 )
 
 
+/*
 ZMK_LAYER(med_layer,
     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___        
     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___        
     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___        
     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___        
 )
-
-//  &kp C_VOL_DN &kp C_VOL_UP
-// &kp C_PREV   &kp C_NEXT 
+*/
+ 
