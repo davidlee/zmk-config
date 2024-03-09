@@ -1,5 +1,3 @@
-// TODO left shift > tap dance tab word
-
 #include <behaviors.dtsi>
 
 #include <dt-bindings/zmk/keys.h>
@@ -44,12 +42,10 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     hold-trigger-key-positions = <KEYS_L THUMBS>;
 )    
    
-
 // ZMK_COMBO(combo_l_bracket, &kp LBKT, LB3 LB2, ALL) 
 // ZMK_COMBO(combo_r_bracket, &kp RBKT, LB2 LB1, ALL)
 // ZMK_COMBO(combo_l_paren, &kp LPAR, LT3 LT2, ALL)
 // ZMK_COMBO(combo_r_paren, &kp RPAR, LT2 LT1, ALL)
-
     
 ZMK_COMBO(combo_bs_word, &kp LA(BSPC), RM1 RM2, ALL)
 ZMK_COMBO(combo_del, &kp DEL, RM3 RM4, ALL)
@@ -102,7 +98,7 @@ ZMK_LAYER(default_layer,
     &kp GRAVE   &kp Q  &kp W  &kp F    &kp P    &kp B    &kp J   &kp L    &kp U      &kp Y    &kp SEMI  &kp BSPC
     ESC_MEH     HML_A  HML_R  HML_S    HML_T    &kp G    &kp M   HMR_N    HMR_E      HMR_I    HMR_O     SQT_MEH
     &kp LSHFT   &kp Z  &kp X  &kp C    &kp D    &kp V    &kp K   &kp H    &kp COMMA  &kp DOT  &kp SLASH SFT_ENT
-    ___         ___    ___    CMD_TAB  SPC_NUM  &kp ESC  NAV_KEY SFT_BSP  &kp ENTER  ___      ___       ___
+    &kp GLOBE   ___    ___    CMD_TAB  SPC_NUM  &kp ESC  NAV_KEY SFT_BSP  &kp ENTER  ___      ___       &kp GLOBE
 )
 
 ZMK_LAYER(num_layer,
@@ -113,10 +109,10 @@ ZMK_LAYER(num_layer,
 )
 
 ZMK_LAYER(nav_layer,
-    &kp CAPS   &kp F1     &kp F2       &kp F3       &kp F4     &kp F5   &kp F6   &kp HOME  &kp PG_DN &kp PG_UP &kp END   ___
+    &kp CAPS   &kp F1     &kp F2       &kp F3       &kp F4     &kp F5   &kp F6   &kp HOME  &kp PG_DN &kp PG_UP &kp END   &kp C_PWR
     DICTATION  &kp F7     &kp F8       &kp F9       &kp F10    &kp F11  &kp F12  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT ___
     APPLE_FN   &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT ___      &kp C_PP BACK      ZOOM_OUT  ZOOM_IN   FORWARD   APPLE_FN
-    &sys_reset ___        ___          &kp TAB      &kp SPACE  ___      ___      ___       ___       ___       ___       ___
+    ___        ___        ___          &kp TAB      &kp SPACE  ___      ___      APPLE_FN  ___       ___       ___       ___
 )
 
 
@@ -128,4 +124,3 @@ ZMK_LAYER(med_layer,
     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___        
 )
 */
- 
