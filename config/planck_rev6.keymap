@@ -47,14 +47,10 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     hold-trigger-on-release;
 )    
 
-// ZMK_MACRO(fat_arrow,
-//     // label = "fat_arrow";
-//     bindings = <&kp A>;
-// )
-
-// ZMK_BEHAVIOUR(thin_arrow, macro,
-//     bindings = <&kp EQUAL>, <&kp LS(DOT)>;
-// )
+ZMK_BEHAVIOR(semi_quote, tap_dance,
+    tapping-term-ms = <120>;
+    bindings = <&kp SEMI>,<&kp SQT>;
+)
    
 ZMK_COMBO(combo_bs_word, &kp LA(BSPC), RM1 RM2, ALL)
 ZMK_COMBO(combo_del, &kp DEL, RT3 RT4, ALL)
@@ -124,10 +120,10 @@ ZMK_COMBO(combo_meh_r, &kp LC(LA(LSHIFT)), RB4 RB3, ALL)
 
 
 ZMK_LAYER(default_layer,
-    ___ &kp Q &kp W   &kp F   &kp P   &kp B   &kp J   &kp L   &kp U     &kp Y   &kp SEMI  ___
-    ___ HML_A HML_R   HML_S   HML_T   &kp G   &kp M   HMR_N   HMR_E     HMR_I   HMR_O     ___
-    ___ &kp Z &kp X   &kp C   &kp D   &kp V   &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH ___
-    ___ ___   ___     CMD_TAB SPC_NUM ESC_SYM NAV_KEY SFT_BSP &kp ENTER ___     ___       ___
+    ___ &kp Q &kp W   &kp F   &kp P   &kp B   &kp J   &kp L   &kp U     &kp Y   &semi_quote  ___
+    ___ HML_A HML_R   HML_S   HML_T   &kp G   &kp M   HMR_N   HMR_E     HMR_I   HMR_O        ___
+    ___ &kp Z &kp X   &kp C   &kp D   &kp V   &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH    ___
+    ___ ___   ___     CMD_TAB SPC_NUM ESC_SYM NAV_KEY SFT_BSP &kp ENTER ___     ___          ___
 )
 
 
