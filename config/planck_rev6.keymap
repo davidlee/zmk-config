@@ -10,10 +10,9 @@
 
 #define DEF 0  // layer shortcuts, must match order in which they are defined below
 #define NUM 1
-#define NAV 2
-#define PTR_TEMP 3 
-#define PTR_LOCK 4
-#define PTR 5
+#define SYM 2
+#define NAV 3
+#define PTR 4
 
 #define QUICK_TAP_MS 175
 #define TAPPING_TERM_MS 220
@@ -47,16 +46,35 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     hold-trigger-key-positions = <KEYS_L THUMBS>;
     hold-trigger-on-release;
 )    
+
+// ZMK_MACRO(fat_arrow,
+//     // label = "fat_arrow";
+//     bindings = <&kp A>;
+// )
+
+// ZMK_BEHAVIOUR(thin_arrow, macro,
+//     bindings = <&kp EQUAL>, <&kp LS(DOT)>;
+// )
    
 ZMK_COMBO(combo_bs_word, &kp LA(BSPC), RM1 RM2, ALL)
 ZMK_COMBO(combo_del, &kp DEL, RM3 RM4, ALL)
 ZMK_COMBO(combo_esc, &kp ESC, LM3 LM4, ALL)
 ZMK_COMBO(combo_ptr_lock, &tog PTR, RT2 RM1 RM3, ALL)
 
-ZMK_CONDITIONAL_LAYER(PTR_LOCK, PTR)
-ZMK_CONDITIONAL_LAYER(PTR_TEMP, PTR)
+ZMK_COMBO(combo_bracket_l, &kp LBKT, LB3 LB2, ALL)
+ZMK_COMBO(combo_bracket_r, &kp RBKT, LB2 LB1, ALL)
+ZMK_COMBO(combo_paren_l, &kp LPAR, LT3 LT2, ALL)
+ZMK_COMBO(combo_paren_r, &kp RPAR, LT2 LT1, ALL)
 
 /* keycodes */
+/*                                      48 KEY MATRIX / LAYOUT MAPPING
+
+  ╭────────────────────────┬────────────────────────╮ ╭─────────────────────────┬─────────────────────────╮
+  │  0   1   2   3   4   5 │  6   7   8   9  10  11 │ │ LT5 LT4 LT3 LT2 LT1 LT0 │ RT0 RT1 RT2 RT3 RT4 RT5 │
+  │ 12  13  14  15  16  17 │ 18  19  20  21  22  23 │ │ LM5 LM4 LM3 LM2 LM1 LM0 │ RM0 RM1 RM2 RM3 RM4 RM5 │
+  │ 24  25  26  27  28  29 │ 30  31  32  33  34  35 │ │ LB5 LB4 LB3 LB2 LB1 LB0 │ RB0 RB1 RB2 RB3 RB4 RB5 │
+  │ 36  37  38  39  40  41 │ 42  43  44  45  46  47 │ │ LH5 LH4 LH3 LH2 LH1 LH0 │ RH0 RH1 RH2 RH3 RH4 RH5 │
+  ╰────────────────────────┴────────────────────────╯ ╰─────────────────────────┴─────────────────────────╯ */
 
 #define MEH LC(LA(LSHFT))
 
@@ -68,8 +86,8 @@ ZMK_CONDITIONAL_LAYER(PTR_TEMP, PTR)
 #define SPC_NUM &lt NUM SPACE
 
 #define ESC_MEH &mt MEH ESC
-#define ESC_PTR &lt  PTR_TEMP ESC
-#define PTR_LCK &tog PTR_LOCK
+#define ESC_SYM &lt  SYM ESC
+#define PTR_LCK &tog PTR
 
 #define SQT_MEH &mt MEH SQT
 #define CMD_TAB &mt LCMD TAB
@@ -79,14 +97,10 @@ ZMK_CONDITIONAL_LAYER(PTR_TEMP, PTR)
 #define FORWARD  &kp LG(LBRC)
 #define BACK     &kp LG(RBRC)
 
-#undef UNDO
-#undef CUT
-#undef COPY
-#undef PASTE
-#define UNDO  &kp LG(Z)
-#define CUT   &kp LG(X)
-#define COPY  &kp LG(C)
-#define PASTE &kp LG(V)
+#define U_UNDO  &kp LG(Z)
+#define U_CUT   &kp LG(X)
+#define U_COPY  &kp LG(C)
+#define U_PASTE &kp LG(V)
 
 #define EMDASH &kp LA(MINUS)
 
@@ -109,20 +123,36 @@ ZMK_LAYER(default_layer,
     &kp GRAVE &kp Q &kp W &kp F   &kp P   &kp B   &kp J   &kp L   &kp U     &kp Y   &kp SEMI  &kp BSPC
     ESC_MEH   HML_A HML_R HML_S   HML_T   &kp G   &kp M   HMR_N   HMR_E     HMR_I   HMR_O     SQT_MEH
     &kp LSHFT &kp Z &kp X &kp C   &kp D   &kp V   &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH SFT_ENT
-    PTR_LCK   ___    ___  CMD_TAB SPC_NUM ESC_PTR NAV_KEY SFT_BSP &kp ENTER ___     ___       ___
+    PTR_LCK   ___    ___  CMD_TAB SPC_NUM ESC_SYM NAV_KEY SFT_BSP &kp ENTER ___     ___       ___
 )
 
+
 ZMK_LAYER(num_layer,
-    &kp TAB    &kp EXCL  &kp AT    &kp HASH &kp UNDER &kp LPAR  &kp RPAR  &kp N7  &kp N8  &kp N9 &kp COLON &kp AMPS
-    &kp GT     &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp LBRC  &kp RBRC  &kp N4  &kp N5  &kp N6 &kp N0    &kp PLUS
-    &caps_word &kp BSLH  &kp PRCNT &kp DLLR &kp STAR  &kp PIPE  &kp CARET &kp N1  &kp N2  &kp N3 &kp SLASH &kp ENTER
-    ___        ___       ___       EMDASH   ___       &kp LT    &kp N0    ___     &kp DOT ___    ___       ___
+    ___ ___ ___ ___ ___ ___ ___ &kp N7 &kp N8 &kp N9  &kp COLON ___
+    ___ ___ ___ ___ ___ ___ ___ &kp N4 &kp N5 &kp N6  &kp N0    &kp PLUS
+    ___ ___ ___ ___ ___ ___ ___ &kp N1 &kp N2 &kp N3  &kp SLASH &kp ENTER
+    ___ ___ ___ ___ ___ ___ ___ &kp N0 ___    &kp DOT ___       ___
 )
+
+// 
+ZMK_LAYER(sym_layer,
+    ___  &kp EXCL &kp AT   &kp HASH  &kp UNDER &kp GRAVE ___  ___  &kp LPAR &kp RPAR ___  ___
+    ___  &kp AMPS &kp STAR &kp MINUS &kp EQUAL &kp A     ___  ___  &kp LBKT &kp RBKT ___  ___
+    ___  &kp BSLH &kp DLLR &kp PRCNT &kp CARET ___       ___  ___  &kp LBRC &kp RBRC ___  ___  
+    ___  ___      ___       ___      ___       ___       ___  ___  ___      ___      ___  ___     
+)
+
+// ZMK_LAYER(num_layer,
+//     &kp TAB    &kp EXCL  &kp AT    &kp HASH &kp UNDER &kp LPAR  &kp RPAR  &kp N7  &kp N8  &kp N9 &kp COLON &kp AMPS
+//     &kp GT     &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp LBRC  &kp RBRC  &kp N4  &kp N5  &kp N6 &kp N0    &kp PLUS
+//     &caps_word &kp BSLH  &kp PRCNT &kp DLLR &kp STAR  &kp PIPE  &kp CARET &kp N1  &kp N2  &kp N3 &kp SLASH &kp ENTER
+//     ___        ___       ___       EMDASH   ___       &kp LT    &kp N0    ___     &kp DOT ___    ___       ___
+// )
 
 ZMK_LAYER(nav_layer,
     &kp CAPS  &kp F1 &kp F2 &kp F3  &kp F4    &kp F5  &kp F6  &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp C_PWR
     DICTATION &kp F7 &kp F8 &kp F9  &kp F10   &kp F11 &kp F12 &kp LEFT &kp DOWN  &kp UP    &kp RIGHT ___
-    APPLE_FN  UNDO   CUT    COPY    PASTE     PASTE   ___     ___      ZOOM_OUT  ZOOM_IN   FORWARD   APPLE_FN
+    APPLE_FN  U_UNDO U_CUT  U_COPY  U_PASTE   U_PASTE ___     ___      ZOOM_OUT  ZOOM_IN   FORWARD   APPLE_FN
     ___       ___    ___    &kp TAB &kp SPACE ___     ___     APPLE_FN ___       ___       ___       ___
 )
 
