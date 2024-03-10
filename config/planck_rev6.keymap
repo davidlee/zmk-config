@@ -57,7 +57,8 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 // )
    
 ZMK_COMBO(combo_bs_word, &kp LA(BSPC), RM1 RM2, ALL)
-ZMK_COMBO(combo_del, &kp DEL, RM3 RM4, ALL)
+ZMK_COMBO(combo_del, &kp DEL, RT3 RT4, ALL)
+ZMK_COMBO(combo_ent, &kp ENTER, RM3 RM4, ALL)
 ZMK_COMBO(combo_esc, &kp ESC, LM3 LM4, ALL)
 ZMK_COMBO(combo_ptr_lock, &tog PTR, RT2 RM1 RM3, ALL)
 
