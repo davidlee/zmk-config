@@ -120,10 +120,10 @@ ZMK_COMBO(combo_paren_r, &kp RPAR, LT2 LT1, ALL)
 
 
 ZMK_LAYER(default_layer,
-    &kp GRAVE &kp Q &kp W &kp F   &kp P   &kp B   &kp J   &kp L   &kp U     &kp Y   &kp SEMI  &kp BSPC
-    ESC_MEH   HML_A HML_R HML_S   HML_T   &kp G   &kp M   HMR_N   HMR_E     HMR_I   HMR_O     SQT_MEH
-    &kp LSHFT &kp Z &kp X &kp C   &kp D   &kp V   &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH SFT_ENT
-    PTR_LCK   ___    ___  CMD_TAB SPC_NUM ESC_SYM NAV_KEY SFT_BSP &kp ENTER ___     ___       ___
+    ___     &kp Q &kp W   &kp F   &kp P   &kp B   &kp J   &kp L   &kp U     &kp Y   &kp SEMI  ___
+    ESC_MEH HML_A HML_R   HML_S   HML_T   &kp G   &kp M   HMR_N   HMR_E     HMR_I   HMR_O     SQT_MEH
+    ___     &kp Z &kp X   &kp C   &kp D   &kp V   &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH ___
+    ___     ___   ___     CMD_TAB SPC_NUM ESC_SYM NAV_KEY SFT_BSP &kp ENTER ___     ___       ___
 )
 
 
@@ -134,31 +134,26 @@ ZMK_LAYER(num_layer,
     ___ ___ ___ ___ ___ ___ ___ &kp N0 ___    &kp DOT ___       ___
 )
 
-// 
 ZMK_LAYER(sym_layer,
-    ___  &kp EXCL &kp AT   &kp HASH  &kp UNDER &kp GRAVE ___  ___  &kp LPAR &kp RPAR ___  ___
-    ___  &kp AMPS &kp STAR &kp MINUS &kp EQUAL &kp A     ___  ___  &kp LBKT &kp RBKT ___  ___
-    ___  &kp BSLH &kp DLLR &kp PRCNT &kp CARET ___       ___  ___  &kp LBRC &kp RBRC ___  ___  
-    ___  ___      ___       ___      ___       ___       ___  ___  ___      ___      ___  ___     
+    ___  &kp EXCL &kp AT   &kp HASH  &kp UNDER &kp GRAVE  ___  &kp DQT &kp LPAR &kp RPAR ___       ___
+    ___  &kp AMPS &kp STAR &kp MINUS &kp EQUAL &kp CAPS   ___  &kp LT  &kp LBKT &kp RBKT &kp GT    ___
+    ___  &kp BSLH &kp DLLR &kp PRCNT &kp CARET &caps_word ___  &kp SQT &kp LBRC &kp RBRC &kp SLASH ___  
+    ___  ___      ___      &kp TAB   &kp SPACE ___        ___  ___     ___      ___      ___       ___     
 )
-
-// ZMK_LAYER(num_layer,
-//     &kp TAB    &kp EXCL  &kp AT    &kp HASH &kp UNDER &kp LPAR  &kp RPAR  &kp N7  &kp N8  &kp N9 &kp COLON &kp AMPS
-//     &kp GT     &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp LBRC  &kp RBRC  &kp N4  &kp N5  &kp N6 &kp N0    &kp PLUS
-//     &caps_word &kp BSLH  &kp PRCNT &kp DLLR &kp STAR  &kp PIPE  &kp CARET &kp N1  &kp N2  &kp N3 &kp SLASH &kp ENTER
-//     ___        ___       ___       EMDASH   ___       &kp LT    &kp N0    ___     &kp DOT ___    ___       ___
-// )
 
 ZMK_LAYER(nav_layer,
-    &kp CAPS  &kp F1 &kp F2 &kp F3  &kp F4    &kp F5  &kp F6  &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp C_PWR
-    DICTATION &kp F7 &kp F8 &kp F9  &kp F10   &kp F11 &kp F12 &kp LEFT &kp DOWN  &kp UP    &kp RIGHT ___
-    APPLE_FN  U_UNDO U_CUT  U_COPY  U_PASTE   U_PASTE ___     ___      ZOOM_OUT  ZOOM_IN   FORWARD   APPLE_FN
-    ___       ___    ___    &kp TAB &kp SPACE ___     ___     APPLE_FN ___       ___       ___       ___
+    ___ &kp F1     &kp F2 &kp F3  &kp F4       &kp F5     &kp F6    &kp HOME &kp PG_DN &kp PG_UP &kp END   ___ // &kp C_PWR
+    ___ &kp F7     &kp F8 &kp F9  &kp F10      &kp F11    &kp F12   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT ___
+    ___ &kp C_PREV &kp C_VOL_DN   &kp C_VOL_UP &kp C_NEXT &kp C_PP  BACK     ZOOM_OUT  ZOOM_IN   FORWARD   ___
+    ___ ___        ___    &kp TAB &kp SPACE    ___        ___       APPLE_FN DICTATION ___       ___       ___
 )
 
+// U_UNDO U_CUT  U_COPY  U_PASTE   U_PASTE 
+
 ZMK_LAYER(ptr_layer,
-    ___     ___        ___          ___          ___        ___      ___     U_WH_L  U_WH_D  U_WH_U  U_WH_R ___
-    PTR_LCK &kp LCTRL  &kp LALT     &kp LCMD     &kp LSHFT  ___      ___     U_MS_L  U_MS_D  U_MS_U  U_MS_R ___
-    ___     &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PP ___     ___     ___     ___     ___    ___
-    ___     ___        ___           ___         ___        ___      U_MS_B1 U_MS_B2 U_MS_B3 ___     ___    ___        
+    ___ ___       ___      ___      ___       ___  ___     U_WH_L  U_WH_D  U_WH_U  U_WH_R ___
+    ___ &kp LCTRL &kp LALT &kp LCMD &kp LSHFT ___  U_MS_B1 U_MS_L  U_MS_D  U_MS_U  U_MS_R ___
+    ___ ___       ___      ___      ___       ___  ___     U_MS_B1 U_MS_B2 ___     ___    ___
+    ___ ___       ___      ___      ___       ___  U_MS_B1 U_MS_B2 U_MS_B3 ___     ___    ___        
 )
+
