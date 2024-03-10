@@ -66,6 +66,9 @@ ZMK_COMBO(combo_bracket_r, &kp RBKT, LB2 LB1, ALL)
 ZMK_COMBO(combo_paren_l, &kp LPAR, LT3 LT2, ALL)
 ZMK_COMBO(combo_paren_r, &kp RPAR, LT2 LT1, ALL)
 
+ZMK_COMBO(combo_meh_l, &kp LC(LA(LSHIFT)), LB4 LB3, ALL)
+ZMK_COMBO(combo_meh_r, &kp LC(LA(LSHIFT)), RB4 RB3, ALL)
+
 /* keycodes */
 /*                                      48 KEY MATRIX / LAYOUT MAPPING
 
@@ -120,10 +123,10 @@ ZMK_COMBO(combo_paren_r, &kp RPAR, LT2 LT1, ALL)
 
 
 ZMK_LAYER(default_layer,
-    ___     &kp Q &kp W   &kp F   &kp P   &kp B   &kp J   &kp L   &kp U     &kp Y   &kp SEMI  ___
-    ESC_MEH HML_A HML_R   HML_S   HML_T   &kp G   &kp M   HMR_N   HMR_E     HMR_I   HMR_O     SQT_MEH
-    ___     &kp Z &kp X   &kp C   &kp D   &kp V   &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH ___
-    ___     ___   ___     CMD_TAB SPC_NUM ESC_SYM NAV_KEY SFT_BSP &kp ENTER ___     ___       ___
+    ___ &kp Q &kp W   &kp F   &kp P   &kp B   &kp J   &kp L   &kp U     &kp Y   &kp SEMI  ___
+    ___ HML_A HML_R   HML_S   HML_T   &kp G   &kp M   HMR_N   HMR_E     HMR_I   HMR_O     ___
+    ___ &kp Z &kp X   &kp C   &kp D   &kp V   &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH ___
+    ___ ___   ___     CMD_TAB SPC_NUM ESC_SYM NAV_KEY SFT_BSP &kp ENTER ___     ___       ___
 )
 
 
@@ -135,10 +138,10 @@ ZMK_LAYER(num_layer,
 )
 
 ZMK_LAYER(sym_layer,
-    ___  &kp EXCL &kp AT   &kp HASH  &kp UNDER &kp GRAVE  ___  &kp DQT &kp LPAR &kp RPAR ___       ___
-    ___  &kp AMPS &kp STAR &kp MINUS &kp EQUAL &kp CAPS   ___  &kp LT  &kp LBKT &kp RBKT &kp GT    ___
-    ___  &kp BSLH &kp DLLR &kp PRCNT &kp CARET &caps_word ___  &kp SQT &kp LBRC &kp RBRC &kp SLASH ___  
-    ___  ___      ___      &kp TAB   &kp SPACE ___        ___  ___     ___      ___      ___       ___     
+    ___ &kp EXCL &kp AT   &kp HASH  &kp UNDER &kp GRAVE  ___  &kp DQT &kp LPAR &kp RPAR ___       ___
+    ___ &kp AMPS &kp STAR &kp MINUS &kp EQUAL &kp CAPS   ___  &kp LT  &kp LBKT &kp RBKT &kp GT    ___
+    ___ &kp BSLH &kp DLLR &kp PRCNT &kp CARET &caps_word ___  &kp SQT &kp LBRC &kp RBRC &kp SLASH ___  
+    ___ ___      ___      &kp TAB   &kp SPACE ___        ___  ___     ___      ___      ___       ___     
 )
 
 ZMK_LAYER(nav_layer,
@@ -156,4 +159,3 @@ ZMK_LAYER(ptr_layer,
     ___ ___       ___      ___      ___       ___  ___     U_MS_B1 U_MS_B2 ___     ___    ___
     ___ ___       ___      ___      ___       ___  U_MS_B1 U_MS_B2 U_MS_B3 ___     ___    ___        
 )
-
