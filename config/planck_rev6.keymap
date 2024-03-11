@@ -89,9 +89,8 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 )
 
 ZMK_BEHAVIOR(th_ht, hold_tap, 
-    flavor = "balanced";
-    tapping-term-ms = <QUICK_TAP_MS>;
-    // hold-while-undecided = <true>;
+    flavor = "hold-preferred";
+    tapping-term-ms = <200>;
     bindings = <&kp>, <&kp>;
 )
 
@@ -139,10 +138,10 @@ ZMK_LAYER(default_layer,
 
 
 ZMK_LAYER(num_layer,
-    ___ ___ ___ ___ ___ ___ ___ &kp N7 &kp N8 &kp N9  &kp COLON ___
-    ___ ___ ___ ___ ___ ___ ___ &kp N4 &kp N5 &kp N6  &kp N0    &kp PLUS
-    ___ ___ ___ ___ ___ ___ ___ &kp N1 &kp N2 &kp N3  &kp SLASH &kp ENTER
-    ___ ___ ___ ___ ___ ___ ___ &kp N0 ___    &kp DOT ___       ___
+    ___ &kp F1  &kp F2  &kp F3  &kp F4  &kp  F5  &kp F6  &kp N7 &kp N8 &kp N9  &kp COLON ___
+    ___ &kp F7  &kp F8  &kp F9  &kp F10 &kp F11  &kp F12 &kp N4 &kp N5 &kp N6  &kp N0    &kp PLUS
+    ___ ___     ___     ___     ___     ___      ___     &kp N1 &kp N2 &kp N3  &kp SLASH &kp ENTER
+    ___ ___     ___     ___     ___     ___      ___     &kp N0 ___    &kp DOT ___       ___
 )
 
 ZMK_LAYER(sym_layer,
@@ -154,7 +153,7 @@ ZMK_LAYER(sym_layer,
 
 ZMK_LAYER(nav_layer,
     ___ &kp F1     &kp F2         &kp F3       &kp F4     &kp F5    &kp F6   &kp HOME  &kp PG_DN &kp PG_UP &kp END   ___ 
-    ___ &kp F7     &kp F8         &kp F9       &kp F10    &kp F11   &kp F12  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT ___
+    ___ &kp LCTRL  &kp LALT       &kp LCMD     &kp LSHFT  ___       ___      &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT ___
     ___ &kp C_PREV &kp C_VOL_DN   &kp C_VOL_UP &kp C_NEXT &kp C_PP  ___      BACK      ZOOM_OUT  ZOOM_IN   FORWARD   ___
     ___ ___        ___            &kp TAB      &kp SPACE  ___       ___      APPLE_FN  DICTATION ___       ___       ___
 )
