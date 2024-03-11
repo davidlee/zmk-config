@@ -118,10 +118,10 @@ ZMK_COMBO(combo_meh_r, &kp MEH, RB4 RB3, ALL)
 
 
 ZMK_LAYER(default_layer,
-    ___ &kp Q &kp W   &kp F   &kp P   &kp B   &kp J   &kp L   &kp U     &kp Y   &semi_quote  ___
-    ___ HML_A HML_R   HML_S   HML_T   &kp G   &kp M   HMR_N   HMR_E     HMR_I   HMR_O        ___
-    ___ &kp Z &kp X   &kp C   &kp D   &kp V   &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH    ___
-    ___ ___   ___     CMD_TAB SPC_NUM ESC_SYM NAV_KEY SFT_BSP &kp ENTER ___     ___          ___
+    &kp GRAVE &kp Q &kp W   &kp F   &kp P   &kp B   &kp J   &kp L   &kp U     &kp Y   &semi_quote  ___
+    ESC_MEH   HML_A HML_R   HML_S   HML_T   &kp G   &kp M   HMR_N   HMR_E     HMR_I   HMR_O        &kp SQT
+    &kp LSHFT &kp Z &kp X   &kp C   &kp D   &kp V   &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH    SFT_ENT
+    ___       ___   ___     CMD_TAB SPC_NUM ESC_SYM NAV_KEY SFT_BSP &kp ENTER ___     ___          ___
 )
 
 
@@ -140,10 +140,10 @@ ZMK_LAYER(sym_layer,
 )
 
 ZMK_LAYER(nav_layer,
-    ___ &kp F1     &kp F2 &kp F3  &kp F4       &kp F5     &kp F6    &kp HOME &kp PG_DN &kp PG_UP &kp END   ___ // &kp C_PWR
-    ___ &kp F7     &kp F8 &kp F9  &kp F10      &kp F11    &kp F12   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT ___
-    ___ &kp C_PREV &kp C_VOL_DN   &kp C_VOL_UP &kp C_NEXT &kp C_PP  BACK     ZOOM_OUT  ZOOM_IN   FORWARD   ___
-    ___ ___        ___    &kp TAB &kp SPACE    ___        ___       APPLE_FN DICTATION ___       ___       ___
+    ___ &kp F1     &kp F2         &kp F3       &kp F4     &kp F5    &kp F6   &kp HOME  &kp PG_DN &kp PG_UP &kp END   ___ 
+    ___ &kp F7     &kp F8         &kp F9       &kp F10    &kp F11   &kp F12  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT ___
+    ___ &kp C_PREV &kp C_VOL_DN   &kp C_VOL_UP &kp C_NEXT &kp C_PP  ___      BACK      ZOOM_OUT  ZOOM_IN   FORWARD   ___
+    ___ ___        ___            &kp TAB      &kp SPACE  ___       ___      APPLE_FN  DICTATION ___       ___       ___
 )
 
 // U_UNDO U_CUT  U_COPY  U_PASTE   U_PASTE 
