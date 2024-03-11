@@ -29,7 +29,8 @@
 #define MEH LC(LA(LSHFT))
 
 #define SFT_ENT &mt LSHFT ENTER
-#define SFT_BSP &mt LSHFT BSPC
+// #define SFT_BSP &mt LSHFT BSPC
+#define SFT_BSP &th_ht LSHFT BSPC
 
 #define NAV_KEY &mo NAV 
 #define SPC_NUM &lt NUM SPACE
@@ -85,11 +86,23 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <KEYS_L THUMBS>;
     hold-trigger-on-release;
-)    
+)
+
+ZMK_BEHAVIOR(th_ht, hold_tap, 
+    flavor = "balanced";
+    tapping-term-ms = <QUICK_TAP_MS>;
+    // hold-while-undecided = <true>;
+    bindings = <&kp>, <&kp>;
+)
 
 ZMK_BEHAVIOR(semi_quote, tap_dance,
-    tapping-term-ms = <120>;
+    tapping-term-ms = <QUICK_TAP_MS>;
     bindings = <&kp SEMI>,<&kp SQT>;
+)
+
+ZMK_BEHAVIOR(magic_sft, tap_dance,
+    tapping-term-ms = <QUICK_TAP_MS>;
+    bindings = <&kp LSHFT>,<&caps_word>;
 )
    
 ZMK_COMBO(combo_bs_word, &kp LA(BSPC), RM1 RM2, ALL)
@@ -118,10 +131,10 @@ ZMK_COMBO(combo_meh_r, &kp MEH, RB4 RB3, ALL)
 
 
 ZMK_LAYER(default_layer,
-    &kp GRAVE &kp Q &kp W   &kp F   &kp P   &kp B   &kp J   &kp L   &kp U     &kp Y   &semi_quote  ___
-    ESC_MEH   HML_A HML_R   HML_S   HML_T   &kp G   &kp M   HMR_N   HMR_E     HMR_I   HMR_O        &kp SQT
-    &kp LSHFT &kp Z &kp X   &kp C   &kp D   &kp V   &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH    SFT_ENT
-    ___       ___   ___     CMD_TAB SPC_NUM ESC_SYM NAV_KEY SFT_BSP &kp ENTER ___     ___          ___
+    &kp GRAVE  &kp Q &kp W   &kp F   &kp P   &kp B   &kp J   &kp L   &kp U     &kp Y   &semi_quote  ___
+    ESC_MEH    HML_A HML_R   HML_S   HML_T   &kp G   &kp M   HMR_N   HMR_E     HMR_I   HMR_O        &kp SQT
+    &magic_sft &kp Z &kp X   &kp C   &kp D   &kp V   &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH    SFT_ENT
+    ___        ___   ___     CMD_TAB SPC_NUM ESC_SYM NAV_KEY SFT_BSP &kp ENTER ___     ___          ___
 )
 
 
@@ -133,10 +146,10 @@ ZMK_LAYER(num_layer,
 )
 
 ZMK_LAYER(sym_layer,
-    ___ &kp EXCL &kp AT   &kp HASH  &kp UNDER &kp GRAVE  ___  &kp DQT &kp LPAR &kp RPAR ___       ___
-    ___ &kp AMPS &kp STAR &kp MINUS &kp EQUAL &kp CAPS   ___  &kp LT  &kp LBKT &kp RBKT &kp GT    ___
-    ___ &kp BSLH &kp DLLR &kp PRCNT &kp CARET &caps_word ___  &kp SQT &kp LBRC &kp RBRC &kp SLASH ___  
-    ___ ___      ___      &kp TAB   &kp SPACE ___        ___  ___     ___      ___      ___       ___     
+    ___ &kp EXCL &kp AT    &kp HASH  &kp STAR  &kp GRAVE  ___       &kp DQT &kp LPAR &kp RPAR ___       ___
+    ___ &kp AMPS &kp UNDER &kp MINUS &kp MINUS &kp EQUAL  &kp CAPS  &kp LT  &kp LBKT &kp RBKT &kp GT    ___
+    ___ &kp BSLH &kp DLLR  &kp PRCNT &kp CARET &caps_word ___       &kp SQT &kp LBRC &kp RBRC &kp SLASH ___  
+    ___ ___      ___       &kp TAB   &kp SPACE ___        ___       ___     ___      ___      ___       ___     
 )
 
 ZMK_LAYER(nav_layer,
@@ -147,10 +160,11 @@ ZMK_LAYER(nav_layer,
 )
 
 // U_UNDO U_CUT  U_COPY  U_PASTE   U_PASTE 
+// F10 is mapped to centre pointer
 
 ZMK_LAYER(ptr_layer,
     ___ ___       ___      ___      ___       ___  ___     U_WH_L  U_WH_D  U_WH_U  U_WH_R ___
-    ___ &kp LCTRL &kp LALT &kp LCMD &kp LSHFT ___  U_MS_B1 U_MS_L  U_MS_D  U_MS_U  U_MS_R ___
+    ___ &kp LCTRL &kp LALT &kp LCMD &kp LSHFT &kp F10      U_MS_B1 U_MS_L  U_MS_D  U_MS_U  U_MS_R ___
     ___ ___       ___      ___      ___       ___  ___     U_MS_B1 U_MS_B2 ___     ___    ___
     ___ ___       ___      ___      ___       ___  U_MS_B1 U_MS_B2 U_MS_B3 ___     ___    ___        
 )
