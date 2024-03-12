@@ -1,0 +1,37 @@
+
+ZMK_BEHAVIOR(hml, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM_MS>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    require-prior-idle-ms = <PRIOR_IDLE_MS>;
+    bindings = <&kp>, <&kp>;
+    hold-trigger-key-positions = <KEYS_R THUMBS>;
+    hold-trigger-on-release;
+)
+
+ZMK_BEHAVIOR(hmr, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM_MS>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    require-prior-idle-ms = <PRIOR_IDLE_MS>;
+    bindings = <&kp>, <&kp>;
+    hold-trigger-key-positions = <KEYS_L THUMBS>;
+    hold-trigger-on-release;
+)
+
+ZMK_BEHAVIOR(th_ht, hold_tap, 
+    flavor = "balanced";
+    tapping-term-ms = <160>;
+    bindings = <&kp>, <&kp>;
+)
+
+ZMK_BEHAVIOR(semi_quote, tap_dance,
+    tapping-term-ms = <QUICK_TAP_MS>;
+    bindings = <&kp SEMI>,<&kp SQT>;
+)
+
+ZMK_BEHAVIOR(magic_sft, tap_dance,
+    tapping-term-ms = <QUICK_TAP_MS>;
+    bindings = <&kp LSHFT>, <&caps_word>, <&kp CAPSLOCK>;
+)
+   
