@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/mouse.h>
 // #include <dt-bindings/led/led.h>
 
-
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/keypos_def/keypos_48keys.h"
 
