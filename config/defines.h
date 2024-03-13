@@ -12,6 +12,7 @@
 */
 
 #define ___ &trans
+#define NONE &none
    
 // for application shortcuts in Raycast
 #define MEH LC(LA(LSHFT))
@@ -39,7 +40,6 @@
 #define BACK     &kp LG(LBKT)
 #define FORWARD  &kp LG(RBKT)
 
-#define EMDASH &kp LS(LA(MINUS))
 
 // home row mods
 #define HML_A &hml LCTRL A
@@ -63,11 +63,15 @@
 #define TAPPING_TERM_MS 220
 #define PRIOR_IDLE_MS 150
 
+#undef COMBO_TERM 
 #define COMBO_TERM 15
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5 
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5 
 #define THUMBS LH3 LH2 LH1 RH1 RH2 RH3      
 
-#define NONE &none
+#define EXIT &to DEF
 
+// combos
+#define EMDASH &kp LS(LA(MINUS)) // handy, this comes out as _ in helix / kitty
+#define BSWORD &kp LA(BSPC)

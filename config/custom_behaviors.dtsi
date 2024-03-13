@@ -1,4 +1,25 @@
 
+/ {
+    behaviors {
+        num_word: behavior_num_word {
+            compatible = "zmk,behavior-caps-word";
+            label = "NUM_WORD";
+            #binding-cells = <0>;
+            layers = <NUM>;                                // insert location of numbers layer here
+            continue-list = <BACKSPACE DELETE DOT COMMA SLASH STAR PLUS EQUAL MINUS COLON ENTER>; 
+            ignore-numbers;                                // numbers don't deactivate the layer
+        };
+    };
+};
+
+// ZMK_BEHAVIOR(num_word, behaviour_num_word,
+//     // #binding-cells = <0>;
+//     label = "NUM_WORD";
+//     layers = <NUM>;                                // insert location of numbers layer here
+//     continue-list = <BACKSPACE DELETE DOT COMMA>;  // adjust as desired
+//     ignore-numbers;                                // numbers don't deactivate the layer
+// )
+
 ZMK_BEHAVIOR(hml, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM_MS>;

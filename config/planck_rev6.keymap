@@ -3,18 +3,19 @@
 #include <dt-bindings/zmk/mouse.h>
 // #include <dt-bindings/led/led.h>
 
+
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/keypos_def/keypos_48keys.h"
-#include "mouse.dtsi"
+
 #include "defines.h"
 
+#include "mouse.dtsi"
 #include "custom_behaviors.dtsi"
 #include "combos.dtsi"
-
 /* keymap */
 
 ZMK_LAYER(default_layer,
-    &kp GRAVE  &kp Q &kp W   &kp F   &kp P   &kp B   &kp J   &kp L   &kp U     &kp Y   &kp SEMI  ___
+    &kp GRAVE  &kp Q &kp W   &kp F   &kp P   &kp B   &kp J   &kp L   &kp U     &kp Y   &kp SEMI  NONE
     ESC_MEH    HML_A HML_R   HML_S   HML_T   &kp G   &kp M   HMR_N   HMR_E     HMR_I   HMR_O     &kp SQT
     &magic_sft &kp Z &kp X   &kp C   &kp D   &kp V   &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH SFT_ENT
     NONE       NONE  NONE    CMD_TAB SPC_NUM ESC_SYM NAV_KEY SFT_BSP &kp ENTER NONE    NONE      NONE
@@ -24,7 +25,7 @@ ZMK_LAYER(default_layer,
 ZMK_LAYER(num_layer,
     ___ &kp F1  &kp F2  &kp F3  &kp F4  &kp  F5  &kp F6  &kp N7 &kp N8 &kp N9  &kp COLON ___
     ___ &kp F7  &kp F8  &kp F9  &kp F10 &kp F11  &kp F12 &kp N4 &kp N5 &kp N6  &kp N0    &kp PLUS
-    ___ ___     ___     ___     ___     ___      ___     &kp N1 &kp N2 &kp N3  &kp SLASH &kp ENTER
+    &num_word ___     ___     ___     ___     ___      ___     &kp N1 &kp N2 &kp N3  &kp SLASH &kp ENTER
     ___ ___     ___     ___     ___     ___      ___     &kp N0 ___    &kp DOT ___       ___
 )
 
@@ -43,9 +44,9 @@ ZMK_LAYER(nav_layer,
 )
 
 ZMK_LAYER(ptr_layer,
-    ___ ___       ___      ___      ___       ___  ___     U_WH_L  U_WH_D  U_WH_U  U_WH_R ___
-    ___ &kp LCTRL &kp LALT &kp LCMD &kp LSHFT &kp F12      U_MS_B1 U_MS_L  U_MS_D  U_MS_U  U_MS_R ___
-    ___ ___       ___      ___      ___       ___  ___     U_MS_B1 U_MS_B2 ___     ___    ___
-    ___ ___       ___      ___      ___       ___  U_MS_B1 U_MS_B2 U_MS_B3 ___     ___    ___        
+    ___ EXIT      EXIT     EXIT     EXIT      EXIT         EXIT    U_WH_L  U_WH_D  U_WH_U  U_WH_R EXIT
+    ___ &kp LCTRL &kp LALT &kp LCMD &kp LSHFT &kp F12      U_MS_B1 U_MS_L  U_MS_D  U_MS_U  U_MS_R EXIT
+    ___ EXIT      EXIT     EXIT     EXIT      EXIT         EXIT    U_MS_B1 U_MS_B2 EXIT    EXIT   EXIT
+    ___ ___       ___      EXIT     EXIT      EXIT U_MS_B1 U_MS_B2 U_MS_B3 ___     ___    ___        
 )
 
