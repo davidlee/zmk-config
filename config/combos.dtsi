@@ -23,6 +23,5 @@ ZMK_COMBO(combo_meh_r,     &kp MEH,   RB4 RB3, ALL)
 
 ZMK_COMBO(combo_squot,     &kp SQT,   RM2 RM3, ALL)
 ZMK_COMBO(combo_minus,     &kp MINUS, LM2 LM3, ALL)
+ZMK_COMBO(combo_under,     &kp UNDER, LM1 LM2, ALL)
 ZMK_COMBO(combo_emdash,    EMDASH,    LM1 LM0, ALL)
-
-// ZMK_COMBO(combo_numword,   &numword,  RB1 RB2, ALL)

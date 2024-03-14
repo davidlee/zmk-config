@@ -13,8 +13,8 @@
 
 #include "matrix_keymap.h"
 
-ZMK_LAYER(default_layer, 
-    __BLANK_ROW__ 
+ZMK_LAYER(default_layer,     
+    LR_DEF_TOP // mostly so I can bang CMD-`
     LR_DEF_TOP 
     LR_DEF_MID 
     LR_DEF_LOW 
