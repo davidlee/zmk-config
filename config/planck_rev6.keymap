@@ -4,7 +4,7 @@
 // #include <dt-bindings/led/led.h>
 
 #include "../zmk-nodefree-config/helper.h"
-#include "preonic_keypos_def.h"
+#include "planck_keypos_def.h"
 
 #include "defines.h"
 #include "mouse.dtsi"
@@ -24,13 +24,6 @@ ZMK_LAYER(num_layer,
     LR_NUM_MID  
     LR_NUM_LOW  
     LR_NUM_BOT  
-)
-
-ZMK_LAYER(sym_layer,
-    LR_SYM_TOP  
-    LR_SYM_MID  
-    LR_SYM_LOW  
-    LR_SYM_BOT  
 )
 
 ZMK_LAYER(nav_layer,
