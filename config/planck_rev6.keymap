@@ -10,7 +10,7 @@
 #include "mouse.dtsi"
 #include "custom_behaviors.dtsi"
 #include "combos.dtsi"
-#include "matrix_keymap.h"
+#include "ortholinear_keymap.h"
 
 ZMK_LAYER(default_layer, 
     LR_DEF_TOP 
