@@ -51,3 +51,9 @@ ZMK_BEHAVIOR(magic_sft, tap_dance,
     tapping-term-ms = <QUICK_TAP_MS>;
     bindings = <&kp LSHFT>, <&caps_word>, <&kp CAPSLOCK>;
 )
+
+// macros
+ZMK_BEHAVIOR(fat_arrow, macro,
+    bindings = <&kp EQUAL &kp GT>;
+)
+

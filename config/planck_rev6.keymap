@@ -4,7 +4,7 @@
 // #include <dt-bindings/led/led.h>
 
 #include "../zmk-nodefree-config/helper.h"
-#include "../zmk-nodefree-config/keypos_def/keypos_48keys.h"
+#include "preonic_keypos_def.h"
 
 #include "defines.h"
 #include "mouse.dtsi"
