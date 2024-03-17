@@ -29,14 +29,6 @@ ZMK_LAYER(num_layer,
     LR_NUM_BOT  
 )
 
-ZMK_LAYER(sym_layer,
-    __BLANK_ROW__
-    LR_SYM_TOP  
-    LR_SYM_MID  
-    LR_SYM_LOW  
-    LR_SYM_BOT  
-)
-
 ZMK_LAYER(nav_layer,
     __BLANK_ROW__
     LR_NAV_TOP  

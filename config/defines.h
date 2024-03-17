@@ -3,9 +3,8 @@
 
 #define DEF 0  
 #define NUM 1
-#define SYM 2
-#define NAV 3
-#define PTR 4
+#define NAV 2
+#define PTR 3
 
 /* 
     key aliases 
@@ -20,7 +19,7 @@
 // L thumb
 #define CMD_TAB &mt LCMD TAB
 #define SPC_NUM &lt NUM SPACE
-#define ESC_SYM &lt  SYM ESC
+#define ESC_PTR &lt PTR ESC
 // R thumb
 #define NAV_KEY &mo NAV 
 #define SFT_BSP &th_ht LSHFT BSPC
@@ -31,8 +30,6 @@
 #define SQT_MEH &mt MEH SQT
 #define SFT_ENT &mt LSHFT ENTER
 
-// #define PTR_LCK &tog PTR
-
 
 // NAV
 #define ZOOM_IN  &kp LG(EQUAL)
@@ -40,6 +37,10 @@
 #define BACK     &kp LG(LBKT)
 #define FORWARD  &kp LG(RBKT)
 
+#define VOL_DN &kp C_VOL_DN
+#define VOL_UP &kp C_VOL_UP
+#define TRK_NEXT &kp C_NEXT
+#define TRK_PREV &kp C_PREV
 
 // home row mods
 #define HML_A &hml LCTRL A
@@ -56,12 +57,6 @@
 #define DICTATION &kp F21
 #define APPLE_FN  &kp F24
 
-/* 
-    behaviours 
-*/
-#define QUICK_TAP_MS 175
-#define TAPPING_TERM_MS 220
-#define PRIOR_IDLE_MS 150
 
 #undef COMBO_TERM 
 #define COMBO_TERM 15
@@ -73,5 +68,6 @@
 #define EXIT &to DEF
 
 // combos
-#define EMDASH &kp LS(LA(MINUS)) // handy, this comes out as _ in helix / kitty
+#define EMDASH &kp LS(LA(MINUS)) 
 #define BSWORD &kp LA(BSPC)
+#define ENT_MEH &mt MEH ENTER

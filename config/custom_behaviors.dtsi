@@ -1,3 +1,6 @@
+#define QUICK_TAP_MS 175
+#define TAPPING_TERM_MS 220
+#define PRIOR_IDLE_MS 150
 
 / {
     behaviors {
@@ -12,13 +15,7 @@
     };
 };
 
-// ZMK_BEHAVIOR(num_word, behaviour_num_word,
-//     // #binding-cells = <0>;
-//     label = "NUM_WORD";
-//     layers = <NUM>;                                // insert location of numbers layer here
-//     continue-list = <BACKSPACE DELETE DOT COMMA>;  // adjust as desired
-//     ignore-numbers;                                // numbers don't deactivate the layer
-// )
+// home row mods
 
 ZMK_BEHAVIOR(hml, hold_tap,
     flavor = "balanced";
@@ -40,19 +37,17 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     hold-trigger-on-release;
 )
 
+// thumbs 
+
 ZMK_BEHAVIOR(th_ht, hold_tap, 
     flavor = "balanced";
     tapping-term-ms = <160>;
     bindings = <&kp>, <&kp>;
 )
 
-ZMK_BEHAVIOR(semi_quote, tap_dance,
-    tapping-term-ms = <QUICK_TAP_MS>;
-    bindings = <&kp SEMI>,<&kp SQT>;
-)
+// tap dance 
 
 ZMK_BEHAVIOR(magic_sft, tap_dance,
     tapping-term-ms = <QUICK_TAP_MS>;
     bindings = <&kp LSHFT>, <&caps_word>, <&kp CAPSLOCK>;
 )
-   

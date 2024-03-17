@@ -1,10 +1,9 @@
   - [ ] RGB lights
-  - [ ] more combos
-  - [ ] figure out where MED goes
-
+  - [ ] more function keys?
+  
   - [ ] typing speed check
-  - [ ] tap term tuning? 
-  - [ ] PTR?
+  - [ ] PTR LOCK // conditional layers?
+  - [ ] update QMK config for parity on Lulu
   - [ ] leader key?
   - [ ] sound?
 

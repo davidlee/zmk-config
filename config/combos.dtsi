@@ -1,3 +1,7 @@
+// use require-prior-idle-ms for combos
+#undef COMBO_HOOK
+#define COMBO_HOOK require-prior-idle-ms = <20>;
+
 /*                                      48 KEY MATRIX / LAYOUT MAPPING - COMBOS
   ╭────────────────────────┬────────────────────────╮ ╭─────────────────────────┬─────────────────────────╮
   │  0   1   2   3   4   5 │  6   7   8   9  10  11 │ │ LT5 LT4 LT3 LT2 LT1 LT0 │ RT0 RT1 RT2 RT3 RT4 RT5 │
@@ -5,23 +9,34 @@
   │ 24  25  26  27  28  29 │ 30  31  32  33  34  35 │ │ LB5 LB4 LB3 LB2 LB1 LB0 │ RB0 RB1 RB2 RB3 RB4 RB5 │
   │ 36  37  38  39  40  41 │ 42  43  44  45  46  47 │ │ LH5 LH4 LH3 LH2 LH1 LH0 │ RH0 RH1 RH2 RH3 RH4 RH5 │
   ╰────────────────────────┴────────────────────────╯ ╰─────────────────────────┴─────────────────────────╯ */
-
-ZMK_COMBO(combo_ptr_lock,  &tog PTR,  RT2 RM1 RM3, ALL)
-
-ZMK_COMBO(combo_bs_word,   BSWORD,    RM1 RM2, ALL)
-ZMK_COMBO(combo_del,       &kp DEL,   RT3 RT4, ALL)
-ZMK_COMBO(combo_ent,       &kp ENTER, RM3 RM4, ALL)
-ZMK_COMBO(combo_esc,       &kp ESC,   LM3 LM4, ALL)
-
-ZMK_COMBO(combo_bracket_l, &kp LBKT,  LB3 LB2, ALL)
-ZMK_COMBO(combo_bracket_r, &kp RBKT,  LB2 LB1, ALL)
-ZMK_COMBO(combo_paren_l,   &kp LPAR,  LT3 LT2, ALL)
-ZMK_COMBO(combo_paren_r,   &kp RPAR,  LT2 LT1, ALL)
-
-ZMK_COMBO(combo_meh_l,     &kp MEH,   LB4 LB3, ALL)
-ZMK_COMBO(combo_meh_r,     &kp MEH,   RB4 RB3, ALL)
-
-ZMK_COMBO(combo_squot,     &kp SQT,   RM2 RM3, ALL)
+// LEFT HAND
+ZMK_COMBO(combo_esc,       ESC_MEH,   LM3 LM4, ALL)
 ZMK_COMBO(combo_minus,     &kp MINUS, LM2 LM3, ALL)
 ZMK_COMBO(combo_under,     &kp UNDER, LM1 LM2, ALL)
-ZMK_COMBO(combo_emdash,    EMDASH,    LM1 LM0, ALL)
+
+ZMK_COMBO(combo_capsword, &caps_word, LM4 LM1, ALL)
+ZMK_COMBO(combo_emdash,    EMDASH,    LB1 LB0, DEF)
+
+ZMK_COMBO(fat_arrow,       &kp F,     LT0 LT1, NUM)
+ZMK_COMBO(skinny_arrow,    &kp S,     LM0 LM0, NUM)
+ZMK_COMBO(left_arrow,      &kp L,     LB0 LB1, NUM)
+
+// RIGHT HAND
+ZMK_COMBO(combo_del_hr,    &kp DEL,   RM3 RM4 RH1, ALL) // ???
+
+ZMK_COMBO(combo_ptr_lock,  &tog PTR,  RT2 RM1 RM3, ALL)
+ZMK_COMBO(combo_pause,     &kp C_PP,  RT0 RT1, DEF)
+ZMK_COMBO(combo_vol_up,    VOL_UP,    RM1 RT2, ALL)
+ZMK_COMBO(combo_vol_dn,    VOL_DN,    RT2 RM3, ALL)
+ZMK_COMBO(combo_trk_prev,  TRK_PREV,  RM0 RT1, ALL)
+ZMK_COMBO(combo_trk_next,  TRK_NEXT,  RM4 RT3, ALL)
+
+ZMK_COMBO(combo_squot,     &kp SQT,   RM2 RM3, DEF)
+ZMK_COMBO(combo_bs_word,   BSWORD,    RM1 RM2, ALL)
+ZMK_COMBO(combo_del,       &kp DEL,   RT3 RT4, DEF)
+ZMK_COMBO(combo_ent,       ENT_MEH,   RM3 RM4, ALL)
+
+ZMK_COMBO(combo_paren_l,   &kp LPAR,  RH2 RT3, DEF)
+ZMK_COMBO(combo_paren_r,   &kp RPAR,  RH2 RT4, DEF)
+ZMK_COMBO(combo_lbkt,      &kp LBKT,  RB2 RB3, DEF)
+ZMK_COMBO(combo_rbkt,      &kp RBKT,  RB3 RB4, DEF)
