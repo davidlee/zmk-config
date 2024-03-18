@@ -1,9 +1,9 @@
 #define __BLANK_ROW__  ___  ___  ___  ___  ___  ___  ___  ___  ___  ___  ___  ___ 
 
-#define LR_DEF_TOP &kp Q  &kp W  &kp F   &kp P   &kp B   NONE  NONE &kp J   &kp L   &kp U     &kp Y   &kp SEMI
-#define LR_DEF_MID HML_A  HML_R  HML_S   HML_T   &kp G   NONE  NONE &kp M   HMR_N   HMR_E     HMR_I   HMR_O     
-#define LR_DEF_LOW &kp Z  &kp X  &kp C   &kp D   &kp V   NONE  NONE &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH 
-#define LR_DEF_BOT TO_CAN NONE CMD_TAB SPC_NUM ESC_PTR NONE  NONE NAV_KEY SFT_BSP &kp ENTER NONE    NONE   
+#define _DEF_TOP &kp Q  &kp W  &kp F   &kp P   &kp B   NONE  NONE &kp J   &kp L   &kp U     &kp Y   &kp SEMI
+#define _DEF_MID HML4_A HML3_R HML2_S  HML1_T  &kp G   NONE  NONE &kp M   HMR1_N  HMR2_E    HMR3_I  HMR4_O     
+#define _DEF_LOW &kp Z  &kp X  &kp C   &kp D   &kp V   NONE  NONE &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH 
+#define _DEF_BOT EXIT   TO_CAN CMD_TAB SPC_NUM ESC_PTR NONE  NONE NAV_KEY SFT_BSP &kp ENTER TO_NRP  TO_APT
 
 /* CANARY */
   
@@ -13,62 +13,81 @@
 
 
 // home row mods
-#define CANL_C &hml LCTRL C
-#define CANL_R &hml LALT  R
-#define CANL_S &hml LCMD  S
-#define CANL_T &hml LSHFT T
-#define CANR_N &hmr LSHFT N
-#define CANR_E &hmr LCMD  E
-#define CANR_I &hmr LALT  I
-#define CANR_A &hmr LCTRL A
+#define HML4_C &hml LCTRL C
+#define HML3_R &hml LALT  R
+#define HMR4_A &hmr LCTRL A
 
-#define LR_CAN_TOP &kp W  &kp L  &kp Y   &kp P   &kp B   NONE  NONE &kp Z   &kp F   &kp O     &kp U     &kp SQT
-#define LR_CAN_MID CANL_C CANL_R CANL_S  CANL_T  &kp G   NONE  NONE &kp M   CANR_N  CANR_E    CANR_I    CANR_A        
-#define LR_CAN_LOW &kp Q  &kp J  &kp V   &kp D   &kp K   NONE  NONE &kp X   &kp H   &kp SLASH &kp COMMA &kp DOT
-#define LR_CAN_BOT EXIT   NONE   CMD_TAB SPC_NUM ESC_PTR NONE  NONE NAV_KEY SFT_BSP &kp ENTER NONE      NONE
-
-#define LR_NUM_TOP &kp EXCL  &kp AT   &kp HASH  &kp UNDER &kp TILDE NONE  NONE &kp TILDE  &kp N7 &kp N8  &kp N9  &kp COLON 
-#define LR_NUM_MID &kp GRAVE &kp AMPS &kp STAR  &kp MINUS &kp EQUAL NONE  NONE &kp GT     &kp N4 &kp N5  &kp N6  &kp N0    
-#define LR_NUM_LOW &kp BSLH  &kp DLLR &kp PRCNT &kp CARET &kp LBKT  NONE  NONE &kp RBKT   &kp N1 &kp N2  &kp N3  &kp SLASH 
-#define LR_NUM_BOT ___      ___       &kp DOT   ___       ___       ___   ___  &kp DOT    ___    ___     ___     ___     
-
-#define LR_NAV_TOP &kp F1    &kp F2   &kp F3   &kp F4    &kp F5  NONE  NONE &kp F6   &kp HOME &kp PG_DN &kp PG_UP &kp END  
-#define LR_NAV_MID &kp LCTRL &kp LALT &kp LCMD &kp LSHFT NONE    NONE  NONE NONE     &kp LEFT &kp DOWN  &kp UP    &kp RIGHT
-#define LR_NAV_LOW &kp F7    &kp F8   &kp F9   &kp F10   &kp F11 NONE  NONE &kp F12  BACK      ZOOM_OUT ZOOM_IN   FORWARD  
-#define LR_NAV_BOT ___       ___      &kp TAB  &kp SPACE ___     NONE  NONE ___      APPLE_FN DICTATION ___       ___      
-
-#define LR_PTR_TOP EXIT      EXIT     EXIT     EXIT      EXIT         NONE  NONE EXIT    U_WH_L  U_WH_D  U_WH_U  U_WH_R 
-#define LR_PTR_MID &kp LCTRL &kp LALT &kp LCMD &kp LSHFT &kp F12      NONE  NONE U_MS_B1 U_MS_L  U_MS_D  U_MS_U  U_MS_R 
-#define LR_PTR_LOW EXIT      EXIT     EXIT     EXIT      EXIT         NONE  NONE EXIT    U_MS_B1 U_MS_B2 U_MS_B3 EXIT   
-#define LR_PTR_BOT ___       ___      EXIT     EXIT      EXIT U_MS_B1 NONE  NONE U_MS_B2 U_MS_B3 ___     ___    
-
-#define LR_BLANK_TOP ___ ___ ___ ___ ___ ___  ___ ___ ___ ___ ___ ___ 
-#define LR_BLANK_MID ___ ___ ___ ___ ___ ___  ___ ___ ___ ___ ___ ___ 
-#define LR_BLANK_LOW ___ ___ ___ ___ ___ ___  ___ ___ ___ ___ ___ ___ 
-#define LR_BLANK_BOT ___ ___ ___ ___ ___ ___  ___ ___ ___ ___ ___ ___ 
-
-// #define LR_DEF_TOP &kp GRAVE  &kp Q &kp W   &kp F   &kp P   &kp B   &kp J   &kp L   &kp U     &kp Y   &kp SEMI  NONE
-// #define LR_DEF_MID ESC_MEH    HML_A HML_R   HML_S   HML_T   &kp G   &kp M   HMR_N   HMR_E     HMR_I   HMR_O     &kp SQT
-// #define LR_DEF_LOW &magic_sft &kp Z &kp X   &kp C   &kp D   &kp V   &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH SFT_ENT
-// #define LR_DEF_BOT NONE       NONE  NONE    CMD_TAB SPC_NUM ESC_PTR NAV_KEY SFT_BSP &kp ENTER NONE    NONE      NONE
-
-// #define LR_NUM_TOP ___        &kp EXCL &kp AT   &kp HASH  &kp UNDER &kp GRAVE  &kp TILDE  &kp N7 &kp N8  &kp N9  &kp COLON ___
-// #define LR_NUM_MID &caps_word &kp DOT  &kp AMPS &kp STAR  &kp MINUS &kp EQUAL  &kp GT     &kp N4 &kp N5  &kp N6  &kp N0    &kp PLUS
-// #define LR_NUM_LOW &num_word  &kp BSLH &kp DLLR &kp PRCNT &kp CARET &kp LBKT   &kp RBKT   &kp N1 &kp N2  &kp N3  &kp SLASH &kp ENTER
-// #define LR_NUM_BOT ___        ___      ___      ___       ___       ___        &kp N0     ___    &kp DOT ___     ___       ___
-
-// #define LR_NAV_TOP ___ &kp F1    &kp F2   &kp F3   &kp F4    &kp F5  &kp F6   &kp HOME &kp PG_DN &kp PG_UP &kp END   ___ 
-// #define LR_NAV_MID ___ &kp LCTRL &kp LALT &kp LCMD &kp LSHFT NONE    NONE     &kp LEFT &kp DOWN  &kp UP    &kp RIGHT ___
-// #define LR_NAV_LOW ___ &kp F7    &kp F8   &kp F9   &kp F10   &kp F11 &kp F12  BACK      ZOOM_OUT ZOOM_IN   FORWARD   ___
-// #define LR_NAV_BOT ___ ___       ___      &kp TAB  &kp SPACE ___     ___      APPLE_FN DICTATION ___       ___       ___
-
-// #define LR_PTR_TOP ___ EXIT      EXIT     EXIT     EXIT      EXIT         EXIT    U_WH_L  U_WH_D  U_WH_U  U_WH_R EXIT
-// #define LR_PTR_MID ___ &kp LCTRL &kp LALT &kp LCMD &kp LSHFT &kp F12      U_MS_B1 U_MS_L  U_MS_D  U_MS_U  U_MS_R EXIT
-// #define LR_PTR_LOW ___ EXIT      EXIT     EXIT     EXIT      EXIT         EXIT    U_MS_B1 U_MS_B2 U_MS_B3 EXIT   EXIT
-// #define LR_PTR_BOT ___ ___       ___      EXIT     EXIT      EXIT U_MS_B1 U_MS_B2 U_MS_B3 ___     ___    ___        
+#define _CAN_TOP &kp W  &kp L  &kp Y   &kp P   &kp B   NONE  NONE &kp Z   &kp F   &kp O     &kp U     &kp SQT
+#define _CAN_MID HML4_C HML3_R HML2_S  HML1_T  &kp G   NONE  NONE &kp M   HMR1_N  HMR2_E    HMR3_I    HMR4_O     
+#define _CAN_LOW &kp Q  &kp J  &kp V   &kp D   &kp K   NONE  NONE &kp X   &kp H   &kp SLASH &kp COMMA &kp DOT
+#define _CAN_BOT EXIT   NONE   CMD_TAB SPC_NUM ESC_PTR NONE  NONE NAV_KEY SFT_BSP &kp ENTER NONE      NONE
 
 
-// #define LR_BLANK_TOP ___ ___ ___ ___ ___ ___  ___ ___ ___ ___ ___ ___ 
-// #define LR_BLANK_MID ___ ___ ___ ___ ___ ___  ___ ___ ___ ___ ___ ___ 
-// #define LR_BLANK_LOW ___ ___ ___ ___ ___ ___  ___ ___ ___ ___ ___ ___ 
-// #define LR_BLANK_BOT ___ ___ ___ ___ ___ ___  ___ ___ ___ ___ ___ ___ 
+/* APTv3 */
+
+// w g d f b  q l u o y
+// r s t h k  j n e a i ;
+// c m p v x  z , . ' /
+
+#define HML4_R &hml LCTRL R
+#define HML3_S &hml LALT  S
+#define HML2_T &hml LCMD  T
+#define HML1_H &hml LSHFT H
+
+#define HMR3_A &hmr LALT  A
+#define HMR4_I &hmr LCTRL I
+
+#define _APT_TOP &kp W  &kp G  &kp D   &kp F   &kp B   NONE  NONE &kp Q   &kp L     &kp U     &kp O   &kp Y
+#define _APT_MID HML4_R HML3_S HML2_T  HML1_H  &kp K   NONE  NONE &kp J   HMR1_N    HMR2_E    HMR3_A  HMR4_I
+#define _APT_LOW &kp C  &kp M  &kp P   &kp V   &kp X   NONE  NONE &kp Z   &kp COMMA &kp DOT   &kp SQT &kp SLASH  
+#define _APT_BOT EXIT   NONE   CMD_TAB SPC_NUM ESC_PTR NONE  NONE NAV_KEY SFT_BSP   &kp ENTER NONE    NONE
+
+
+/* NERPS
+
+x l d p v  z k o u ;
+n r t s g  y h e i a
+j m c w q  b f ' , .
+*/
+
+
+#define HML4_N &hml LCTRL N
+#define HML3_R &hml LALT  R 
+#define HML2_T &hml LCMD  T
+#define HML1_S &hml LSHFT S
+
+#define HMR1_H &hmr LSHFT H
+#define HMR2_E &hmr LCMD  E
+#define HMR3_I &hmr LALT  I
+#define HMR4_A &hmr LCTRL A
+
+#define _NRP_TOP &kp X  &kp L  &kp D   &kp P   &kp V   NONE  NONE &kp Z   &kp K   &kp O     &kp U     &kp SEMI    
+#define _NRP_MID HML4_N HML3_R HML2_T  HML1_S  &kp G   NONE  NONE &kp Y   HMR1_H  HMR2_E    HMR3_I    HMR4_A 
+#define _NRP_LOW &kp J  &kp M  &kp C   &kp W   &kp Q   NONE  NONE &kp B   &kp F   &kp SQT   &kp COMMA &kp DOT
+#define _NRP_BOT EXIT   NONE   CMD_TAB SPC_NUM ESC_PTR NONE  NONE NAV_KEY SFT_BSP &kp ENTER NONE      NONE
+
+/* NUM */
+
+#define _NUM_TOP &kp EXCL  &kp AT   &kp HASH  &kp UNDER &kp TILDE NONE  NONE &kp TILDE  &kp N7 &kp N8  &kp N9  &kp COLON 
+#define _NUM_MID &kp GRAVE &kp AMPS &kp STAR  &kp MINUS &kp EQUAL NONE  NONE &kp GT     &kp N4 &kp N5  &kp N6  &kp N0    
+#define _NUM_LOW &kp BSLH  &kp DLLR &kp PRCNT &kp CARET &kp LBKT  NONE  NONE &kp RBKT   &kp N1 &kp N2  &kp N3  &kp SLASH 
+#define _NUM_BOT ___      ___       &kp DOT   ___       ___       ___   ___  &kp DOT    ___    ___     ___     ___     
+
+/* NAV */
+
+#define _NAV_TOP &kp F1    &kp F2   &kp F3   &kp F4    &kp F5  NONE  NONE &kp F6   &kp HOME &kp PG_DN &kp PG_UP &kp END  
+#define _NAV_MID &kp LCTRL &kp LALT &kp LCMD &kp LSHFT NONE    NONE  NONE NONE     &kp LEFT &kp DOWN  &kp UP    &kp RIGHT
+#define _NAV_LOW &kp F7    &kp F8   &kp F9   &kp F10   &kp F11 NONE  NONE &kp F12  BACK      ZOOM_OUT ZOOM_IN   FORWARD  
+#define _NAV_BOT ___       ___      &kp TAB  &kp SPACE ___     NONE  NONE ___      APPLE_FN DICTATION ___       ___      
+
+/* PTR */
+
+#define _PTR_TOP EXIT      EXIT     EXIT     EXIT      EXIT         NONE  NONE EXIT    U_WH_L  U_WH_D  U_WH_U  U_WH_R 
+#define _PTR_MID &kp LCTRL &kp LALT &kp LCMD &kp LSHFT &kp F12      NONE  NONE U_MS_B1 U_MS_L  U_MS_D  U_MS_U  U_MS_R 
+#define _PTR_LOW EXIT      EXIT     EXIT     EXIT      EXIT         NONE  NONE EXIT    U_MS_B1 U_MS_B2 U_MS_B3 EXIT   
+#define _PTR_BOT ___       ___      EXIT     EXIT      EXIT U_MS_B1 NONE  NONE U_MS_B2 U_MS_B3 ___     ___    
+
+// #define _BLANK_TOP ___ ___ ___ ___ ___ ___  ___ ___ ___ ___ ___ ___ 
+// #define _BLANK_MID ___ ___ ___ ___ ___ ___  ___ ___ ___ ___ ___ ___ 
+// #define _BLANK_LOW ___ ___ ___ ___ ___ ___  ___ ___ ___ ___ ___ ___ 
+// #define _BLANK_BOT ___ ___ ___ ___ ___ ___  ___ ___ ___ ___ ___ ___ 
