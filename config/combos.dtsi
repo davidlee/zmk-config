@@ -1,9 +1,9 @@
-// use require-prior-idle-ms for combos
 #undef COMBO_HOOK
 #define COMBO_HOOK require-prior-idle-ms = <20>;
+
 #define FAT_ARROW &kp EQUAL &kp GT
 
-/*           
+ /*           
  ╭─────────────────────┬─────────────────────╮
  │ LT4 LT3 LT2 LT1 LT0 │ RT0 RT1 RT2 RT3 RT4 │
  │ LM4 LM3 LM2 LM1 LM0 │ RM0 RM1 RM2 RM3 RM4 │
@@ -19,32 +19,32 @@ ZMK_COMBO(combo_under,     &kp UNDER, LM1 LM2, ALL)
 ZMK_COMBO(combo_capsword, &caps_word, LM4 LM1, ALL)
 ZMK_COMBO(combo_numword,   &num_word, LM4 LH1, ALL)
 
-ZMK_COMBO(combo_emdash,    EMDASH,     LB1 LB0, DEF)
-ZMK_COMBO(fat_arrow,       &fat_arrow, LM1 LM0, DEF)
+ZMK_COMBO(combo_emdash,    EMDASH,     LB1 LB0, DEF CAN)
+ZMK_COMBO(fat_arrow,       &fat_arrow, LM1 LM0, DEF CAN)
 
 // RIGHT HAND
-ZMK_COMBO(combo_del_hr,    &kp DEL,   RM3 RM4 RH1, ALL) // ???
 
 ZMK_COMBO(combo_ptr_lock,  &tog PTR,  RT2 RM1 RM3, ALL)
-ZMK_COMBO(combo_pause,     &kp C_PP,  RT0 RT1, DEF)
+ZMK_COMBO(combo_pause,     &kp C_PP,  RT0 RT1, DEF CAN)
 ZMK_COMBO(combo_vol_up,    VOL_UP,    RM1 RT2, ALL)
 ZMK_COMBO(combo_vol_dn,    VOL_DN,    RT2 RM3, ALL)
 ZMK_COMBO(combo_trk_prev,  TRK_PREV,  RM0 RT1, ALL)
 ZMK_COMBO(combo_trk_next,  TRK_NEXT,  RM4 RT3, ALL)
 
-ZMK_COMBO(combo_squot,     &kp SQT,   RM2 RM3, DEF)
+ZMK_COMBO(combo_squot,     &kp SQT,   RM2 RM3, DEF) // COLEMAK
+ZMK_COMBO(combo_semi,      &kp SEMI,  RM2 RM3, CAN) // CANARY
+
+ZMK_COMBO(combo_del,       &kp DEL,   RT3 RT4, ALL)
 ZMK_COMBO(combo_bs_word,   BSWORD,    RM1 RM2, ALL)
-ZMK_COMBO(combo_del,       &kp DEL,   RT3 RT4, DEF)
 ZMK_COMBO(combo_ent,       ENT_MEH,   RM3 RM4, ALL)
 
-ZMK_COMBO(combo_paren_l,   &kp LPAR,  LT2 LT1, DEF)
-ZMK_COMBO(combo_paren_r,   &kp RPAR,  LT1 LT0, DEF)
+ZMK_COMBO(combo_paren_l,   &kp LPAR,  LT2 LT1, DEF CAN)
+ZMK_COMBO(combo_paren_r,   &kp RPAR,  LT1 LT0, DEF CAN)
 
-ZMK_COMBO(combo_lbkt,      &kp LBKT,  RB2 RB3, DEF)
-ZMK_COMBO(combo_rbkt,      &kp RBKT,  RB3 RB4, DEF)
+ZMK_COMBO(combo_lbkt,      &kp LBKT,  RB2 RB3, DEF CAN)
+ZMK_COMBO(combo_rbkt,      &kp RBKT,  RB3 RB4, DEF CAN)
 
 // BOTH HANDS
 
 
-// ZMK_COMBO(skinny_arrow,    &kp MINUS &kp GT,  LM2 RB3, DEF, 50)
-// ZMK_COMBO(left_arrow,      &kp LT &kp MINUS,  LM2 RB2, DEF, 50)
+

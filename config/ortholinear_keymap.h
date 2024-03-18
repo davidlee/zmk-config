@@ -1,11 +1,33 @@
 #define __BLANK_ROW__  ___  ___  ___  ___  ___  ___  ___  ___  ___  ___  ___  ___ 
 
-#define LR_DEF_TOP &kp Q &kp W   &kp F   &kp P   &kp B   NONE  NONE &kp J   &kp L   &kp U     &kp Y   &kp SEMI
-#define LR_DEF_MID HML_A HML_R   HML_S   HML_T   &kp G   NONE  NONE &kp M   HMR_N   HMR_E     HMR_I   HMR_O     
-#define LR_DEF_LOW &kp Z &kp X   &kp C   &kp D   &kp V   NONE  NONE &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH 
-#define LR_DEF_BOT NONE  NONE    CMD_TAB SPC_NUM ESC_PTR NONE  NONE NAV_KEY SFT_BSP &kp ENTER NONE    NONE   
+#define LR_DEF_TOP &kp Q  &kp W  &kp F   &kp P   &kp B   NONE  NONE &kp J   &kp L   &kp U     &kp Y   &kp SEMI
+#define LR_DEF_MID HML_A  HML_R  HML_S   HML_T   &kp G   NONE  NONE &kp M   HMR_N   HMR_E     HMR_I   HMR_O     
+#define LR_DEF_LOW &kp Z  &kp X  &kp C   &kp D   &kp V   NONE  NONE &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH 
+#define LR_DEF_BOT TO_CAN NONE CMD_TAB SPC_NUM ESC_PTR NONE  NONE NAV_KEY SFT_BSP &kp ENTER NONE    NONE   
 
-#define LR_NUM_TOP &kp EXCL  &kp AT   &kp HASH  &kp UNDER &kp GRAVE NONE  NONE &kp TILDE  &kp N7 &kp N8  &kp N9  &kp COLON 
+/* CANARY */
+  
+// w l y p b z f o u '
+// c r s t g m n e i a
+// q j v d k x h / , .
+
+
+// home row mods
+#define CANL_C &hml LCTRL C
+#define CANL_R &hml LALT  R
+#define CANL_S &hml LCMD  S
+#define CANL_T &hml LSHFT T
+#define CANR_N &hmr LSHFT N
+#define CANR_E &hmr LCMD  E
+#define CANR_I &hmr LALT  I
+#define CANR_A &hmr LCTRL A
+
+#define LR_CAN_TOP &kp W  &kp L  &kp Y   &kp P   &kp B   NONE  NONE &kp Z   &kp F   &kp O     &kp U     &kp SQT
+#define LR_CAN_MID CANL_C CANL_R CANL_S  CANL_T  &kp G   NONE  NONE &kp M   CANR_N  CANR_E    CANR_I    CANR_A        
+#define LR_CAN_LOW &kp Q  &kp J  &kp V   &kp D   &kp K   NONE  NONE &kp X   &kp H   &kp SLASH &kp COMMA &kp DOT
+#define LR_CAN_BOT EXIT   NONE   CMD_TAB SPC_NUM ESC_PTR NONE  NONE NAV_KEY SFT_BSP &kp ENTER NONE      NONE
+
+#define LR_NUM_TOP &kp EXCL  &kp AT   &kp HASH  &kp UNDER &kp TILDE NONE  NONE &kp TILDE  &kp N7 &kp N8  &kp N9  &kp COLON 
 #define LR_NUM_MID &kp GRAVE &kp AMPS &kp STAR  &kp MINUS &kp EQUAL NONE  NONE &kp GT     &kp N4 &kp N5  &kp N6  &kp N0    
 #define LR_NUM_LOW &kp BSLH  &kp DLLR &kp PRCNT &kp CARET &kp LBKT  NONE  NONE &kp RBKT   &kp N1 &kp N2  &kp N3  &kp SLASH 
 #define LR_NUM_BOT ___      ___       &kp DOT   ___       ___       ___   ___  &kp DOT    ___    ___     ___     ___     

@@ -21,6 +21,14 @@ ZMK_LAYER(default_layer,
     LR_DEF_BOT
 )
 
+ZMK_LAYER(can_layer,
+    LR_CAN_TOP  
+    LR_CAN_TOP  
+    LR_CAN_MID  
+    LR_CAN_LOW  
+    LR_CAN_BOT  
+)
+
 ZMK_LAYER(num_layer,
     __BLANK_ROW__
     LR_NUM_TOP  

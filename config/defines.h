@@ -2,9 +2,10 @@
 /* layer IDs */ 
 
 #define DEF 0  
-#define NUM 1
-#define NAV 2
-#define PTR 3
+#define CAN 1  
+#define NUM 2
+#define NAV 3
+#define PTR 4
 
 /* 
     key aliases 
@@ -30,8 +31,7 @@
 #define SQT_MEH &mt MEH SQT
 #define SFT_ENT &mt LSHFT ENTER
 
-
-// NAV
+ // NAV
 #define ZOOM_IN  &kp LG(EQUAL)
 #define ZOOM_OUT &kp LG(MINUS)
 #define BACK     &kp LG(LBKT)
@@ -57,6 +57,7 @@
 #define DICTATION &kp F21
 #define APPLE_FN  &kp F24
 
+#define TO_CAN &to CAN
 
 #undef COMBO_TERM 
 #define COMBO_TERM 15
