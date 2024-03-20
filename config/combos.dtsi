@@ -31,8 +31,7 @@ ZMK_COMBO(combo_vol_dn,    VOL_DN,    RT2 RM3, ALL)
 ZMK_COMBO(combo_trk_prev,  TRK_PREV,  RM0 RT1, ALL)
 ZMK_COMBO(combo_trk_next,  TRK_NEXT,  RM4 RT3, ALL)
 
-ZMK_COMBO(combo_squot,     &kp SQT,   RM2 RM3, DEF) // COLEMAK
-ZMK_COMBO(combo_semi,      &kp SEMI,  RM2 RM3, CAN) // CANARY
+ZMK_COMBO(combo_semi,      &kp SEMI,  RM2 RM3, DEF CAN)
 
 ZMK_COMBO(combo_del,       &kp DEL,   RT3 RT4, ALL)
 ZMK_COMBO(combo_bs_word,   BSWORD,    RM1 RM2, ALL)
