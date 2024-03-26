@@ -1,12 +1,10 @@
-
 /* layer IDs */ 
 
 #define DEF 0  
-#define CAN 1  
-#define GAL 2  
-#define NUM 3
-#define NAV 4
-#define PTR 5
+#define GAL 1  
+#define NUM 2
+#define NAV 3
+#define PTR 4
 /* 
     key aliases 
 */
@@ -16,7 +14,6 @@
    
 // layers
 #define EXIT &to DEF
-#define TO_CAN &to CAN
 #define TO_GAL &to GAL
 
 // for application shortcuts in Raycast
@@ -47,7 +44,7 @@
 #define TRK_NEXT &kp C_NEXT
 #define TRK_PREV &kp C_PREV
 
-// home row mods
+// home row mods - Colemak-DH
 #define HML4_A &hml LCTRL A
 #define HML3_R &hml LALT  R
 #define HML2_S &hml LCMD  S
@@ -58,10 +55,22 @@
 #define HMR3_I &hmr LALT  I
 #define HMR4_O &hmr LCTRL O
 
+// home row mods - Gallium
+
+#define HML4_N &hml LCTRL N
+#define HML3_R &hml LALT  R 
+#define HML2_T &hml LCMD  T
+#define HML1_S &hml LSHFT S
+
+
+#define HMR1_H &hmr LSHFT H
+#define HMR2_A &hmr LCMD  A
+#define HMR3_E &hmr LALT  E
+#define HMR4_I &hmr LCTRL I
+
 /* karabiner tokens */
 #define DICTATION &kp F21
 #define APPLE_FN  &kp F24
-
 
 #undef COMBO_TERM 
 #define COMBO_TERM 15

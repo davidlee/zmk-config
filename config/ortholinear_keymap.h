@@ -1,26 +1,11 @@
-#define __BLANK_ROW__  ___  ___  ___  ___  ___  ___  ___  ___  ___  ___  ___  ___ 
+#define _BLANK ___ ___ ___ ___ ___ ___  ___ ___ ___ ___ ___ ___ 
+
+// default layer - Colemak-DH
 
 #define _DEF_TOP &kp Q  &kp W  &kp F   &kp P   &kp B   NONE  NONE &kp J   &kp L   &kp U     &kp Y   &kp SQT
 #define _DEF_MID HML4_A HML3_R HML2_S  HML1_T  &kp G   NONE  NONE &kp M   HMR1_N  HMR2_E    HMR3_I  HMR4_O     
 #define _DEF_LOW &kp Z  &kp X  &kp C   &kp D   &kp V   NONE  NONE &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH 
-#define _DEF_BOT EXIT   TO_CAN CMD_TAB SPC_NUM ESC_PTR NONE  NONE NAV_KEY SFT_BSP &kp ENTER TO_GAL  TO_GAL
-
-/* CANARY 
-  
-W L Y P B   Z F O U '
-C R S T G   M N E I A
-Q J V D K   X H / , .
-
-*/
-
-// home row mods
-#define HML4_C &hml LCTRL C
-#define HML3_R &hml LALT  R
-#define HMR4_A &hmr LCTRL A
-
-#define _CAN_TOP &kp W  &kp L  &kp Y   &kp P   &kp B   NONE  NONE &kp Z   &kp F   &kp O     &kp U     &kp SQT
-#define _CAN_MID HML4_C HML3_R HML2_S  HML1_T  &kp G   NONE  NONE &kp M   HMR1_N  HMR2_E    HMR3_I    HMR4_A   
-#define _CAN_LOW &kp Q  &kp J  &kp V   &kp D   &kp K   NONE  NONE &kp X   &kp H   &kp SLASH &kp COMMA &kp DOT
+#define _DEF_BOT EXIT   TO_GAL CMD_TAB SPC_NUM ESC_PTR NONE  NONE NAV_KEY SFT_BSP &kp ENTER TO_GAL  TO_GAL
 
 /* GALLIUM 
 
@@ -29,18 +14,6 @@ N R T S G   P H A E I
 Q X M W J   K F ' ; .
 
 */
-
-
-#define HML4_N &hml LCTRL N
-#define HML3_R &hml LALT  R 
-#define HML2_T &hml LCMD  T
-#define HML1_S &hml LSHFT S
-
-
-#define HMR1_H &hmr LSHFT H
-#define HMR2_A &hmr LCMD  A
-#define HMR3_E &hmr LALT  E
-#define HMR4_I &hmr LCTRL I
 
 #define _GAL_TOP &kp B  &kp L  &kp D   &kp C   &kp V   NONE  NONE &kp Z   &kp Y  &kp O   &kp U    &kp COMMA
 #define _GAL_MID HML4_N HML3_R HML2_T  HML1_S  &kp G   NONE  NONE &kp P   HMR1_H HMR2_A  HMR3_E   HMR4_I   
@@ -66,8 +39,3 @@ Q X M W J   K F ' ; .
 #define _PTR_MID &kp LCTRL &kp LALT &kp LCMD &kp LSHFT &kp F12      NONE  NONE U_MS_B1 U_MS_L  U_MS_D  U_MS_U  U_MS_R 
 #define _PTR_LOW EXIT      EXIT     EXIT     EXIT      EXIT         NONE  NONE EXIT    U_MS_B1 U_MS_B2 U_MS_B3 EXIT   
 #define _PTR_BOT ___       ___      EXIT     EXIT      EXIT U_MS_B1 NONE  NONE U_MS_B2 U_MS_B3 ___     ___    
-
-// #define _BLANK_TOP ___ ___ ___ ___ ___ ___  ___ ___ ___ ___ ___ ___ 
-// #define _BLANK_MID ___ ___ ___ ___ ___ ___  ___ ___ ___ ___ ___ ___ 
-// #define _BLANK_LOW ___ ___ ___ ___ ___ ___  ___ ___ ___ ___ ___ ___ 
-// #define _BLANK_BOT ___ ___ ___ ___ ___ ___  ___ ___ ___ ___ ___ ___ 

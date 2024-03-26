@@ -1,44 +1,31 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
-// #include <dt-bindings/led/led.h>
 
 #include "../zmk-nodefree-config/helper.h"
-#include "planck_keypos_def.h"
 
+#include "planck_keypos_def.h"
 #include "defines.h"
 #include "mouse.dtsi"
 #include "custom_behaviors.dtsi"
 #include "combos.dtsi"
+
 #include "ortholinear_keymap.h"
 
-ZMK_LAYER(default_layer, 
+ZMK_LAYER(def_layer,     
     _DEF_TOP 
     _DEF_MID 
     _DEF_LOW 
     _DEF_BOT
 )
 
-ZMK_LAYER(can_layer,
-    _CAN_TOP  
-    _CAN_MID  
-    _CAN_LOW  
-    _CAN_BOT  
+ZMK_LAYER(gal_layer,
+    _GAL_TOP  
+    _GAL_MID  
+    _GAL_LOW  
+    _DEF_BOT
 )
 
-ZMK_LAYER(apt_layer,
-    _APT_TOP  
-    _APT_MID  
-    _APT_LOW  
-    _APT_BOT  
-)
-
-ZMK_LAYER(nrp_layer,
-    _NRP_TOP  
-    _NRP_MID  
-    _NRP_LOW  
-    _NRP_BOT  
-)
 ZMK_LAYER(num_layer,
     _NUM_TOP  
     _NUM_MID  
@@ -53,10 +40,10 @@ ZMK_LAYER(nav_layer,
     _NAV_BOT  
 )
 
-
 ZMK_LAYER(ptr_layer,
     _PTR_TOP  
     _PTR_MID  
     _PTR_LOW  
     _PTR_BOT  
 )
+
