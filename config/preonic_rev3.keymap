@@ -14,7 +14,7 @@
 #include "ortholinear_keymap.h"
 
 ZMK_LAYER(def_layer,     
-    _DEF_TOP // mostly so I can bang CMD-`
+    _DEF_TOP 
     _DEF_TOP 
     _DEF_MID 
     _DEF_LOW 
@@ -29,29 +29,13 @@ ZMK_LAYER(can_layer,
     _DEF_BOT
 )
 
-ZMK_LAYER(std_layer,
-    _STD_TOP  
-    _STD_TOP  
-    _STD_MID  
-    _STD_LOW  
+ZMK_LAYER(gal_layer,
+    _GAL_TOP  
+    _GAL_TOP  
+    _GAL_MID  
+    _GAL_LOW  
     _DEF_BOT
 )
-
-// ZMK_LAYER(apt_layer,
-//     _APT_TOP  
-//     _APT_TOP  
-//     _APT_MID  
-//     _APT_LOW  
-//     _DEF_BOT
-// )
-
-// ZMK_LAYER(nrp_layer,
-//     _NRP_TOP  
-//     _NRP_TOP  
-//     _NRP_MID  
-//     _NRP_LOW  
-//     _DEF_BOT  
-// )
 
 ZMK_LAYER(num_layer,
     __BLANK_ROW__

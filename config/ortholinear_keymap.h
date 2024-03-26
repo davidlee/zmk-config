@@ -3,14 +3,15 @@
 #define _DEF_TOP &kp Q  &kp W  &kp F   &kp P   &kp B   NONE  NONE &kp J   &kp L   &kp U     &kp Y   &kp SQT
 #define _DEF_MID HML4_A HML3_R HML2_S  HML1_T  &kp G   NONE  NONE &kp M   HMR1_N  HMR2_E    HMR3_I  HMR4_O     
 #define _DEF_LOW &kp Z  &kp X  &kp C   &kp D   &kp V   NONE  NONE &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH 
-#define _DEF_BOT EXIT   TO_CAN CMD_TAB SPC_NUM ESC_PTR NONE  NONE NAV_KEY SFT_BSP &kp ENTER TO_STD  TO_STD
+#define _DEF_BOT EXIT   TO_CAN CMD_TAB SPC_NUM ESC_PTR NONE  NONE NAV_KEY SFT_BSP &kp ENTER TO_GAL  TO_GAL
 
-/* CANARY */
+/* CANARY 
   
-// w l y p b z f o u '
-// c r s t g m n e i a
-// q j v d k x h / , .
+W L Y P B   Z F O U '
+C R S T G   M N E I A
+Q J V D K   X H / , .
 
+*/
 
 // home row mods
 #define HML4_C &hml LCTRL C
@@ -21,69 +22,28 @@
 #define _CAN_MID HML4_C HML3_R HML2_S  HML1_T  &kp G   NONE  NONE &kp M   HMR1_N  HMR2_E    HMR3_I    HMR4_A   
 #define _CAN_LOW &kp Q  &kp J  &kp V   &kp D   &kp K   NONE  NONE &kp X   &kp H   &kp SLASH &kp COMMA &kp DOT
 
+/* GALLIUM 
 
-/* APTv3 */
-
-// w g d f b  q l u o y
-// r s t h k  j n e a i ;
-// c m p v x  z , . ' /
-
-// #define HML4_R &hml LCTRL R
-// #define HML3_S &hml LALT  S
-// #define HML2_T &hml LCMD  T
-// #define HML1_H &hml LSHFT H
-
-// #define HMR3_A &hmr LALT  A
-// #define HMR4_I &hmr LCTRL I
-
-// #define _APT_TOP &kp W  &kp G  &kp D   &kp F   &kp B   NONE  NONE &kp Q   &kp L     &kp U     &kp O   &kp Y
-// #define _APT_MID HML4_R HML3_S HML2_T  HML1_H  &kp K   NONE  NONE &kp J   HMR1_N    HMR2_E    HMR3_A  HMR4_I
-// #define _APT_LOW &kp C  &kp M  &kp P   &kp V   &kp X   NONE  NONE &kp Z   &kp COMMA &kp DOT   &kp SQT &kp SLASH  
-
-
-/* NERPS
-
-x l d p v  z k o u ;
-n r t s g  y h e i a
-j m c w q  b f ' , .
-*/
-
-
-// #define HML4_N &hml LCTRL N
-// #define HML3_R &hml LALT  R 
-// #define HML2_T &hml LCMD  T
-// #define HML1_S &hml LSHFT S
-
-// #define HMR1_H &hmr LSHFT H
-// #define HMR2_E &hmr LCMD  E
-// #define HMR3_I &hmr LALT  I
-// #define HMR4_A &hmr LCTRL A
-
-// #define _NRP_TOP &kp X  &kp L  &kp D   &kp P   &kp V   NONE  NONE &kp Z   &kp K   &kp O     &kp U     &kp SEMI    
-// #define _NRP_MID HML4_N HML3_R HML2_T  HML1_S  &kp G   NONE  NONE &kp Y   HMR1_H  HMR2_E    HMR3_I    HMR4_A 
-// #define _NRP_LOW &kp J  &kp M  &kp C   &kp W   &kp Q   NONE  NONE &kp B   &kp F   &kp SQT   &kp COMMA &kp DOT
-
-/* STURDY 
-
-v m l c p  x f o u j 
-s t r d y  . n a e i 
-z k q g w  b h ' ; ,
+B L D C V   Z Y O U ,
+N R T S G   P H A E I
+Q X M W J   K F ' ; .
 
 */
 
-#define HML4_S &hml LCTRL S
-#define HML3_T &hml LALT  T 
-#define HML2_R &hml LCMD  R
-#define HML1_D &hml LSHFT D
 
-// #define HML1_N &hmr LSHFT N
+#define HML4_N &hml LCTRL N
+#define HML3_R &hml LALT  R 
+#define HML2_S &hml LCMD  S
+#define HML1_T &hml LSHFT T
+
+#define HMR1_H &hmr LSHFT H
 #define HMR2_A &hmr LCMD  A
 #define HMR3_E &hmr LALT  E
 #define HMR4_I &hmr LCTRL I
 
-#define _STD_TOP &kp V   &kp M   &kp L   &kp C   &kp P  NONE NONE  &kp X   &kp F   &kp O   &kp U   &kp J
-#define _STD_MID HML4_S  HML3_T  HML2_R  HML1_D  &kp Y  NONE NONE  &kp DOT HMR1_N  HMR2_A  HMR3_E  HMR4_I  
-#define _STD_LOW &kp Z   &kp K   &kp Q   &kp G   &kp W  NONE NONE  &kp B   &kp H   &kp SQT &kp SEMI &kp COMMA
+#define _GAL_TOP &kp B  &kp L  &kp D   &kp C   &kp V   NONE  NONE &kp Z   &kp Y  &kp O   &kp U    &kp COMMA
+#define _GAL_MID HML4_N HML3_R HML2_S  HML1_T  &kp G   NONE  NONE &kp P   HMR1_H HMR2_A  HMR3_E   HMR4_I   
+#define _GAL_LOW &kp Q  &kp X  &kp M   &kp W   &kp J   NONE  NONE &kp K   &kp F  &kp SQT &kp SEMI &kp DOT
 
 /* NUM */
 
