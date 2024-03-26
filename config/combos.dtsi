@@ -12,25 +12,39 @@
  ╰─────────────────────┴─────────────────────╯ */
 
 // LEFT HAND
-ZMK_COMBO(combo_esc,       ESC_MEH,   LM3 LM4, ALL)
-ZMK_COMBO(combo_minus,     &kp MINUS, LM2 LM3, ALL)
-ZMK_COMBO(combo_under,     &kp UNDER, LM1 LM2, ALL)
+ZMK_COMBO(combo_esc,       ESC_MEH,   LM4 LM3, ALL)
+ZMK_COMBO(combo_minus,     &kp MINUS, LM3 LM2, ALL)
+ZMK_COMBO(combo_under,     &kp UNDER, LM2 LM1, ALL)
 
 ZMK_COMBO(combo_capsword, &caps_word, LM4 LM1, ALL)
 ZMK_COMBO(combo_numword,   &num_word, LM4 LH1, ALL)
 
-ZMK_COMBO(combo_emdash,    EMDASH,     LB1 LB0, DEF GAL)
-ZMK_COMBO(fat_arrow,       &fat_arrow, LM1 LM0, DEF GAL)
+ZMK_COMBO(combo_emdash,    EMDASH,     LM1 LM0, DEF GAL)
+// ZMK_COMBO(fat_arrow,       &fat_arrow, LM1 LM0, DEF GAL)
+
+ZMK_COMBO(combo_paren_l,   &kp LPAR,  LT3 LT2, ALL)
+ZMK_COMBO(combo_paren_r,   &kp RPAR,  LT2 LT1, ALL)
+
+ZMK_COMBO(combo_lt,        &kp LT,    LT4 LT3, ALL)
+ZMK_COMBO(combo_gt,        &kp GT,    LT1 LT0, ALL)
+
+ZMK_COMBO(combo_lbkt,      &kp LBKT,  LB3 LB2, ALL)
+ZMK_COMBO(combo_rbkt,      &kp RBKT,  LB2 LB1, ALL)
+
+ZMK_COMBO(combo_brace_l,   &kp LBRC,  LB4 LB3, ALL)
+ZMK_COMBO(combo_brace_r,   &kp RBRC,  LB1 LB0, ALL)
 
 // RIGHT HAND
 
 ZMK_COMBO(combo_ptr_lock,  &tog PTR,  RT2 RM1 RM3, ALL)
-ZMK_COMBO(combo_pause,     &kp C_PP,  RT0 RT1, DEF GAL)
+ZMK_COMBO(combo_pause,     &kp C_PP,  RT0 RT1, ALL)
 ZMK_COMBO(combo_vol_up,    VOL_UP,    RM1 RT2, ALL)
 ZMK_COMBO(combo_vol_dn,    VOL_DN,    RT2 RM3, ALL)
 ZMK_COMBO(combo_trk_prev,  TRK_PREV,  RM0 RT1, ALL)
 ZMK_COMBO(combo_trk_next,  TRK_NEXT,  RM4 RT3, ALL)
 
+// these fill in missing base layer punctuation
+// and so are dependent on which layout is in use
 ZMK_COMBO(combo_semi,      &kp SEMI,  RM2 RM3, DEF)
 ZMK_COMBO(combo_slash,     &kp SLASH, RM2 RM3, GAL)
 
@@ -38,13 +52,8 @@ ZMK_COMBO(combo_del,       &kp DEL,   RT3 RT4, ALL)
 ZMK_COMBO(combo_bs_word,   BSWORD,    RM1 RM2, ALL)
 ZMK_COMBO(combo_ent,       ENT_MEH,   RM3 RM4, ALL)
 
-ZMK_COMBO(combo_paren_l,   &kp LPAR,  LT2 LT1, DEF GAL)
-ZMK_COMBO(combo_paren_r,   &kp RPAR,  LT1 LT0, DEF GAL)
 
-ZMK_COMBO(combo_lbkt,      &kp LBKT,  RB2 RB3, DEF GAL)
-ZMK_COMBO(combo_rbkt,      &kp RBKT,  RB3 RB4, DEF GAL)
+ZMK_COMBO(combo_lbkt_r,    &kp LBKT,  RB2 RB3, ALL)
+ZMK_COMBO(combo_rbkt_r,    &kp RBKT,  RB3 RB4, ALL)
 
 // BOTH HANDS
-
-
-

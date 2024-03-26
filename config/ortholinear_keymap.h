@@ -21,10 +21,10 @@ Q X M W J   K F ' ; .
 
 /* NUM */
 
-#define _NUM_TOP &kp EXCL  &kp AT   &kp HASH  &kp UNDER &kp TILDE NONE  NONE &kp TILDE  &kp N7 &kp N8  &kp N9  &kp COLON 
-#define _NUM_MID &kp GRAVE &kp AMPS &kp STAR  &kp MINUS &kp EQUAL NONE  NONE &kp GT     &kp N4 &kp N5  &kp N6  &kp N0    
-#define _NUM_LOW &kp BSLH  &kp DLLR &kp PRCNT &kp CARET &kp LBKT  NONE  NONE &kp RBKT   &kp N1 &kp N2  &kp N3  &kp SLASH 
-#define _NUM_BOT ___      ___       &kp DOT   ___       ___       ___   ___  &kp DOT    ___    ___     ___     ___     
+#define _NUM_TOP &kp EXCL  &kp AT   &kp HASH  &kp UNDER &kp TILDE NONE  NONE &kp PIPE &kp N7 &kp N8  &kp N9  &kp COLON 
+#define _NUM_MID &kp GRAVE &kp AMPS &kp STAR  &kp MINUS &kp EQUAL NONE  NONE &kp GT   &kp N4 &kp N5  &kp N6  &kp N0    
+#define _NUM_LOW &kp BSLH  &kp DLLR &kp PRCNT &kp CARET &kp LBKT  NONE  NONE &kp RBKT &kp N1 &kp N2  &kp N3  &kp SLASH 
+#define _NUM_BOT ___      ___       &kp DOT   ___       ___       ___   ___  &kp DOT  ___    ___     ___     ___     
 
 /* NAV */
 
