@@ -33,8 +33,9 @@ Q X M W J   K F ' ; .
 
 #define HML4_N &hml LCTRL N
 #define HML3_R &hml LALT  R 
-#define HML2_S &hml LCMD  S
-#define HML1_T &hml LSHFT T
+#define HML2_T &hml LCMD  T
+#define HML1_S &hml LSHFT S
+
 
 #define HMR1_H &hmr LSHFT H
 #define HMR2_A &hmr LCMD  A
@@ -42,7 +43,7 @@ Q X M W J   K F ' ; .
 #define HMR4_I &hmr LCTRL I
 
 #define _GAL_TOP &kp B  &kp L  &kp D   &kp C   &kp V   NONE  NONE &kp Z   &kp Y  &kp O   &kp U    &kp COMMA
-#define _GAL_MID HML4_N HML3_R HML2_S  HML1_T  &kp G   NONE  NONE &kp P   HMR1_H HMR2_A  HMR3_E   HMR4_I   
+#define _GAL_MID HML4_N HML3_R HML2_T  HML1_S  &kp G   NONE  NONE &kp P   HMR1_H HMR2_A  HMR3_E   HMR4_I   
 #define _GAL_LOW &kp Q  &kp X  &kp M   &kp W   &kp J   NONE  NONE &kp K   &kp F  &kp SQT &kp SEMI &kp DOT
 
 /* NUM */
