@@ -3,12 +3,10 @@
 
 #define DEF 0  
 #define CAN 1  
-#define APT 2  
-#define NRP 3  
-#define NUM 4
-#define NAV 5
-#define PTR 6
-
+#define STD 2  
+#define NUM 3
+#define NAV 4
+#define PTR 5
 /* 
     key aliases 
 */
@@ -19,8 +17,9 @@
 // layers
 #define EXIT &to DEF
 #define TO_CAN &to CAN
-#define TO_APT &to APT
-#define TO_NRP &to NRP
+#define TO_STD &to STD
+// #define TO_APT &to APT
+// #define TO_NRP &to NRP
 
 // for application shortcuts in Raycast
 #define MEH LC(LA(LSHFT))
@@ -60,19 +59,6 @@
 #define HMR2_E &hmr LCMD  E
 #define HMR3_I &hmr LALT  I
 #define HMR4_O &hmr LCTRL O
-
-// this is better.
-
-// #define HML4_A &hml LCTRL A
-// #define HML3_R &hml LALT  R
-// #define HML2_S &hml LCMD  S
-// #define HML1_T &hml LSHFT T
-
-// #define HMR1_N &hmr LSHFT N
-// #define HMR2_E &hmr LCMD  E
-// #define HMR3_I &hmr LALT  I
-// #define HMR4_O &hmr LCTRL O
-
 
 /* karabiner tokens */
 #define DICTATION &kp F21
