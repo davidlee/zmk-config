@@ -23,63 +23,75 @@
 #define L_NUM &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 
 #define R_NUM &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
 
-#define L_TH_U ___ TO_GAL EXIT 
-#define R_TH_U ___ ___ ___ 
-
-#define L_TH_D CMD_TAB SPC_NUM ESC_PTR 
-#define R_TH_D NAV_KEY SFT_BSP &kp ENTER
-
 #define L_DEF_BOT &kp HOME &kp END  &kp LEFT &kp RIGHT
 #define R_DEF_BOT &kp UP   &kp DOWN &kp LBKT &kp RBKT
 
-// #define BLANK_5 ___ ___ ___ ___ ___ 
-// #define BLANK_3 ___ ___ ___ ___ ___ 
+// thumb clusters
+
+#define LT_DEF_U ___ TO_GAL EXIT 
+#define RT_DEF_U ___ ___ &mo PTR
+
+#define LT_DEF_D CMD_TAB SPC_NUM ESC_PTR 
+#define RT_DEF_D NAV_KEY SFT_BSP &kp ENTER
+
+#define LT_NUM_D &kp DOT ___ ___
+#define RT_NUM_D &kp DOT ___ ___
+
+#define LT_NAV_D &kp TAB &kp SPACE ___
+#define RT_NAV_D ___ APPLE_FN DICTATION
+
+#define LT_PTR_D &kp TAB &kp SPACE &kp ESC
+#define RT_PTR_D U_MS_B3 U_MS_B1 U_MS_B2
+
 
 ZMK_LAYER(def_layer, 
-               L_FUN                   R_FUN
-    &kp EQUAL  L_NUM                   R_NUM      &kp MINUS
-    &kp TAB    L_DEF_U                 R_DEF_U    &kp BSLH
-    &kp ESC    L_DEF_H                 R_DEF_H    &kp SQT
-    &kp GRAVE  L_DEF_D   L_TH_U R_TH_U R_DEF_U    &kp PG_UP
-    &kp M      L_DEF_BOT L_TH_D R_TH_D R_DEF_BOT  &kp PG_DN    
+               L_FUN                       R_FUN
+    &kp EQUAL  L_NUM                       R_NUM      &kp MINUS
+    &kp TAB    L_DEF_U                     R_DEF_U    &kp BSLH
+    &kp ESC    L_DEF_H                     R_DEF_H    &kp SQT
+    &kp GRAVE  L_DEF_D   LT_DEF_U RT_DEF_U R_DEF_U    &kp PG_UP
+    &kp M      L_DEF_BOT LT_DEF_D RT_DEF_D R_DEF_BOT  &kp PG_DN    
 )
 
 ZMK_LAYER(gal_layer, 
-               L_FUN                   R_FUN
-    &kp EQUAL  L_NUM                   R_NUM      &kp MINUS
-    &kp TAB    L_GAL_U                 R_GAL_U    &kp BSLH
-    &kp ESC    L_GAL_H                 R_GAL_H    &kp SQT
-    &kp GRAVE  L_GAL_D   L_TH_U R_TH_U R_GAL_U    &kp PG_UP
-    &kp M      L_DEF_BOT L_TH_D R_TH_D R_DEF_BOT  &kp PG_DN    
+               L_FUN                       R_FUN
+    &kp EQUAL  L_NUM                       R_NUM      &kp MINUS
+    &kp TAB    L_GAL_U                     R_GAL_U    &kp BSLH
+    &kp ESC    L_GAL_H                     R_GAL_H    &kp SQT
+    &kp GRAVE  L_GAL_D   LT_DEF_U RT_DEF_U R_GAL_U    &kp PG_UP
+    &kp M      L_DEF_BOT LT_DEF_D RT_DEF_D R_DEF_BOT  &kp PG_DN    
 )
 
 ZMK_LAYER(num_layer, 
-               L_FUN                   R_FUN
-    &kp EQUAL  L_NUM                   R_NUM      &kp MINUS
-    &kp TAB    L_NUM_U                 R_NUM_U    &kp BSLH
-    &kp ESC    L_NUM_H                 R_NUM_H    &kp SQT
-    &kp GRAVE  L_NUM_D   L_TH_U R_TH_U R_NUM_U    &kp PG_UP
-    &kp M      L_DEF_BOT L_TH_D R_TH_D R_DEF_BOT  &kp PG_DN    
+               L_FUN                       R_FUN
+    &kp EQUAL  L_NUM                       R_NUM      &kp MINUS
+    &kp TAB    L_NUM_U                     R_NUM_U    &kp BSLH
+    &kp ESC    L_NUM_H                     R_NUM_H    &kp SQT
+    &kp GRAVE  L_NUM_D   LT_DEF_U RT_DEF_U R_NUM_U    &kp PG_UP
+    &kp M      L_DEF_BOT LT_NUM_D RT_NUM_D R_DEF_BOT  &kp PG_DN    
 )
 
 ZMK_LAYER(nav_layer, 
-               L_FUN                   R_FUN
-    &kp EQUAL  L_NUM                   R_NUM      &kp MINUS
-    &kp TAB    L_NAV_U                 R_NAV_U    &kp BSLH
-    &kp ESC    L_NAV_H                 R_NAV_H    &kp SQT
-    &kp GRAVE  L_NAV_D   L_TH_U R_TH_U R_NAV_U    &kp PG_UP
-    &kp M      L_DEF_BOT L_TH_D R_TH_D R_DEF_BOT  &kp PG_DN    
+               L_FUN                       R_FUN
+    &kp EQUAL  L_NUM                       R_NUM      &kp MINUS
+    &kp TAB    L_NAV_U                     R_NAV_U    &kp BSLH
+    &kp ESC    L_NAV_H                     R_NAV_H    &kp SQT
+    &kp GRAVE  L_NAV_D   LT_DEF_U RT_DEF_U R_NAV_U    &kp PG_UP
+    &kp M      L_DEF_BOT LT_NAV_D RT_NAV_D R_DEF_BOT  &kp PG_DN    
 )
 
-ZMK_LAYER(nav_layer, 
-               L_FUN                   R_FUN
-    &kp EQUAL  L_NUM                   R_NUM      &kp MINUS
-    &kp TAB    L_PTR_U                 R_PTR_U    &kp BSLH
-    &kp ESC    L_PTR_H                 R_PTR_H    &kp SQT
-    &kp GRAVE  L_PTR_D   L_TH_U R_TH_U R_PTR_U    &kp PG_UP
-    &kp M      L_DEF_BOT L_TH_D R_TH_D R_DEF_BOT  &kp PG_DN    
+ZMK_LAYER(ptr_layer, 
+               L_FUN                       R_FUN
+    &kp EQUAL  L_NUM                       R_NUM      &kp MINUS
+    &kp TAB    L_PTR_U                     R_PTR_U    &kp BSLH
+    &kp ESC    L_PTR_H                     R_PTR_H    &kp SQT
+    &kp GRAVE  L_PTR_D   LT_DEF_U RT_DEF_U R_PTR_U    &kp PG_UP
+    &kp M      L_DEF_BOT LT_PTR_D RT_PTR_D R_DEF_BOT  &kp PG_DN    
 )
 
+// #define BLANK_5 ___ ___ ___ ___ ___ 
+// #define BLANK_3 ___ ___ ___ ___ ___ 
+//
 // ZMK_LAYER(def_layer, 
 //       BLANK_5                 BLANK_5 
 //   ___ BLANK_5                 BLANK_5 ___  
