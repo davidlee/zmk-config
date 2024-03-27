@@ -13,41 +13,41 @@
 #include "ortholinear_keymap.h"
 
 ZMK_LAYER(def_layer,     
-    _DEF_TOP 
-    _DEF_TOP 
-    _DEF_MID 
-    _DEF_LOW 
-    _DEF_BOT
+    DEF_TOP 
+    DEF_TOP 
+    DEF_MID 
+    DEF_LOW 
+    DEF_BOT
 )
 
 ZMK_LAYER(gal_layer,
-    _GAL_TOP  
-    _GAL_TOP  
-    _GAL_MID  
-    _GAL_LOW  
-    _DEF_BOT
+    GAL_TOP  
+    GAL_TOP  
+    GAL_MID  
+    GAL_LOW  
+    DEF_BOT
 )
 
 ZMK_LAYER(num_layer,
-    _BLANK
-    _NUM_TOP  
-    _NUM_MID  
-    _NUM_LOW  
-    _NUM_BOT  
+    BLANKS
+    NUM_TOP  
+    NUM_MID  
+    NUM_LOW  
+    NUM_BOT  
 )
 
 ZMK_LAYER(nav_layer,
-    _BLANK
-    _NAV_TOP  
-    _NAV_MID  
-    _NAV_LOW  
-    _NAV_BOT  
+    BLANKS
+    NAV_TOP  
+    NAV_MID  
+    NAV_LOW  
+    NAV_BOT  
 )
 
 ZMK_LAYER(ptr_layer,
-    _BLANK
-    _PTR_TOP  
-    _PTR_MID  
-    _PTR_LOW  
-    _PTR_BOT  
+    BLANKS
+    PTR_TOP  
+    PTR_MID  
+    PTR_LOW  
+    PTR_BOT  
 )
