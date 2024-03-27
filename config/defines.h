@@ -1,10 +1,12 @@
 /* layer IDs */ 
 
-#define DEF 0  
-#define GAL 1  
-#define NUM 2
-#define NAV 3
-#define PTR 4
+#define DEF 0 // default = colemak
+#define GAL 1 // gallium
+#define NUM 2 // number 
+#define NAV 3 // navigation
+#define PTR 4 // pointer
+#define MAG 5 // glove80 magic
+
 /* 
     key aliases 
 */
