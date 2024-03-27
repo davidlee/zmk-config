@@ -4,8 +4,10 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
-
 #include <dt-bindings/zmk/mouse.h>
+
+#include "../zmk-nodefree-config/helper.h"
+#include "../zmk-nodefree-config/keypos_def/keypos_glv80.h"
 
 #include "defines.h"
 #include "mouse.dtsi"
