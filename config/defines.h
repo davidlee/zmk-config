@@ -5,7 +5,7 @@
 #define NUM 2 // number 
 #define NAV 3 // navigation
 #define PTR 4 // pointer
-#define MAG 5 // glove80 magic
+#define SYS 5 // system
 
 /* 
     key aliases 
