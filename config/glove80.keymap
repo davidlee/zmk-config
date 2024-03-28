@@ -33,7 +33,7 @@
 /* Thumb Clusters */
 
 // default
-#define LT_DEF_U ___ ___ APPLE_FN
+#define LT_DEF_U STATUS ___ APPLE_FN
 #define RT_DEF_U ___ ___ PTR_ENT
 
 #define LT_DEF_D SPC_NUM   CMD_TAB  ESC_PTR 

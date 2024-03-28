@@ -102,3 +102,4 @@
 #define SQT_MEH &mt MEH SQT
 #define SLS_MEH &mt MEH SLASH
 #define BSL_HYP &mt HYPER BSLH
+#define STATUS &rgb_ug_status_macro
