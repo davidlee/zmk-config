@@ -15,19 +15,19 @@
 #define DEF_LOW L_DEF_D NONE NONE R_DEF_D
 #define DEF_BOT EXIT TO_GAL  CMD_TAB SPC_NUM ESC_PTR  NONE NONE  NAV_KEY SFT_BSP &kp ENTER  TO_GAL TO_GAL
 
-/* GALLIUM 
+/* GALLIUM (alt keyb discord cmini version)
 
-B L D C V   Z Y O U ,
+B L D C V   J Y O U ,
 N R T S G   P H A E I
-Q X M W J   K F ' ; .
+X Q M W Z   K F ' ; .
 
 */
 
 #define L_GAL_U &kp B  &kp L  &kp D   &kp C   &kp V 
 #define L_GAL_H HML4_N HML3_R HML2_T  HML1_S  &kp G 
-#define L_GAL_D &kp Q  &kp X  &kp M   &kp W   &kp J 
+#define L_GAL_D &kp X  &kp Q  &kp M   &kp W   &kp Z 
 
-#define R_GAL_U &kp Z &kp Y  &kp O   &kp U    &kp COMMA
+#define R_GAL_U &kp J &kp Y  &kp O   &kp U    &kp COMMA
 #define R_GAL_H &kp P HMR1_H HMR2_A  HMR3_E   HMR4_I   
 #define R_GAL_D &kp K &kp F  &kp SQT &kp SEMI &kp DOT
 
