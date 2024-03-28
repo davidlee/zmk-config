@@ -1,4 +1,4 @@
-#define BLANKS ___ ___ ___ ___ ___ ___  ___ ___ ___ ___ ___ ___ 
+#define TRANS ___ TRAN_5 TRAN_5 ___ 
 
 // default layer - Colemak-DH
 

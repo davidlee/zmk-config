@@ -16,6 +16,9 @@
 #include "ortholinear_keymap.h"
 
 /* keycodes for Glove80 */
+#define MO_SYS &mo SYS
+/* other defines for Glove80 */
+
 
 #define L_FUN &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 
 #define R_FUN &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
@@ -28,11 +31,11 @@
 
 // thumb clusters
 
-#define LT_DEF_U ___ TO_GAL EXIT 
+#define LT_DEF_U ___ ___ APPLE_FN
 #define RT_DEF_U ___ ___ &mo PTR
 
-#define LT_DEF_D CMD_TAB SPC_NUM ESC_PTR 
-#define RT_DEF_D NAV_KEY SFT_BSP &kp ENTER
+#define LT_DEF_D SPC_NUM   CMD_TAB  ESC_PTR 
+#define RT_DEF_D &kp ENTER NAV_KEY  SFT_BSP 
 
 #define LT_NUM_D &kp DOT ___ ___
 #define RT_NUM_D &kp DOT ___ ___
@@ -43,6 +46,15 @@
 #define LT_PTR_D &kp TAB &kp SPACE &kp ESC
 #define RT_PTR_D U_MS_B3 U_MS_B1 U_MS_B2
 
+/* SYS layer */
+
+#define NONE_4 NONE NONE NONE NONE 
+
+#define SYS_RGB_U &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG 
+#define SYS_RGB_D &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF
+
+#define SYS_BT_U &bt_2 &bt_3 NONE_4
+#define SYS_BT_D &bt_0 &bt_1 &out OUT_USB NONE_3
 
 ZMK_LAYER(def_layer, 
                L_FUN                       R_FUN
@@ -50,56 +62,53 @@ ZMK_LAYER(def_layer,
     &kp TAB    L_DEF_U                     R_DEF_U    &kp BSLH
     ESC_MEH    L_DEF_H                     R_DEF_H    &kp SQT
     &kp GRAVE  L_DEF_D   LT_DEF_U RT_DEF_U R_DEF_D    &kp PG_UP
-    &kp M      L_DEF_BOT LT_DEF_D RT_DEF_D R_DEF_BOT  &kp PG_DN    
+    MO_SYS     L_DEF_BOT LT_DEF_D RT_DEF_D R_DEF_BOT  &kp PG_DN    
 )
 
 ZMK_LAYER(gal_layer, 
                L_FUN                       R_FUN
     &kp EQUAL  L_NUM                       R_NUM      &kp MINUS
     &kp TAB    L_GAL_U                     R_GAL_U    &kp BSLH
-    ESC_MEH    L_GAL_H                     R_GAL_H    &kp SQT
+    ESC_MEH    L_GAL_H                     R_GAL_H    &kp SLASH
     &kp GRAVE  L_GAL_D   LT_DEF_U RT_DEF_U R_GAL_D    &kp PG_UP
-    &kp M      L_DEF_BOT LT_DEF_D RT_DEF_D R_DEF_BOT  &kp PG_DN    
+    MO_SYS     L_DEF_BOT LT_DEF_D RT_DEF_D R_DEF_BOT  &kp PG_DN    
 )
 
 ZMK_LAYER(num_layer, 
-               L_FUN                       R_FUN
-    &kp EQUAL  L_NUM                       R_NUM      &kp MINUS
-    &kp TAB    L_NUM_U                     R_NUM_U    &kp BSLH
-    ESC_MEH    L_NUM_H                     R_NUM_H    &kp SQT
-    &kp GRAVE  L_NUM_D   LT_DEF_U RT_DEF_U R_NUM_D    &kp PG_UP
-    &kp M      L_DEF_BOT LT_NUM_D RT_NUM_D R_DEF_BOT  &kp PG_DN    
+         L_FUN                       R_FUN
+    ___  L_NUM                       R_NUM      ___
+    ___  L_NUM_U                     R_NUM_U    ___
+    ___  L_NUM_H                     R_NUM_H    ___
+    ___  L_NUM_D   LT_DEF_U RT_DEF_U R_NUM_D    ___
+    ___  L_DEF_BOT LT_NUM_D RT_NUM_D R_DEF_BOT  ___
 )
 
 ZMK_LAYER(nav_layer, 
-               L_FUN                       R_FUN
-    &kp EQUAL  L_NUM                       R_NUM      &kp MINUS
-    &kp TAB    L_NAV_U                     R_NAV_U    &kp BSLH
-    ESC_MEH    L_NAV_H                     R_NAV_H    &kp SQT
-    &kp GRAVE  L_NAV_D   LT_DEF_U RT_DEF_U R_NAV_D    &kp PG_UP
-    &kp M      L_DEF_BOT LT_NAV_D RT_NAV_D R_DEF_BOT  &kp PG_DN    
+    &kp F11 &kp F12  TRAN_3 TRAN_3   &kp C_BRI_DN &kp C_BRI_UP
+    ___  L_NUM                       R_NUM      ___
+    ___  L_NAV_U                     R_NAV_U    ___
+    ___  L_NAV_H                     R_NAV_H    ___
+    ___  L_NAV_D   LT_DEF_U RT_DEF_U R_NAV_D    ___
+    ___  L_DEF_BOT LT_NAV_D RT_NAV_D R_DEF_BOT  ___
 )
 
 ZMK_LAYER(ptr_layer, 
-               L_FUN                       R_FUN
-    &kp EQUAL  L_NUM                       R_NUM      &kp MINUS
-    &kp TAB    L_PTR_U                     R_PTR_U    &kp BSLH
-    ESC_MEH    L_PTR_H                     R_PTR_H    &kp SQT
-    &kp GRAVE  L_PTR_D   LT_DEF_U RT_DEF_U R_PTR_D    &kp PG_UP
-    &kp M      L_DEF_BOT LT_PTR_D RT_PTR_D R_DEF_BOT  &kp PG_DN    
+         L_FUN                       R_FUN
+    ___  L_NUM                       R_NUM      EXIT
+    ___  L_PTR_U                     R_PTR_U    EXIT
+    ___  L_PTR_H                     R_PTR_H    TO_GAL
+    ___  L_PTR_D   LT_DEF_U RT_DEF_U R_PTR_D    EXIT
+    ___  L_DEF_BOT LT_PTR_D RT_PTR_D R_DEF_BOT  EXIT
 )
 
-// #define BLANK_5 ___ ___ ___ ___ ___ 
-// #define BLANK_3 ___ ___ ___ ___ ___ 
-//
-// ZMK_LAYER(def_layer, 
-//       BLANK_5                 BLANK_5 
-//   ___ BLANK_5                 BLANK_5 ___  
-//   ___ BLANK_5                 BLANK_5 ___  
-//   ___ BLANK_5                 BLANK_5 ___  
-//   ___ BLANK_5 BLANK_3 BLANK_3 BLANK_5 ___  
-//   ___ BLANK_5 BLANK_3 BLANK_3 BLANK_5 ___  
-// )
+ZMK_LAYER(sys_layer, 
+    &bt BT_CLR  NONE_4              NONE_4 &bt BT_CLR_ALL
+    NONE        NONE_5              NONE_5 NONE
+    &bootloader SYS_RGB_U           NONE_5 &bootloader
+    &sys_reset  SYS_RGB_D           NONE_5 &sys_reset
+    NONE        NONE_5    SYS_BT_U  NONE_5 NONE
+    NONE        NONE_5    SYS_BT_D  NONE_5 NONE
+)
 
 /* 
 

@@ -73,9 +73,9 @@ ZMK_COMBO(combo_rbkt_r,    &kp RBKT,  RB3 RB4, ALL)
 */
 
 // outer two function keys
-ZMK_COMBO(combo_boot_l, &bootloader, RC5 RC4, ALL)
-ZMK_COMBO(combo_boot_r, &bootloader, LC5 LC4, ALL)
-
+ZMK_COMBO(combo_boot_l, &bootloader, LC5 LC4, ALL)
+ZMK_COMBO(combo_boot_r, &bootloader, RC5 RC4, ALL)
 
 ZMK_COMBO(combo_sysreset_l, &sys_reset, RC5 RC1, ALL)
 ZMK_COMBO(combo_sysreset_r, &sys_reset, LC5 LC1, ALL)
+

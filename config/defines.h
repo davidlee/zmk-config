@@ -13,6 +13,10 @@
 
 #define ___ &trans
 #define NONE &none
+#define TRAN_5 ___ ___ ___ ___ ___ 
+#define TRAN_3 ___ ___ ___  
+#define NONE_5 NONE NONE NONE NONE NONE 
+#define NONE_3 NONE NONE NONE 
    
 // layers
 #define EXIT &to DEF
