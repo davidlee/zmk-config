@@ -10,54 +10,36 @@
 #include "../zmk-nodefree-config/keypos_def/keypos_glv80.h"
 
 #include "defines.h"
-#include "mouse.dtsi"
+#include "keypos_groups_glv80.h"
 #include "custom_behaviors.dtsi"
+#include "behaviors_glv80.dtsi"
+#include "key_codes.h"
+#include "key_clusters.h"
+#include "mouse.dtsi"
 #include "combos.dtsi"
-#include "ortholinear_keymap.h"
-
-
-/* key clusters */
-
-// Function Keys
-#define L_FUN &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 
-#define R_FUN &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
-
-// Number Row
-#define L_NUM &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 
-#define R_NUM &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-
-// Bottom Row 
-#define L_DEF_BOT &kp HOME  &kp LEFT &kp RIGHT &kp END
-#define R_DEF_BOT &kp LBKT  &kp DOWN &kp UP    &kp RBKT
 
 /* Thumb Clusters */
 
-// default
+// 👍 Default 
 #define LT_DEF_U STATUS ___ APPLE_FN
-#define RT_DEF_U ___ ___ PTR_ENT
+#define RT_DEF_U STATUS ___ PTR_ENT
 
-#define LT_DEF_D SPC_NUM   CMD_TAB  ESC_PTR 
-#define RT_DEF_D &kp ENTER NAV_KEY  SFT_BSP 
+#define LT_DEF_D SPC_NUM  CMD_TAB  ESC_PTR 
+#define RT_DEF_D PTR_ENT  NAV_KEY  SFT_BSP 
 
-// NUM
+// 👍 NUM
 #define LT_NUM_D &kp DOT ___ ___
 #define RT_NUM_D &kp DOT ___ ___
 
-// NAV
+// 👍 NAV
 #define LT_NAV_D &kp TAB &kp SPACE ___
 #define RT_NAV_D ___ APPLE_FN DICTATION
 
-// PTR
+// 👍 PTR
 #define LT_PTR_D &kp TAB &kp SPACE &kp ESC
 #define RT_PTR_D U_MS_B3 U_MS_B1 U_MS_B2
 
-/* SYS layer */
-
-#define SYS_RGB_U &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG 
-#define SYS_RGB_D &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF
-
-#define SYS_BT_U &bt_2 &bt_3 NONE_4
-#define SYS_BT_D &bt_0 &bt_1 &out OUT_USB NONE_3
+/* Layers */
 
 ZMK_LAYER(def_layer, 
                L_FUN                       R_FUN

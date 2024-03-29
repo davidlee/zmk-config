@@ -6,6 +6,8 @@
 
 #include "planck_keypos_def.h"
 #include "defines.h"
+#include "key_codes.h"
+#include "key_clusters.h"
 #include "mouse.dtsi"
 #include "custom_behaviors.dtsi"
 #include "combos.dtsi"
