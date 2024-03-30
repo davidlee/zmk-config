@@ -47,21 +47,22 @@ X Q M W Z   K F ' ; .
 
 #define L_NAV_U &kp F1    &kp F2   &kp F3    &kp F4    &kp F5  
 #define L_NAV_H &kp LCTRL &kp LALT &kp LCMD  &kp LSHFT NONE    
-#define L_NAV_D &kp F7    &kp F8   &kp F9    &kp F10   &kp F11 
+#define L_NAV_D &kp F6    &kp F7    &kp F8   &kp F9    &kp F10   
 
-#define R_NAV_U &kp F6    &kp HOME &kp PG_DN &kp PG_UP &kp END  
+#define R_NAV_U NONE      &kp HOME &kp PG_DN &kp PG_UP &kp END  
 #define R_NAV_H NONE      &kp LEFT &kp DOWN  &kp UP    &kp RIGHT
-#define R_NAV_D &kp F12   BACK     ZOOM_OUT  ZOOM_IN   FORWARD  
+#define R_NAV_D NONE      BACK     ZOOM_OUT  ZOOM_IN   FORWARD  
 
 /* PTR */
 
-#define L_PTR_U EXIT      EXIT     EXIT     EXIT      EXIT    
-#define L_PTR_H &kp LCTRL &kp LALT &kp LCMD &kp LSHFT &kp F12 
-#define L_PTR_D EXIT      EXIT     EXIT     EXIT      EXIT    
 
-#define R_PTR_U EXIT    U_WH_L  U_WH_D  U_WH_U  U_WH_R 
+#define L_PTR_U &kp F11   &kp F12  &kp F13   &kp F14   &kp F15  
+#define L_PTR_H &kp LCTRL &kp LALT &kp LCMD  &kp LSHFT &kp F12 
+#define L_PTR_D &kp F16   &kp F17  &kp F18   &kp F19   &kp F20  
+
+#define R_PTR_U &kp F21 U_WH_L  U_WH_D  U_WH_U  U_WH_R 
 #define R_PTR_H U_MS_B1 U_MS_L  U_MS_D  U_MS_U  U_MS_R 
-#define R_PTR_D EXIT    U_MS_B1 U_MS_B2 U_MS_B3 EXIT   
+#define R_PTR_D &kp F22 U_MS_B1 U_MS_B2 U_MS_B3 &kp F22
 
 /* GAME */ 
 

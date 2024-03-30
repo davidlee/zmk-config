@@ -95,11 +95,11 @@ ZMK_LAYER(nav_layer,
 ZMK_LAYER(ptr_layer, 
                     // ALT KEYMAP LAYERS
          L_FUN        TO_DEF TO_GAL TO_GAM EXIT EXIT
-    ___  L_NUM                       R_NUM      EXIT
-    ___  L_PTR_U                     R_PTR_U    EXIT
-    ___  L_PTR_H                     R_PTR_H    &tog GAL
-    ___  L_PTR_D   LT_DEF_U RT_DEF_U R_PTR_D    EXIT
-    ___  L_DEF_BOT LT_PTR_D RT_PTR_D R_DEF_BOT  EXIT
+    ___  L_NUM                       R_NUM      ___
+    ___  L_PTR_U                     R_PTR_U    ___
+    ___  L_PTR_H                     R_PTR_H    ___
+    ___  L_PTR_D   LT_DEF_U RT_DEF_U R_PTR_D    ___
+    ___  L_DEF_BOT LT_PTR_D RT_PTR_D R_DEF_BOT  ___
 )
 
 ZMK_LAYER(sys_layer, 

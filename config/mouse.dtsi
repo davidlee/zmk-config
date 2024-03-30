@@ -1,13 +1,13 @@
 #undef ZMK_MOUSE_DEFAULT_MOVE_VAL
 #undef ZMK_MOUSE_DEFAULT_SCRL_VAL
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 3200  // 600
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 6000  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 40    // 10
 
 #include <dt-bindings/zmk/mouse.h>
 
 &mmv {
   acceleration-exponent = <1>;      // 1
-  time-to-max-speed-ms = <200>;     // 40
+  time-to-max-speed-ms = <550>;     // 40
   delay-ms = <0>;                   // 0
 };
 
@@ -21,6 +21,7 @@
 #define U_MS_D &mmv MOVE_DOWN
 #define U_MS_L &mmv MOVE_LEFT
 #define U_MS_R &mmv MOVE_RIGHT
+
 #define U_WH_U &msc SCRL_UP
 #define U_WH_D &msc SCRL_DOWN
 #define U_WH_L &msc SCRL_LEFT
