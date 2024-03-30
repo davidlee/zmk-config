@@ -67,8 +67,6 @@
 #define DICTATION &kp F21
 #define APPLE_FN  &kp F24
 
-
-
 // combos
 #define EMDASH &kp LS(LA(MINUS)) 
 #define BSWORD &kp LA(BSPC)
@@ -82,3 +80,4 @@
 #define SLS_MEH &mt MEH SLASH
 #define BSL_HYP &mt HYPER BSLH
 #define STATUS &rgb_ug_status_macro
+#define SYS_STATUS &magic SYS 0

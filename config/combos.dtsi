@@ -14,6 +14,7 @@ ZMK_COMBO(combo_under,     &kp UNDER, LM2 LM1, ALL)
 
 ZMK_COMBO(combo_capsword, &caps_word, LM4 LM1, ALL)
 ZMK_COMBO(combo_numword,   &num_word, LM4 LH1, ALL)
+ZMK_COMBO(combo_dictate,   DICTATION, LM4 LM0, ALL)
 
 ZMK_COMBO(combo_emdash,    EMDASH,     LM1 LM0, DEF GAL)
 
@@ -75,5 +76,7 @@ ZMK_COMBO(combo_rbkt_r,    &kp RBKT,  RB3 RB4, ALL)
 
 	ZMK_COMBO(combo_sysreset_l, &sys_reset, RC5 RC1, ALL)
 	ZMK_COMBO(combo_sysreset_r, &sys_reset, LC5 LC1, ALL)
+
+	ZMK_COMBO(combo_enter_b, &kp ENTER, RF5 RF4, ALL)
 
 #endif
