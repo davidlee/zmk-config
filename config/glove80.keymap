@@ -31,7 +31,6 @@
 #define LT_NUM_D TRAN_3
 #define RT_NUM_D &kp DOT &kp DOT ___ 
 
-
 // 👍 NAV
 #define LT_NAV_D &kp TAB &kp SPACE &kp ESC
 #define RT_NAV_D NONE    ___       DICTATION
@@ -40,6 +39,12 @@
 #define LT_PTR_D &kp TAB &kp SPACE &kp ESC
 #define RT_PTR_D U_MS_B3 U_MS_B1 U_MS_B2
 
+// 👍 Game
+#define LT_GAM_U &kp LSHFT &kp DEL &kp LGUI 
+#define RT_GAM_U ___       ___     ___ 
+
+#define LT_GAM_D &kp SPC  &kp LCTRL  &kp LALT
+#define RT_GAM_D PTR_ENT  NAV_KEY    SFT_BSP 
 /* Layers */
 
 ZMK_LAYER(def_layer, 
@@ -69,6 +74,15 @@ ZMK_LAYER(num_layer,
     ___  L_DEF_BOT LT_NUM_D RT_NUM_D R_DEF_BOT  ___
 )
 
+ZMK_LAYER(gam_layer, 
+               L_FUN                       R_FUN
+    ___        L_NUM                       R_NUM      ___
+    &kp TAB    L_GAM_U                     R_GAM_U    &kp BACKSLASH
+    &kp ESC    L_GAM_H                     R_GAM_H    &kp SQT
+    ___        L_GAM_D   LT_GAM_U RT_GAM_U R_GAM_D    ___
+    ___        L_DEF_BOT LT_GAM_D RT_GAM_D R_DEF_BOT  ___
+)
+
 ZMK_LAYER(nav_layer, 
     &kp F11 &kp F12  TRAN_3 TRAN_3   &kp C_BRI_DN &kp C_BRI_UP
     ___  L_NUM                       R_NUM      ___
@@ -79,7 +93,8 @@ ZMK_LAYER(nav_layer,
 )
 
 ZMK_LAYER(ptr_layer, 
-         L_FUN                       R_FUN
+                    // ALT KEYMAP LAYERS
+         L_FUN        TO_DEF TO_GAL TO_GAM EXIT EXIT
     ___  L_NUM                       R_NUM      EXIT
     ___  L_PTR_U                     R_PTR_U    EXIT
     ___  L_PTR_H                     R_PTR_H    &tog GAL

@@ -7,11 +7,13 @@
 
    
 // layers
-#define EXIT &to DEF
+#define EXIT   &to DEF
+#define TO_DEF &to DEF
 #define TO_GAL &to GAL
+#define TO_GAM &to GAM
 
 // for custom shortcuts 
-#define MEH LC(LA(LSHFT))
+#define MEH   LC(LA(LSHFT))
 #define HYPER LC(LS(LG(LALT)))
 
 // L thumb
@@ -34,8 +36,8 @@
 #define BACK     &kp LG(LBKT)
 #define FORWARD  &kp LG(RBKT)
 
-#define VOL_DN &kp C_VOL_DN
-#define VOL_UP &kp C_VOL_UP
+#define VOL_DN   &kp C_VOL_DN
+#define VOL_UP   &kp C_VOL_UP
 #define TRK_NEXT &kp C_NEXT
 #define TRK_PREV &kp C_PREV
 
@@ -80,4 +82,5 @@
 #define SLS_MEH &mt MEH SLASH
 #define BSL_HYP &mt HYPER BSLH
 #define STATUS &rgb_ug_status_macro
+// FIXME
 #define SYS_STATUS &magic SYS 0

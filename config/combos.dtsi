@@ -78,5 +78,6 @@ ZMK_COMBO(combo_rbkt_r,    &kp RBKT,  RB3 RB4, ALL)
 	ZMK_COMBO(combo_sysreset_r, &sys_reset, LC5 LC1, ALL)
 
 	ZMK_COMBO(combo_enter_b, &kp ENTER, RF5 RF4, ALL)
-
+	ZMK_COMBO(combo_tab,     &kp TAB,   RM1 RB1, ALL)
+	
 #endif

@@ -63,6 +63,16 @@ X Q M W Z   K F ' ; .
 #define R_PTR_H U_MS_B1 U_MS_L  U_MS_D  U_MS_U  U_MS_R 
 #define R_PTR_D EXIT    U_MS_B1 U_MS_B2 U_MS_B3 EXIT   
 
+/* GAME */ 
+
+#define L_GAM_U &kp Q &kp W &kp E &kp R &kp T 
+#define L_GAM_H &kp A &kp S &kp D &kp F &kp G 
+#define L_GAM_D &kp Z &kp X &kp C &kp V &kp B
+
+#define R_GAM_U &kp Y &kp U &kp I     &kp O   &kp P 
+#define R_GAM_H &kp H &kp J &kp K     &kp L   &kp SEMI
+#define R_GAM_D &kp N &kp M &kp COMMA &kp DOT &kp SLASH
+
 /* Glove 80 */
 
 // Bottom Row 

@@ -3,9 +3,10 @@
 #define DEF 0 // default = colemak
 #define GAL 1 // gallium
 #define NUM 2 // number 
-#define NAV 3 // navigation
-#define PTR 4 // pointer
-#define SYS 5 // system
+#define GAM 3 // qwerty 
+#define NAV 4 // navigation
+#define PTR 5 // pointer
+#define SYS 6 // system
 
 #undef COMBO_TERM 
 #define COMBO_TERM 15
