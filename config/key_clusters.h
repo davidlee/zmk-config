@@ -1,6 +1,7 @@
 // blanks
 //
 #define TRAN_5 ___ ___ ___ ___ ___ 
+#define TRAN_4 ___ ___ ___ ___ 
 #define TRAN_3 ___ ___ ___  
 #define NONE_5 NONE NONE NONE NONE NONE 
 #define NONE_4 NONE NONE NONE NONE 
@@ -60,9 +61,9 @@ X Q M W Z   K F ' ; .
 #define L_PTR_H &kp LCTRL &kp LALT &kp LCMD  &kp LSHFT &kp F12 
 #define L_PTR_D &kp F16   &kp F17  &kp F18   &kp F19   &kp F20  
 
-#define R_PTR_U &kp F21 U_WH_L  U_WH_D  U_WH_U  U_WH_R 
-#define R_PTR_H U_MS_B1 U_MS_L  U_MS_D  U_MS_U  U_MS_R 
-#define R_PTR_D &kp F22 U_MS_B1 U_MS_B2 U_MS_B3 &kp F22
+#define R_PTR_U PTR_ZERO U_WH_L  U_WH_D  U_WH_U  U_WH_R 
+#define R_PTR_H U_MS_B1  U_MS_L  U_MS_D  U_MS_U  U_MS_R 
+#define R_PTR_D PTR_CNTR U_MS_B1 U_MS_B2 U_MS_B3 PTR_CNTR
 
 /* GAME */ 
 
@@ -95,3 +96,13 @@ X Q M W Z   K F ' ; .
 
 #define SYS_BT_U &bt_2 &bt_3 ___          NONE_3
 #define SYS_BT_D &bt_0 &bt_1 &out OUT_USB NONE_3
+
+/* REC - window management */ 
+#define L_REC_U HYP_F1  HYP_F2  HYP_F3  HYP_F4  HYP_F5  
+#define L_REC_H HYP_F6  HYP_F7  HYP_F8  HYP_F9  HYP_F10 
+#define L_REC_D HYP_F11 HYP_F12 HYP_F13 HYP_F14 HYP_F15
+
+#define R_REC_U ___ HYP_F16 HYP_F17 HYP_F18 ___  
+#define R_REC_H ___ HYP_F19 HYP_F20 HYP_F21 ___
+#define R_REC_D ___ HYP_F22 HYP_F23 HYP_F24 ___ 
+

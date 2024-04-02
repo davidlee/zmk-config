@@ -54,3 +54,12 @@ ZMK_BEHAVIOR(fat_arrow, macro,
     bindings = <&kp EQUAL &kp GT>;
 )
 
+// ZMK_BEHAVIOR(hyp, macro_one_param,
+//     wait-ms = <20>;
+//     tap-ms = <10>;
+//     bindings =  \
+//         <&macro_press &kp LCTRL &kp LSHFT &kp LALT &kp LCMD>,\
+//         <&macro_param_1to1>,\
+//         <&kp>,\
+//         <&macro_release &kp LCMD &kp LALT &kp LSHFT &kp LCTRL>;
+// )

@@ -7,6 +7,7 @@
 #define NAV 4 // navigation
 #define PTR 5 // pointer
 #define SYS 6 // system
+#define REC 7 // rectangle WM
 
 #undef COMBO_TERM 
 #define COMBO_TERM 15

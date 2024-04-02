@@ -14,15 +14,15 @@
 #include "custom_behaviors.dtsi"
 #include "behaviors_glv80.dtsi"
 #include "key_codes.h"
-#include "key_clusters.h"
 #include "mouse.dtsi"
+#include "key_clusters.h"
 #include "combos.dtsi"
 
 /* Thumb Clusters */
 
 // 👍 Default 
 #define LT_DEF_U STATUS MO_SYS APPLE_FN
-#define RT_DEF_U STATUS MO_SYS PTR_ENT
+#define RT_DEF_U MO_REC MO_SYS PTR_ENT
 
 #define LT_DEF_D SPC_NUM  CMD_TAB  ESC_PTR 
 #define RT_DEF_D PTR_ENT  NAV_KEY  SFT_BSP 
@@ -37,7 +37,7 @@
 
 // 👍 PTR
 #define LT_PTR_D &kp TAB &kp SPACE &kp ESC
-#define RT_PTR_D U_MS_B3 U_MS_B1 U_MS_B2
+#define RT_PTR_D U_MS_B3 U_MS_B1   U_MS_B2 
 
 // 👍 Game
 #define LT_GAM_U &kp LSHFT &kp DEL &kp LGUI 
@@ -109,4 +109,13 @@ ZMK_LAYER(sys_layer,
     &sys_reset  SYS_RGB_D           NONE_5 &sys_reset
     NONE        NONE_5    SYS_BT_U  NONE_5 NONE
     NONE        NONE_5    SYS_BT_D  NONE_5 NONE
+)
+
+ZMK_LAYER(rec_layer, 
+         L_FUN                 R_FUN
+    ___  L_NUM                 R_NUM    ___
+    ___  L_REC_U               R_REC_U  ___
+    ___  L_REC_H               R_REC_H  ___
+    ___  L_REC_D TRAN_3 TRAN_3 R_REC_D  ___
+    ___  TRAN_4  TRAN_3 TRAN_3 TRAN_4   ___
 )

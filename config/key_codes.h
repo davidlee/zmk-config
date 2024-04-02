@@ -15,6 +15,7 @@
 // for custom shortcuts 
 #define MEH   LC(LA(LSHFT))
 #define HYPER LC(LS(LG(LALT)))
+#define HYP HYPER 
 
 // L thumb
 #define CMD_TAB &mt LCMD TAB
@@ -65,9 +66,11 @@
 #define HMR3_E &hmr LALT  E
 #define HMR4_I &hmr LCTRL I
 
-/* karabiner tokens */
-#define DICTATION &kp F21
-#define APPLE_FN  &kp F24
+/* karabiner tokens - use non-macos keycodes */
+#define DICTATION &kp OPER
+#define APPLE_FN  &kp SYSREQ
+#define PTR_ZERO  &kp PRIOR
+#define PTR_CNTR  &kp PRINTSCREEN
 
 // combos
 #define EMDASH &kp LS(LA(MINUS)) 
@@ -77,6 +80,7 @@
 /* keycodes for Glove80 side keys, etc */
 
 #define MO_SYS &mo SYS
+#define MO_REC &mo REC
 #define PTR_ENT &lt PTR ENTER
 #define SQT_MEH &mt MEH SQT
 #define SLS_MEH &mt MEH SLASH
@@ -84,7 +88,30 @@
 #define TAB_HYP &mt HYPER TAB
 #define STATUS &rgb_ug_status_macro
 
+/* Rectangle keybinds */
 
-// FIXME only the &magic bit works, not SYS
-// #define SYS_STATUS &magic SYS 
-// #define SYS_STATUS &lt SYS &rgb_ug_status_macro
+#define HYP_F1 &kp LC(LA(LG(LS(F1))))
+#define HYP_F2 &kp LC(LA(LG(LS(F2))))
+#define HYP_F3 &kp LC(LA(LG(LS(F3))))
+#define HYP_F4 &kp LC(LA(LG(LS(F4))))
+#define HYP_F5 &kp LC(LA(LG(LS(F5))))
+#define HYP_F6 &kp LC(LA(LG(LS(F6))))
+#define HYP_F7 &kp LC(LA(LG(LS(F7))))
+#define HYP_F8 &kp LC(LA(LG(LS(F8))))
+#define HYP_F9 &kp LC(LA(LG(LS(F9))))
+#define HYP_F10 &kp LC(LA(LG(LS(F10))))
+#define HYP_F11 &kp LC(LA(LG(LS(F11))))
+#define HYP_F12 &kp LC(LA(LG(LS(F12))))
+#define HYP_F13 &kp LC(LA(LG(LS(F13))))
+#define HYP_F14 &kp LC(LA(LG(LS(F14))))
+#define HYP_F15 &kp LC(LA(LG(LS(F15))))
+#define HYP_F16 &kp LC(LA(LG(LS(F16))))
+#define HYP_F17 &kp LC(LA(LG(LS(F17))))
+#define HYP_F18 &kp LC(LA(LG(LS(F18))))
+#define HYP_F19 &kp LC(LA(LG(LS(F19))))
+#define HYP_F20 &kp LC(LA(LG(LS(F20))))
+#define HYP_F21 &kp LC(LA(LG(LS(F21))))
+#define HYP_F22 &kp LC(LA(LG(LS(F22))))
+#define HYP_F23 &kp LC(LA(LG(LS(F23))))
+#define HYP_F24 &kp LC(LA(LG(LS(F24))))
+

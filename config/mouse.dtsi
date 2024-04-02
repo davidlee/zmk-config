@@ -13,7 +13,7 @@
 
 &msc {
   acceleration-exponent = <1>;      // 0
-  time-to-max-speed-ms = <100>;      // 500
+  time-to-max-speed-ms = <100>;     // 500
   delay-ms = <0>;                   // 10
 };
 
@@ -27,6 +27,6 @@
 #define U_WH_L &msc SCRL_LEFT
 #define U_WH_R &msc SCRL_RIGHT
 
-#define U_MS_B1 &mkp LCLK
-#define U_MS_B2 &mkp RCLK
-#define U_MS_B3 &mkp MCLK
+#define U_MS_B1 &mkp MB1
+#define U_MS_B2 &mkp MB2
+#define U_MS_B3 &mkp MB3
