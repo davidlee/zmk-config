@@ -21,8 +21,8 @@
 /* Thumb Clusters */
 
 // 👍 Default 
-#define LT_DEF_U STATUS ___ APPLE_FN
-#define RT_DEF_U STATUS ___ PTR_ENT
+#define LT_DEF_U STATUS MO_SYS APPLE_FN
+#define RT_DEF_U STATUS MO_SYS PTR_ENT
 
 #define LT_DEF_D SPC_NUM  CMD_TAB  ESC_PTR 
 #define RT_DEF_D PTR_ENT  NAV_KEY  SFT_BSP 
@@ -50,7 +50,7 @@
 ZMK_LAYER(def_layer, 
                L_FUN                       R_FUN
     &kp EQUAL  L_NUM                       R_NUM      &kp MINUS
-    &kp TAB    L_DEF_U                     R_DEF_U    BSL_HYP
+    TAB_HYP    L_DEF_U                     R_DEF_U    BSL_HYP
     ESC_MEH    L_DEF_H                     R_DEF_H    SQT_MEH
     &kp GRAVE  L_DEF_D   LT_DEF_U RT_DEF_U R_DEF_D    &kp PG_UP
     MO_SYS     L_DEF_BOT LT_DEF_D RT_DEF_D R_DEF_BOT  &kp PG_DN    

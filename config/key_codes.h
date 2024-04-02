@@ -81,6 +81,10 @@
 #define SQT_MEH &mt MEH SQT
 #define SLS_MEH &mt MEH SLASH
 #define BSL_HYP &mt HYPER BSLH
+#define TAB_HYP &mt HYPER TAB
 #define STATUS &rgb_ug_status_macro
-// FIXME
-#define SYS_STATUS &magic SYS 0
+
+
+// FIXME only the &magic bit works, not SYS
+// #define SYS_STATUS &magic SYS 
+// #define SYS_STATUS &lt SYS &rgb_ug_status_macro
