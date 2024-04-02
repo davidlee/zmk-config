@@ -21,7 +21,7 @@
 /* Thumb Clusters */
 
 // 👍 Default 
-#define LT_DEF_U STATUS MO_SYS APPLE_FN
+#define LT_DEF_U MO_REC MO_SYS STATUS
 #define RT_DEF_U MO_REC MO_SYS PTR_ENT
 
 #define LT_DEF_D SPC_NUM  CMD_TAB  ESC_PTR 
