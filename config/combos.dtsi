@@ -46,12 +46,11 @@ ZMK_COMBO(combo_slash,     &kp SLASH, RM2 RM3, GAL)
 
 ZMK_COMBO(combo_del,       &kp DEL,   RT3 RT4, ALL)
 ZMK_COMBO(combo_bs_word,   BSWORD,    RM1 RM2, ALL)
-ZMK_COMBO(combo_ent,       ENT_MEH,   RM3 RM4, ALL)
+// ZMK_COMBO(combo_ent,       ENT_MEH,   RM3 RM4, ALL)
 
 
 ZMK_COMBO(combo_lbkt_r,    &kp LBKT,  RB2 RB3, ALL)
 ZMK_COMBO(combo_rbkt_r,    &kp RBKT,  RB3 RB4, ALL)
-
 
 /*                               GLOVE80 KEY MATRIX / LAYOUT MAPPING
  ╭────────────────────╮       ╭────────────────────╮ ╭────────────────────╮       ╭────────────────────╮
@@ -77,7 +76,7 @@ ZMK_COMBO(combo_rbkt_r,    &kp RBKT,  RB3 RB4, ALL)
 	ZMK_COMBO(combo_sysreset_l, &sys_reset, RC5 RC1, ALL)
 	ZMK_COMBO(combo_sysreset_r, &sys_reset, LC5 LC1, ALL)
 
-	ZMK_COMBO(combo_enter_b, &kp ENTER, RF5 RF4, ALL)
+	ZMK_COMBO(combo_enter_meh, ENT_MEH, RF2 RF3, ALL)
 	ZMK_COMBO(combo_tab,     &kp TAB,   RM1 RB1, ALL)
 	
 #endif

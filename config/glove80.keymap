@@ -18,28 +18,28 @@
 #include "key_clusters.h"
 #include "combos.dtsi"
 
-/* Thumb Clusters */
+/* 👍 Thumb Clusters */
 
-// 👍 Default 
+// Default 
 #define LT_DEF_U MO_REC MO_SYS STATUS
-#define RT_DEF_U MO_REC MO_SYS PTR_ENT
+#define RT_DEF_U ___ ___ PTR_ENT
 
 #define LT_DEF_D SPC_NUM  CMD_TAB  ESC_PTR 
 #define RT_DEF_D PTR_ENT  NAV_KEY  SFT_BSP 
 
-// 👍 NUM
-#define LT_NUM_D TRAN_3
+// NUM
+#define LT_NUM_D ___ ___ ___
 #define RT_NUM_D &kp DOT &kp DOT ___ 
 
-// 👍 NAV
+// NAV
 #define LT_NAV_D &kp TAB &kp SPACE &kp ESC
 #define RT_NAV_D NONE    ___       DICTATION
 
-// 👍 PTR
+// PTR
 #define LT_PTR_D &kp TAB &kp SPACE &kp ESC
 #define RT_PTR_D U_MS_B3 U_MS_B1   U_MS_B2 
 
-// 👍 Game
+// Game
 #define LT_GAM_U &kp LSHFT &kp DEL &kp LGUI 
 #define RT_GAM_U ___       ___     ___ 
 
