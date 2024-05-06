@@ -8,6 +8,12 @@
 #define NONE_3 NONE NONE NONE 
 #define TRAN_12 ___ TRAN_5 TRAN_5 ___ 
 
+#define NONE_10 NONE_5 NONE_5
+#define NONE_12 NONE NONE_5 NONE_5 NONE
+#define NONE_18 NONE NONE_5 NONE_3 NONE_3 NONE_5 NONE
+#define NONE_16 NONE_5 NONE_3 NONE_3 NONE_5
+
+
 // default layer - Colemak-DH
 
 #define L_DEF_U &kp Q  &kp W  &kp F   &kp P   &kp B   
@@ -91,11 +97,18 @@ X Q M W Z   K F ' ; .
 
 /* Glove80 SYS layer */
 
-#define SYS_RGB_U &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG 
-#define SYS_RGB_D &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF
+#define L_SYS_U &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG 
+#define L_SYS_H &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF 
+#define L_SYS_D NONE_5
 
-#define SYS_BT_U &bt_2 &bt_3 ___          NONE_3
-#define SYS_BT_D &bt_0 &bt_1 &out OUT_USB NONE_3
+#define R_SYS_U NONE_5
+#define R_SYS_H NONE_5
+#define R_SYS_D NONE_5
+
+#define LT_SYS_U &bt_2 &bt_3 ___          
+#define RT_SYS_U NONE_3
+#define LT_SYS_D &bt_0 &bt_1 &out OUT_USB 
+#define RT_SYS_D NONE_3
 
 /* REC - window management */ 
 #define L_REC_U HYP_F1  HYP_F2  HYP_F3  HYP_F4  HYP_F5  

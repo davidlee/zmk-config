@@ -87,6 +87,7 @@
 #define BSL_HYP &mt HYPER BSLH
 #define TAB_HYP &mt HYPER TAB
 #define STATUS &rgb_ug_status_macro
+#define MAGIC &magic SYS 
 
 /* Rectangle keybinds */
 

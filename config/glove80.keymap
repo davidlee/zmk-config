@@ -32,7 +32,7 @@
 #define RT_NUM_D &kp DOT &kp DOT ___ 
 
 // NAV
-#define LT_NAV_D &kp TAB &kp SPACE &kp ESC
+#define LT_NAV_D &kp SPACE &kp TAB &kp ESC
 #define RT_NAV_D NONE    ___       DICTATION
 
 // PTR
@@ -46,6 +46,16 @@
 #define LT_GAM_D &kp SPC  &kp LCTRL  &kp LALT
 #define RT_GAM_D PTR_ENT  NAV_KEY    SFT_BSP 
 /* Layers */
+
+// 5 5
+// 6 6
+// 6 6
+// 6 6
+// 6 3 3 6
+// 5 3 3 5
+
+// ZMK_LAYER(rec_layer, NONE_10 NONE_12 NONE_12 NONE_12 NONE_18 NONE_16) 
+
 
 ZMK_LAYER(def_layer, 
                L_FUN                       R_FUN
@@ -103,12 +113,12 @@ ZMK_LAYER(ptr_layer,
 )
 
 ZMK_LAYER(sys_layer, 
-    &bt BT_CLR  NONE_4              NONE_4 &bt BT_CLR_ALL
-    NONE        NONE_5              NONE_5 NONE
-    &bootloader SYS_RGB_U           NONE_5 &bootloader
-    &sys_reset  SYS_RGB_D           NONE_5 &sys_reset
-    NONE        NONE_5    SYS_BT_U  NONE_5 NONE
-    NONE        NONE_5    SYS_BT_D  NONE_5 NONE
+    &bt BT_CLR  NONE_4                       NONE_4 &bt BT_CLR_ALL
+    NONE        NONE_5                       NONE_5 NONE
+    &bootloader L_SYS_U                     R_SYS_U &bootloader
+    &sys_reset  L_SYS_H                     R_SYS_H &sys_reset
+    NONE        L_SYS_D  LT_SYS_U RT_SYS_U  R_SYS_D NONE
+    NONE        NONE_4   LT_SYS_D RT_SYS_D  NONE_4  NONE
 )
 
 ZMK_LAYER(rec_layer, 
