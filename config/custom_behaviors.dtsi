@@ -5,23 +5,22 @@
             compatible = "zmk,behavior-caps-word";
             label = "NUM_WORD";
             #binding-cells = <0>;
-            layers = <NUM>;                                // insert location of numbers layer here
+            layers = <NUM>;         // insert location of numbers layer here
             continue-list = <BACKSPACE DELETE DOT COMMA SLASH STAR PLUS EQUAL MINUS COLON ENTER>; 
-            ignore-numbers;                                // numbers don't deactivate the layer
+            ignore-numbers;         // numbers don't deactivate the layer
         };
     };
     macros { 
         hyper: behavior_hyper {
             compatible = "zmk,behavior-macro-one-param";
             label = "HYPER";
+            wait-ms = <30>;
+            tap-ms = <40>;
             #binding-cells = <1>;
             bindings = 
                 <&macro_press &kp LCTRL &kp LALT &kp LGUI &kp LSHIFT>,
                 <&macro_param_1to1>, <&macro_tap &kp MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_release &kp LSHIFT &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT>;
-                // WTF first release is ignored so uhh haxx
-                // TODO maybe solve with higher wait-ms?
+                <&macro_release &kp LSHIFT &kp LGUI &kp LALT &kp LCTRL>;
         };
     };
 };
@@ -56,14 +55,4 @@ ZMK_BEHAVIOR(th_ht, hold_tap,
     bindings = <&kp>, <&kp>;
 )
 
-// tap dance 
 
-ZMK_BEHAVIOR(magic_sft, tap_dance,
-    tapping-term-ms = <QUICK_TAP_MS>;
-    bindings = <&kp LSHFT>, <&caps_word>, <&kp CAPSLOCK>;
-)
-
-// macros
-ZMK_BEHAVIOR(fat_arrow, macro,
-    bindings = <&kp EQUAL &kp GT>;
-)
