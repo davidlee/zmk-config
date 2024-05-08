@@ -10,6 +10,17 @@
             ignore-numbers;                                // numbers don't deactivate the layer
         };
     };
+    macros { 
+        hyper: behavior_hyper {
+            compatible = "zmk,behavior-macro-one-param";
+            label = "HYPER";
+            #binding-cells = <1>;
+            bindings = 
+                <&macro_press &kp LCTRL &kp LALT &kp LGUI &kp LSHIFT>,
+                <&macro_tap &kp>,
+                <&macro_release &kp LCTRL &kp LALT &kp LGUI &kp LSHIFT>;
+        };
+    };
 };
 
 // home row mods
@@ -53,13 +64,3 @@ ZMK_BEHAVIOR(magic_sft, tap_dance,
 ZMK_BEHAVIOR(fat_arrow, macro,
     bindings = <&kp EQUAL &kp GT>;
 )
-
-// ZMK_BEHAVIOR(hyp, macro_one_param,
-//     wait-ms = <20>;
-//     tap-ms = <10>;
-//     bindings =  \
-//         <&macro_press &kp LCTRL &kp LSHFT &kp LALT &kp LCMD>,\
-//         <&macro_param_1to1>,\
-//         <&kp>,\
-//         <&macro_release &kp LCMD &kp LALT &kp LSHFT &kp LCTRL>;
-// )

@@ -63,7 +63,7 @@ ZMK_LAYER(def_layer,
     TAB_HYP    L_DEF_U                     R_DEF_U    BSL_HYP
     ESC_MEH    L_DEF_H                     R_DEF_H    SQT_MEH
     &kp GRAVE  L_DEF_D   LT_DEF_U RT_DEF_U R_DEF_D    &kp PG_UP
-    APPLE_FN   L_DEF_BOT LT_DEF_D RT_DEF_D R_DEF_BOT  &kp PG_DN    
+    VOODOO     L_DEF_BOT LT_DEF_D RT_DEF_D R_DEF_BOT  &kp PG_DN    
 )
 
 ZMK_LAYER(gal_layer, 

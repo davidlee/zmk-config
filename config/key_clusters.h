@@ -111,11 +111,18 @@ X Q M W Z   K F ' ; .
 #define RT_SYS_D NONE_3
 
 /* REC - window management */ 
-#define L_REC_U HYP_F1  HYP_F2  HYP_F3  HYP_F4  HYP_F5  
-#define L_REC_H HYP_F6  HYP_F7  HYP_F8  HYP_F9  HYP_F10 
-#define L_REC_D HYP_F11 HYP_F12 HYP_F13 HYP_F14 HYP_F15
+// #define L_REC_U ___ ___ ___ ___ ___ 
+// #define L_REC_H ___ ___ ___ ___ ___ 
+// #define L_REC_D ___ ___ ___ ___ ___ 
 
-#define R_REC_U ___ HYP_F16 HYP_F17 HYP_F18 ___  
-#define R_REC_H ___ HYP_F19 HYP_F20 HYP_F21 ___
-#define R_REC_D ___ HYP_F22 HYP_F23 HYP_F24 ___ 
+// #define R_REC_U ___ ___ ___ ___ ___ 
+// #define R_REC_H ___ ___ ___ ___ ___ 
+// #define R_REC_D ___ ___ ___ ___ ___ 
 
+#define L_REC_U &hyper F1  &hyper F2  &hyper F3  &hyper F4  &hyper F5  
+#define L_REC_H &hyper F6  &hyper F7  &hyper F8  &hyper F9  &hyper F10 
+#define L_REC_D &hyper F11 &hyper F12 &hyper F13 &hyper F14 &hyper F15
+
+#define R_REC_U ___ &hyper F16 &hyper F17 &hyper F18 ___  
+#define R_REC_H ___ &hyper F19 &hyper F20 &hyper F21 ___
+#define R_REC_D ___ &hyper F22 &hyper F23 &hyper F24 ___ 
