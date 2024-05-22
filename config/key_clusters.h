@@ -20,7 +20,7 @@
 #define L_DEF_H HML4_A HML3_R HML2_S  HML1_T  &kp G   
 #define L_DEF_D &kp Z  &kp X  &kp C   &kp D   &kp V   
 
-#define R_DEF_U &kp J   &kp L   &kp U     &kp Y   &kp SQT
+#define R_DEF_U &kp J   &kp L   &kp U     &kp Y   &kp SCLN
 #define R_DEF_H &kp M   HMR1_N  HMR2_E    HMR3_I  HMR4_O     
 #define R_DEF_D &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH 
 

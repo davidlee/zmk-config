@@ -15,7 +15,6 @@
 // for custom shortcuts 
 #define MEH   LC(LA(LSHFT))
 #define HYPER LC(LS(LG(LALT)))
-#define HYP HYPER 
 
 // L thumb
 #define CMD_TAB &mt LCMD TAB
@@ -87,6 +86,6 @@
 #define BSL_HYP &mt HYPER BSLH
 #define TAB_HYP &mt HYPER TAB
 #define STATUS &rgb_ug_status_macro
-#define VOODOO &magic SYS 0
+#define VOODOO &magic SYS 0 
 
 

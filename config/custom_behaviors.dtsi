@@ -55,4 +55,3 @@ ZMK_BEHAVIOR(th_ht, hold_tap,
     bindings = <&kp>, <&kp>;
 )
 
-
