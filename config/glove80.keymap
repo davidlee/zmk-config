@@ -10,6 +10,7 @@
 #include "../zmk-nodefree-config/keypos_def/keypos_glv80.h"
 
 #include "defines.h"
+#include "syllables.dtsi"
 #include "keypos_groups_glv80.h"
 #include "custom_behaviors.dtsi"
 #include "behaviors_glv80.dtsi"
