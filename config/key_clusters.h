@@ -105,10 +105,6 @@ X Q M W Z   K F ' ; .
 #define R_SYS_H NONE_5
 #define R_SYS_D NONE_5
 
-#define LT_SYS_U &bt_2 &bt_3 ___          
-#define RT_SYS_U NONE_3
-#define LT_SYS_D &bt_0 &bt_1 &out OUT_USB 
-#define RT_SYS_D NONE_3
 
 /* REC - window management */ 
 // #define L_REC_U ___ ___ ___ ___ ___ 

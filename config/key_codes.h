@@ -27,7 +27,6 @@
 // LHS
 #define ESC_MEH &mt MEH ESC
 // RHS
-#define SQT_MEH &mt MEH SQT
 #define SFT_ENT &mt LSHFT ENTER
 
  // NAV
@@ -81,7 +80,8 @@
 #define MO_SYS &mo SYS
 #define MO_REC &mo REC
 #define PTR_ENT &lt PTR ENTER
-#define SQT_MEH &mt MEH SQT
+// #define SQT_MEH &mt MEH SQT
+#define SQT_MEH &hmr MEH SQT
 #define SLS_MEH &mt MEH SLASH
 #define BSL_HYP &mt HYPER BSLH
 #define TAB_HYP &mt HYPER TAB

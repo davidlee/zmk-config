@@ -22,30 +22,20 @@
 /* 👍 Thumb Clusters */
 
 // Default 
-#define LT_DEF_U MO_REC MO_SYS STATUS
-#define RT_DEF_U ___ ___ PTR_ENT
+//               LEFT              >    xx   <                 RIGHT
+#define TH_DEF_U MO_REC   ___      ___       ___      MO_REC   PTR_ENT
+#define TH_DEF_D SPC_NUM  CMD_TAB  ESC_PTR   PTR_ENT  NAV_KEY  SFT_BSP 
 
-#define LT_DEF_D SPC_NUM  CMD_TAB  ESC_PTR 
-#define RT_DEF_D PTR_ENT  NAV_KEY  SFT_BSP 
+// these use TH_DEF_U
+#define TH_NUM_D ___      ___      ___       &kp DOT  &kp DOT  ___ 
+#define TH_NAV_D &kp SPACE &kp TAB &kp ESC   NONE     ___      DICTATION
+#define TH_PTR_D &kp TAB &kp SPACE &kp ESC   U_MS_B3  U_MS_B1  U_MS_B2 
 
-// NUM
-#define LT_NUM_D ___ ___ ___
-#define RT_NUM_D &kp DOT &kp DOT ___ 
+#define TH_GAM_U &kp LSHFT &kp DEL &kp LGUI  ___       ___     ___ 
+#define TH_GAM_D &kp SPC &kp LCTRL &kp LALT  PTR_ENT  NAV_KEY  SFT_BSP 
 
-// NAV
-#define LT_NAV_D &kp SPACE &kp TAB &kp ESC
-#define RT_NAV_D NONE    ___       DICTATION
-
-// PTR
-#define LT_PTR_D &kp TAB &kp SPACE &kp ESC
-#define RT_PTR_D U_MS_B3 U_MS_B1   U_MS_B2 
-
-// Game
-#define LT_GAM_U &kp LSHFT &kp DEL &kp LGUI 
-#define RT_GAM_U ___       ___     ___ 
-
-#define LT_GAM_D &kp SPC  &kp LCTRL  &kp LALT
-#define RT_GAM_D PTR_ENT  NAV_KEY    SFT_BSP 
+#define TH_SYS_U &bt_2 &bt_3 ___             NONE_3
+#define TH_SYS_D &bt_0 &bt_1 &out OUT_USB    NONE_3
 /* Layers */
 
 // 5 5
@@ -59,67 +49,67 @@
 
 
 ZMK_LAYER(def_layer, 
-               L_FUN                       R_FUN
-    &kp EQUAL  L_NUM                       R_NUM      &kp MINUS
-    TAB_HYP    L_DEF_U                     R_DEF_U    BSL_HYP
-    ESC_MEH    L_DEF_H                     R_DEF_H    SQT_MEH
-    &kp GRAVE  L_DEF_D   LT_DEF_U RT_DEF_U R_DEF_D    &kp PG_UP
-    VOODOO     L_DEF_BOT LT_DEF_D RT_DEF_D R_DEF_BOT  &kp PG_DN    
+               L_FUN              R_FUN
+    &kp EQUAL  L_NUM              R_NUM      &kp MINUS
+    TAB_HYP    L_DEF_U            R_DEF_U    BSL_HYP
+    ESC_MEH    L_DEF_H            R_DEF_H    SQT_MEH
+    &kp GRAVE  L_DEF_D   TH_DEF_U R_DEF_D    &kp PG_UP
+    VOODOO     L_DEF_BOT TH_DEF_D R_DEF_BOT  &kp PG_DN    
 )
 
 ZMK_LAYER(gal_layer, 
-               L_FUN                       R_FUN
-    ___        L_NUM                       R_NUM      ___
-    ___        L_GAL_U                     R_GAL_U    ___
-    ___        L_GAL_H                     R_GAL_H    SLS_MEH
-    ___        L_GAL_D   LT_DEF_U RT_DEF_U R_GAL_D    ___
-    ___        L_DEF_BOT LT_DEF_D RT_DEF_D R_DEF_BOT  ___
+               L_FUN              R_FUN
+    ___        L_NUM              R_NUM      ___
+    ___        L_GAL_U            R_GAL_U    ___
+    ___        L_GAL_H            R_GAL_H    SLS_MEH
+    ___        L_GAL_D   TH_DEF_U R_GAL_D    ___
+    ___        L_DEF_BOT TH_DEF_D R_DEF_BOT  ___
 )
 
 ZMK_LAYER(num_layer, 
-         L_FUN                       R_FUN
-    ___  L_NUM                       R_NUM      ___
-    ___  L_NUM_U                     R_NUM_U    ___
-    ___  L_NUM_H                     R_NUM_H    ___
-    ___  L_NUM_D   LT_DEF_U RT_DEF_U R_NUM_D    ___
-    ___  L_DEF_BOT LT_NUM_D RT_NUM_D R_DEF_BOT  ___
+         L_FUN              R_FUN
+    ___  L_NUM              R_NUM      ___
+    ___  L_NUM_U            R_NUM_U    ___
+    ___  L_NUM_H            R_NUM_H    ___
+    ___  L_NUM_D   TH_DEF_U R_NUM_D    ___
+    ___  L_DEF_BOT TH_NUM_D R_DEF_BOT  ___
 )
 
 ZMK_LAYER(gam_layer, 
-               L_FUN                       R_FUN
-    ___        L_NUM                       R_NUM      ___
-    &kp TAB    L_GAM_U                     R_GAM_U    &kp BACKSLASH
-    &kp ESC    L_GAM_H                     R_GAM_H    &kp SQT
-    ___        L_GAM_D   LT_GAM_U RT_GAM_U R_GAM_D    ___
-    ___        L_DEF_BOT LT_GAM_D RT_GAM_D R_DEF_BOT  ___
+               L_FUN              R_FUN
+    ___        L_NUM              R_NUM      ___
+    &kp TAB    L_GAM_U            R_GAM_U    &kp BACKSLASH
+    &kp ESC    L_GAM_H            R_GAM_H    &kp SQT
+    ___        L_GAM_D   TH_GAM_U R_GAM_D    ___
+    ___        L_DEF_BOT TH_GAM_D R_DEF_BOT  ___
 )
 
 ZMK_LAYER(nav_layer, 
     &kp F11 &kp F12  TRAN_3 TRAN_3   &kp C_BRI_DN &kp C_BRI_UP
-    ___  L_NUM                       R_NUM      ___
-    ___  L_NAV_U                     R_NAV_U    ___
-    ___  L_NAV_H                     R_NAV_H    ___
-    ___  L_NAV_D   LT_DEF_U RT_DEF_U R_NAV_D    ___
-    ___  L_DEF_BOT LT_NAV_D RT_NAV_D R_DEF_BOT  ___   
+    ___  L_NUM              R_NUM      ___
+    ___  L_NAV_U            R_NAV_U    ___
+    ___  L_NAV_H            R_NAV_H    ___
+    ___  L_NAV_D   TH_DEF_U R_NAV_D    ___
+    ___  L_DEF_BOT TH_NAV_D R_DEF_BOT  ___   
 )
 
 ZMK_LAYER(ptr_layer, 
-                    // ALT KEYMAP LAYERS
-         L_FUN        TO_DEF TO_GAL TO_GAM EXIT EXIT
-    ___  L_NUM                       R_NUM      ___
-    ___  L_PTR_U                     R_PTR_U    ___
-    ___  L_PTR_H                     R_PTR_H    ___
-    ___  L_PTR_D   LT_DEF_U RT_DEF_U R_PTR_D    ___
-    ___  L_DEF_BOT LT_PTR_D RT_PTR_D R_DEF_BOT  ___
+                           // CHANGE BASE KEYMAP LAYER on F6-F10
+         L_FUN             TO_DEF TO_GAL TO_GAM EXIT EXIT
+    ___  L_NUM              R_NUM      ___
+    ___  L_PTR_U            R_PTR_U    ___
+    ___  L_PTR_H            R_PTR_H    ___
+    ___  L_PTR_D   TH_DEF_U R_PTR_D    ___
+    ___  L_DEF_BOT TH_PTR_D R_DEF_BOT  ___
 )
 
 ZMK_LAYER(sys_layer, 
-    &bt BT_CLR  NONE_4                       NONE_4 &bt BT_CLR_ALL
-    NONE        NONE_5                       NONE_5 NONE
-    &bootloader L_SYS_U                     R_SYS_U &bootloader
-    &sys_reset  L_SYS_H                     R_SYS_H &sys_reset
-    NONE        L_SYS_D  LT_SYS_U RT_SYS_U  R_SYS_D NONE
-    NONE        NONE_4   LT_SYS_D RT_SYS_D  NONE_4  NONE
+    &bt BT_CLR  NONE_4             NONE_4 &bt BT_CLR_ALL
+    NONE        NONE_5             NONE_5 NONE
+    &bootloader L_SYS_U           R_SYS_U &bootloader
+    &sys_reset  L_SYS_H           R_SYS_H &sys_reset
+    NONE        L_SYS_D  TH_SYS_U R_SYS_D NONE
+    NONE        NONE_4   TH_SYS_D NONE_4  NONE
 )
 
 ZMK_LAYER(rec_layer, 
