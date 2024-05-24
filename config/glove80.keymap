@@ -67,12 +67,12 @@ ZMK_LAYER(gal_layer,
 )
 
 ZMK_LAYER(num_layer, 
-         L_FUN              R_FUN
-    ___  L_NUM              R_NUM      ___
-    ___  L_NUM_U            R_NUM_U    ___
-    ___  L_NUM_H            R_NUM_H    ___
-    ___  L_NUM_D   TH_DEF_U R_NUM_D    ___
-    ___  L_DEF_BOT TH_NUM_D R_DEF_BOT  ___
+              L_FUN              R_FUN
+    ___       L_NUM              R_NUM      ___
+    APPLE_FN  L_NUM_U            R_NUM_U    ___
+    ___       L_NUM_H            R_NUM_H    ___
+    ___       L_NUM_D   TH_DEF_U R_NUM_D    ___
+    ___       L_DEF_BOT TH_NUM_D R_DEF_BOT  ___
 )
 
 ZMK_LAYER(gam_layer, 
