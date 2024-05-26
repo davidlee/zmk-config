@@ -8,6 +8,7 @@
 #define PTR 5 // pointer
 #define SYS 6 // system
 #define REC 7 // rectangle WM
+#define FUN 8 // function keys 
 
 #undef COMBO_TERM 
 #define COMBO_TERM 15

@@ -32,6 +32,11 @@ ZMK_COMBO(combo_brace_r,   &kp RBRC,  LB1 LB0, ALL)
 
 // RIGHT HAND
 
+#ifdef LH5 // glove80
+	ZMK_COMBO(combo_enter_meh, ENT_MEH, RF2 RF3, ALL)
+	ZMK_COMBO(combo_tab,     &kp TAB,   RM1 RB1, ALL)
+#endif
+
 ZMK_COMBO(combo_ptr_lock,  &tog PTR,  RT2 RM1 RM3, ALL)
 ZMK_COMBO(combo_pause,     &kp C_PP,  RT0 RT1, ALL)
 ZMK_COMBO(combo_vol_up,    VOL_UP,    RM1 RT2, ALL)
@@ -39,18 +44,17 @@ ZMK_COMBO(combo_vol_dn,    VOL_DN,    RT2 RM3, ALL)
 ZMK_COMBO(combo_trk_prev,  TRK_PREV,  RM0 RT1, ALL)
 ZMK_COMBO(combo_trk_next,  TRK_NEXT,  RM4 RT3, ALL)
 
+ZMK_COMBO(combo_del,       &kp DEL,   RT4 RT5, ALL)
+ZMK_COMBO(combo_bs_word,   BSWORD,    RM1 RM2, ALL)
+ZMK_COMBO(combo_ent,       ENT_MEH,   RM3 RM4, ALL)
+
+ZMK_COMBO(combo_lbkt_r,    &kp LBKT,  RB2 RB3, ALL)
+ZMK_COMBO(combo_rbkt_r,    &kp RBKT,  RB3 RB4, ALL)
+
 // these fill in missing base layer punctuation
 // and so are dependent on which layout is in use
 ZMK_COMBO(combo_semi,      &kp SEMI,  RM2 RM3, DEF)
 ZMK_COMBO(combo_slash,     &kp SLASH, RM2 RM3, GAL)
-
-ZMK_COMBO(combo_del,       &kp DEL,   RT3 RT4, ALL)
-ZMK_COMBO(combo_bs_word,   BSWORD,    RM1 RM2, ALL)
-// ZMK_COMBO(combo_ent,       ENT_MEH,   RM3 RM4, ALL)
-
-
-ZMK_COMBO(combo_lbkt_r,    &kp LBKT,  RB2 RB3, ALL)
-ZMK_COMBO(combo_rbkt_r,    &kp RBKT,  RB3 RB4, ALL)
 
 /*                               GLOVE80 KEY MATRIX / LAYOUT MAPPING
  ╭────────────────────╮       ╭────────────────────╮ ╭────────────────────╮       ╭────────────────────╮
@@ -66,17 +70,11 @@ ZMK_COMBO(combo_rbkt_r,    &kp RBKT,  RB3 RB4, ALL)
              ╰────────────┴────────────╯                         ╰────────────┴────────────╯
 */
 
-// glove80 only 
-#ifdef LH5
-
+#ifdef LH5 // glove80 
 	// outer two function keys
 	ZMK_COMBO(combo_boot_l, &bootloader, LC5 LC4, ALL)
 	ZMK_COMBO(combo_boot_r, &bootloader, RC5 RC4, ALL)
 
 	ZMK_COMBO(combo_sysreset_l, &sys_reset, RC5 RC1, ALL)
 	ZMK_COMBO(combo_sysreset_r, &sys_reset, LC5 LC1, ALL)
-
-	ZMK_COMBO(combo_enter_meh, ENT_MEH, RF2 RF3, ALL)
-	ZMK_COMBO(combo_tab,     &kp TAB,   RM1 RB1, ALL)
-	
 #endif

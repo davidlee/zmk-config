@@ -14,6 +14,15 @@
 #define NONE_16 NONE_5 NONE_3 NONE_3 NONE_5
 
 
+#define L_MODS  &kp LCTRL &kp LALT &kp LCMD  &kp LSHFT  
+#define R_MODS  &kp LSHFT &kp LCMD &kp LALT  &kp LCTRL 
+
+#define L_NUM &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 
+#define R_NUM &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
+
+#define L_FUN &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 
+#define R_FUN &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
+
 // default layer - Colemak-DH
 
 #define L_DEF_U &kp Q  &kp W  &kp F   &kp P   &kp B   
@@ -23,6 +32,7 @@
 #define R_DEF_U &kp J   &kp L   &kp U     &kp Y   &kp SCLN
 #define R_DEF_H &kp M   HMR1_N  HMR2_E    HMR3_I  HMR4_O     
 #define R_DEF_D &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH 
+
 
 /* GALLIUM (alt keyb discord cmini version)
 
@@ -40,32 +50,66 @@ X Q M W Z   K F ' ; .
 #define R_GAL_H &kp P HMR1_H HMR2_A  HMR3_E   HMR4_I   
 #define R_GAL_D &kp K &kp F  &kp SQT &kp SEMI &kp DOT
 
+
 /* NUM */
 
-#define L_NUM_U &kp EXCL  &kp AT   &kp HASH  &kp UNDER &kp TILDE 
-#define L_NUM_H &kp GRAVE &kp AMPS &kp STAR  &kp MINUS &kp EQUAL 
-#define L_NUM_D &kp BSLH  &kp DLLR &kp PRCNT &kp CARET &kp LBKT  
+//  `    -    =    <    (       )    >         +    ,
+//  1    2    3    4    5       6    7    8    9    0
+//  ~    _    \    {    [       ]    }    /    :    .   
 
-#define R_NUM_U &kp PIPE &kp N7 &kp N8  &kp N9  &kp COLON 
-#define R_NUM_H &kp GT   &kp N4 &kp N5  &kp N6  &kp N0    
-#define R_NUM_D &kp RBKT &kp N1 &kp N2  &kp N3  &kp SLASH 
+#define L_NUM_U &kp GRAVE &kp UNDER &kp EQUAL &kp LT &kp LPAR 
+#define L_NUM_H L_NUM 
+#define L_NUM_D &kp TILDE &kp MINUS &kp BSLH &kp LBRC &kp LBKT
+
+#define R_NUM_U &kp RPAR &kp GT &kp PIPE &kp PLUS &kp COMMA 
+#define R_NUM_H R_NUM
+#define R_NUM_D &kp RBKT &kp RBRC &kp SLASH &kp COLON &kp DOT 
+
+/* FUN */
+
+#define L_FUN_U NONE_5 
+#define L_FUN_H &kp F1  &kp F2  &kp F3  &kp F4  &kp F5 
+#define L_FUN_D &kp F11 &kp F12 &kp F13 &kp F14 &kp F15
+
+
+#define R_FUN_U NONE_5 
+#define R_FUN_H &kp F6  &kp F7  &kp F8  &kp F9  &kp F10 
+#define R_FUN_D &kp F16 &kp F17 &kp F18 &kp F19 &kp F20 
 
 /* NAV */
 
-#define L_NAV_U &kp F1    &kp F2   &kp F3    &kp F4    &kp F5  
-#define L_NAV_H &kp LCTRL &kp LALT &kp LCMD  &kp LSHFT NONE    
-#define L_NAV_D &kp F6    &kp F7    &kp F8   &kp F9    &kp F10   
+// #define L_NAV_U &kp F1    &kp F2   &kp F3    &kp F4    &kp F5  
+// #define L_NAV_H &kp LCTRL &kp LALT &kp LCMD  &kp LSHFT NONE    
+// #define L_NAV_D &kp F6    &kp F7    &kp F8   &kp F9    &kp F10   
 
-#define R_NAV_U NONE      &kp HOME &kp PG_DN &kp PG_UP &kp END  
-#define R_NAV_H NONE      &kp LEFT &kp DOWN  &kp UP    &kp RIGHT
-#define R_NAV_D NONE      BACK     ZOOM_OUT  ZOOM_IN   FORWARD  
+// #define R_NAV_U NONE      &kp HOME &kp PG_DN &kp PG_UP &kp END  
+// #define R_NAV_H NONE      &kp LEFT &kp DOWN  &kp UP    &kp RIGHT
+// #define R_NAV_D NONE      BACK     ZOOM_OUT  ZOOM_IN   FORWARD  
+
+
+#define L_NAV_U NONE_5 
+#define L_NAV_H L_MODS NONE 
+#define L_NAV_D NONE_5
+
+#define R_NAV_U NONE &kp HOME &kp PG_DN &kp PG_UP &kp END  
+#define R_NAV_H NONE &kp LEFT &kp DOWN  &kp UP    &kp RIGHT
+#define R_NAV_D NONE BACK     ZOOM_OUT  ZOOM_IN   FORWARD  
 
 /* PTR */
 
 
-#define L_PTR_U &kp F11   &kp F12  &kp F13   &kp F14   &kp F15  
-#define L_PTR_H &kp LCTRL &kp LALT &kp LCMD  &kp LSHFT &kp F12 
-#define L_PTR_D &kp F16   &kp F17  &kp F18   &kp F19   &kp F20  
+// #define L_PTR_U &kp F11   &kp F12  &kp F13   &kp F14   &kp F15  
+// #define L_PTR_H &kp LCTRL &kp LALT &kp LCMD  &kp LSHFT &kp F12 
+// #define L_PTR_D &kp F16   &kp F17  &kp F18   &kp F19   &kp F20  
+
+// #define R_PTR_U PTR_ZERO U_WH_L  U_WH_D  U_WH_U  U_WH_R 
+// #define R_PTR_H U_MS_B1  U_MS_L  U_MS_D  U_MS_U  U_MS_R 
+// #define R_PTR_D PTR_CNTR U_MS_B1 U_MS_B2 U_MS_B3 PTR_CNTR
+
+
+#define L_PTR_U NONE_5 
+#define L_PTR_H L_MODS NONE 
+#define L_PTR_D NONE_5
 
 #define R_PTR_U PTR_ZERO U_WH_L  U_WH_D  U_WH_U  U_WH_R 
 #define R_PTR_H U_MS_B1  U_MS_L  U_MS_D  U_MS_U  U_MS_R 
@@ -88,12 +132,8 @@ X Q M W Z   K F ' ; .
 #define R_DEF_BOT &kp LBKT  &kp DOWN &kp UP    &kp RBKT
 
 // Function Keys
-#define L_FUN &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 
-#define R_FUN &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
 
-// Number Row
-#define L_NUM &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 
-#define R_NUM &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
+
 
 /* Glove80 SYS layer */
 
@@ -105,6 +145,9 @@ X Q M W Z   K F ' ; .
 #define R_SYS_H NONE_5
 #define R_SYS_D NONE_5
 
+#define SYS_U L_SYS_U R_SYS_U
+#define SYS_H L_SYS_H R_SYS_H
+#define SYS_D L_SYS_D R_SYS_D
 
 /* REC - window management */ 
 // #define L_REC_U ___ ___ ___ ___ ___ 
@@ -122,3 +165,8 @@ X Q M W Z   K F ' ; .
 #define R_REC_U ___ &hyper F16 &hyper F17 &hyper F18 ___  
 #define R_REC_H ___ &hyper F19 &hyper F20 &hyper F21 ___
 #define R_REC_D ___ &hyper F22 &hyper F23 &hyper F24 ___ 
+
+#define REC_U L_REC_U R_REC_U
+#define REC_H L_REC_H R_REC_H
+#define REC_D L_REC_D R_REC_D
+

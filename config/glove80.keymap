@@ -23,7 +23,7 @@
 
 // Default 
 //               LEFT              >    xx   <                 RIGHT
-#define TH_DEF_U MO_REC   ___      ___       ___      MO_REC   PTR_ENT
+#define TH_DEF_U MO_REC   ___      SL_FUN    ___      MO_REC   PTR_ENT
 #define TH_DEF_D SPC_NUM  CMD_TAB  ESC_PTR   PTR_ENT  NAV_KEY  SFT_BSP 
 
 // these use TH_DEF_U
@@ -118,5 +118,14 @@ ZMK_LAYER(rec_layer,
     ___  L_REC_U               R_REC_U  ___
     ___  L_REC_H               R_REC_H  ___
     ___  L_REC_D TRAN_3 TRAN_3 R_REC_D  ___
+    ___  TRAN_4  TRAN_3 TRAN_3 TRAN_4   ___
+)
+
+ZMK_LAYER(fun_layer, 
+         L_FUN                 R_FUN
+    ___  L_FUN                 R_FUN    ___
+    ___  L_FUN_U               R_FUN_U  ___
+    ___  L_FUN_H               R_FUN_H  ___
+    ___  L_FUN_D TRAN_3 TRAN_3 R_FUN_D  ___
     ___  TRAN_4  TRAN_3 TRAN_3 TRAN_4   ___
 )

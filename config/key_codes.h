@@ -11,6 +11,7 @@
 #define TO_DEF &to DEF
 #define TO_GAL &to GAL
 #define TO_GAM &to GAM
+#define SL_FUN &sl FUN
 
 // for custom shortcuts 
 #define MEH   LC(LA(LSHFT))
