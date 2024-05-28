@@ -29,6 +29,7 @@
 
 // LHS
 #define ESC_MEH &mt MEH ESC
+#define GRIFT   &mt LSHFT GRAVE
 // RHS
 #define SFT_ENT &mt LSHFT ENTER
 
