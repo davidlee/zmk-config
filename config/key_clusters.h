@@ -17,6 +17,9 @@
 #define L_MODS  &kp LCTRL &kp LALT &kp LCMD  &kp LSHFT  
 #define R_MODS  &kp LSHFT &kp LCMD &kp LALT  &kp LCTRL 
 
+#define L_SMOD  &sk LCTRL &sk LALT &sk LCMD  &sk LSHFT  
+#define R_SMOD  &sk LSHFT &sk LCMD &sk LALT  &sk LCTRL 
+
 #define L_NUM &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 
 #define R_NUM &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
 
@@ -49,6 +52,7 @@ X Q M W Z   K F ' ; .
 #define R_GAL_U &kp J &kp Y  &kp O   &kp U    &kp COMMA
 #define R_GAL_H &kp P HMR1_H HMR2_A  HMR3_E   HMR4_I   
 #define R_GAL_D &kp K &kp F  &kp SQT &kp SEMI &kp DOT
+
 
 
 /* NUM */
@@ -131,9 +135,14 @@ X Q M W Z   K F ' ; .
 #define L_DEF_BOT &kp HOME  &kp LEFT &kp RIGHT &kp END
 #define R_DEF_BOT &kp LBKT  &kp DOWN &kp UP    &kp RBKT
 
-// Function Keys
+/* MOD- sticky key mods */ 
+#define L_MOD_U L_SMOD NONE
+#define L_MOD_H L_SMOD NONE
+#define L_MOD_D L_SMOD NONE
 
-
+#define R_MOD_U NONE R_SMOD
+#define R_MOD_H NONE R_SMOD
+#define R_MOD_D NONE R_SMOD
 
 /* Glove80 SYS layer */
 
@@ -150,13 +159,8 @@ X Q M W Z   K F ' ; .
 #define SYS_D L_SYS_D R_SYS_D
 
 /* REC - window management */ 
-// #define L_REC_U ___ ___ ___ ___ ___ 
-// #define L_REC_H ___ ___ ___ ___ ___ 
-// #define L_REC_D ___ ___ ___ ___ ___ 
-
-// #define R_REC_U ___ ___ ___ ___ ___ 
-// #define R_REC_H ___ ___ ___ ___ ___ 
-// #define R_REC_D ___ ___ ___ ___ ___ 
+// the keycodes aren't important 
+// as long as they're unused by anything other than rectangle
 
 #define L_REC_U &hyper F1  &hyper F2  &hyper F3  &hyper F4  &hyper F5  
 #define L_REC_H &hyper F6  &hyper F7  &hyper F8  &hyper F9  &hyper F10 

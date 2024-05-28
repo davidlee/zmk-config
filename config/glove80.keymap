@@ -24,7 +24,7 @@
 // Default 
 //               LEFT                          <|>                 RIGHT
 #define TH_DEF_U MO_REC   ___        SL_FUN      ___      MO_REC   PTR_ENT 
-#define TH_DEF_D SPC_NUM  CMD_TAB    ESC_PTR     PTR_ENT  NAV_KEY  SFT_BSP 
+#define TH_DEF_D SPC_NUM  CMD_TAB    ESC_MOD     PTR_ENT  NAV_KEY  SFT_BSP 
 
 #define TH_GAM_U &kp LSHFT &kp DEL   &kp LGUI    ___       ___     ___ 
 #define TH_GAM_D &kp SPC   &kp LCTRL &kp LALT    PTR_ENT  NAV_KEY  SFT_BSP 
@@ -118,3 +118,21 @@ ZMK_LAYER(fun_layer,
     ___  L_FUN_D TRAN_3 TRAN_3 R_FUN_D  ___
     ___  TRAN_4  TRAN_3 TRAN_3 TRAN_4   ___
 )
+
+ZMK_LAYER(mod_layer, 
+         NONE_5                NONE_5 
+    ___  NONE_5                NONE_5  ___
+    ___  L_MOD_U               R_MOD_U ___
+    ___  L_MOD_H               R_MOD_H ___
+    ___  L_MOD_D NONE_3 NONE_3 R_MOD_D ___
+    ___  NONE_4  NONE_3 NONE_3 NONE_4  ___
+)
+
+/* none 
+    NONE_5               NONE_5 
+___ NONE_5               NONE_5 ___
+___ NONE_5               NONE_5 ___
+___ NONE_5               NONE_5 ___
+___ NONE_5 NONE_3 NONE_3 NONE_5 ___
+___ NONE_4 NONE_3 NONE_3 NONE_4 ___
+*/

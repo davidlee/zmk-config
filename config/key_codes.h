@@ -21,6 +21,8 @@
 #define CMD_TAB &mt LCMD TAB
 #define SPC_NUM &lt NUM SPACE
 #define ESC_PTR &lt PTR ESC
+#define ESC_MOD &lt MOD ESC
+
 // R thumb
 #define NAV_KEY &mo NAV 
 #define SFT_BSP &th_ht LSHFT BSPC

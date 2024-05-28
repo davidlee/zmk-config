@@ -9,6 +9,7 @@
 #define SYS 6 // system
 #define REC 7 // rectangle WM
 #define FUN 8 // function keys 
+#define MOD 9 // sticky mods
 
 #undef COMBO_TERM 
 #define COMBO_TERM 15
