@@ -22,35 +22,24 @@
 /* 👍 Thumb Clusters */
 
 // Default 
-//               LEFT              >    xx   <                 RIGHT
-#define TH_DEF_U MO_REC   ___      SL_FUN    ___      MO_REC   PTR_ENT
-#define TH_DEF_D SPC_NUM  CMD_TAB  ESC_PTR   PTR_ENT  NAV_KEY  SFT_BSP 
+//               LEFT                          <|>                 RIGHT
+#define TH_DEF_U MO_REC   ___        SL_FUN      ___      MO_REC   PTR_ENT 
+#define TH_DEF_D SPC_NUM  CMD_TAB    ESC_PTR     PTR_ENT  NAV_KEY  SFT_BSP 
 
-// these use TH_DEF_U
-#define TH_NUM_D ___      ___      ___       &kp DOT  &kp DOT  ___ 
-#define TH_NAV_D &kp SPACE &kp TAB &kp ESC   NONE     ___      DICTATION
-#define TH_PTR_D &kp TAB &kp SPACE &kp ESC   U_MS_B3  U_MS_B1  U_MS_B2 
+#define TH_GAM_U &kp LSHFT &kp DEL   &kp LGUI    ___       ___     ___ 
+#define TH_GAM_D &kp SPC   &kp LCTRL &kp LALT    PTR_ENT  NAV_KEY  SFT_BSP 
 
-#define TH_GAM_U &kp LSHFT &kp DEL &kp LGUI  ___       ___     ___ 
-#define TH_GAM_D &kp SPC &kp LCTRL &kp LALT  PTR_ENT  NAV_KEY  SFT_BSP 
+#define TH_SYS_U &bt_2     &bt_3     ___         NONE_3
+#define TH_SYS_D &bt_0     &bt_1     &out OUT_USB  NONE_3
 
-#define TH_SYS_U &bt_2 &bt_3 ___             NONE_3
-#define TH_SYS_D &bt_0 &bt_1 &out OUT_USB    NONE_3
-/* Layers */
-
-// 5 5
-// 6 6
-// 6 6
-// 6 6
-// 6 3 3 6
-// 5 3 3 5
-
-// ZMK_LAYER(rec_layer, NONE_10 NONE_12 NONE_12 NONE_12 NONE_18 NONE_16) 
+#define TH_NUM_D ___       ___       ___         &kp DOT  &kp DOT  ___ 
+#define TH_NAV_D &kp SPACE &kp TAB   &kp ESC     NONE     ___      DICTATION
+#define TH_PTR_D &kp TAB   &kp SPACE &kp ESC     U_MS_B3  U_MS_B1  U_MS_B2 
 
 
 ZMK_LAYER(def_layer, 
                L_FUN              R_FUN
-    &kp EQUAL  L_NUM              R_NUM      &kp MINUS
+    &kp MINUS  L_NUM              R_NUM      &kp EQUAL
     TAB_HYP    L_DEF_U            R_DEF_U    BSL_HYP
     ESC_MEH    L_DEF_H            R_DEF_H    SQT_MEH
     &kp GRAVE  L_DEF_D   TH_DEF_U R_DEF_D    &kp PG_UP
