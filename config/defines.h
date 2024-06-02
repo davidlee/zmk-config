@@ -1,7 +1,7 @@
 /* layer IDs */ 
 
-#define DEF 0 // default = colemak
-#define GAL 1 // gallium
+#define GAL 0 // default = gallium
+#define CMK 1 // colemak
 #define NUM 2 // number 
 #define GAM 3 // qwerty 
 #define NAV 4 // navigation

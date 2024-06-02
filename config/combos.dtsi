@@ -16,7 +16,7 @@ ZMK_COMBO(combo_capsword, &caps_word, LM4 LM1, ALL)
 ZMK_COMBO(combo_numword,   &num_word, LM4 LH1, ALL)
 ZMK_COMBO(combo_dictate,   DICTATION, LM4 LM0, ALL)
 
-ZMK_COMBO(combo_emdash,    EMDASH,     LM1 LM0, DEF GAL)
+ZMK_COMBO(combo_emdash,    EMDASH,     LM1 LM0, GAL CMK)
 
 ZMK_COMBO(combo_paren_l,   &kp LPAR,  LT3 LT2, ALL)
 ZMK_COMBO(combo_paren_r,   &kp RPAR,  LT2 LT1, ALL)
@@ -53,7 +53,7 @@ ZMK_COMBO(combo_rbkt_r,    &kp RBKT,  RB3 RB4, ALL)
 
 // these fill in missing base layer punctuation
 // and so are dependent on which layout is in use
-ZMK_COMBO(combo_semi,      &kp SEMI,  RM2 RM3, DEF)
+ZMK_COMBO(combo_semi,      &kp SEMI,  RM2 RM3, CMK)
 ZMK_COMBO(combo_slash,     &kp SLASH, RM2 RM3, GAL)
 
 /*                               GLOVE80 KEY MATRIX / LAYOUT MAPPING

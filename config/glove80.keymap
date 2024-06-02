@@ -37,21 +37,21 @@
 #define TH_PTR_D &kp TAB   &kp SPACE &kp ESC     U_MS_B3  U_MS_B1  U_MS_B2 
 
 
-ZMK_LAYER(def_layer, 
+ZMK_LAYER(gal_layer, 
                L_FUN              R_FUN
     &kp MINUS  L_NUM              R_NUM      &kp EQUAL
-    TAB_HYP    L_DEF_U            R_DEF_U    BSL_HYP
-    ESC_MEH    L_DEF_H            R_DEF_H    SQT_MEH
-    GRIFT      L_DEF_D   TH_DEF_U R_DEF_D    &kp PG_UP
+    TAB_HYP    L_GAL_U            R_GAL_U    BSL_HYP
+    ESC_MEH    L_GAL_H            R_GAL_H    SLS_MEH
+    GRIFT      L_GAL_D   TH_DEF_U R_GAL_D    &kp PG_UP
     VOODOO     L_DEF_BOT TH_DEF_D R_DEF_BOT  &kp PG_DN    
 )
 
-ZMK_LAYER(gal_layer, 
+ZMK_LAYER(cmk_layer, 
                L_FUN              R_FUN
     ___        L_NUM              R_NUM      ___
-    ___        L_GAL_U            R_GAL_U    ___
-    ___        L_GAL_H            R_GAL_H    SLS_MEH
-    ___        L_GAL_D   TH_DEF_U R_GAL_D    ___
+    ___        L_CMK_U            R_CMK_U    ___
+    ___        L_CMK_H            R_CMK_H    SQT_MEH
+    ___        L_CMK_D   TH_DEF_U R_CMK_D    ___
     ___        L_DEF_BOT TH_DEF_D R_DEF_BOT  ___
 )
 
@@ -84,7 +84,7 @@ ZMK_LAYER(nav_layer,
 
 ZMK_LAYER(ptr_layer, 
                            // CHANGE BASE KEYMAP LAYER on F6-F10
-         L_FUN             TO_DEF TO_GAL TO_GAM EXIT EXIT
+         L_FUN        TO_GAL TO_CMK TO_GAM EXIT EXIT
     ___  L_NUM              R_NUM      ___
     ___  L_PTR_U            R_PTR_U    ___
     ___  L_PTR_H            R_PTR_H    ___

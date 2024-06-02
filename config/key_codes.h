@@ -7,8 +7,8 @@
 
    
 // layers
-#define EXIT   &to DEF
-#define TO_DEF &to DEF
+#define EXIT   &to GAL
+#define TO_CMK &to CMK
 #define TO_GAL &to GAL
 #define TO_GAM &to GAM
 #define SL_FUN &sl FUN
