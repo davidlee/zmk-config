@@ -14,7 +14,6 @@
 #define NONE_18 NONE NONE_5 NONE_3 NONE_3 NONE_5 NONE
 #define NONE_16 NONE_5 NONE_3 NONE_3 NONE_5
 
-
 #define L_MODS  &kp LCTRL &kp LALT &kp LCMD  &kp LSHFT  
 #define R_MODS  &kp LSHFT &kp LCMD &kp LALT  &kp LCTRL 
 
@@ -68,16 +67,6 @@ X Q M W Z   K F ' ; .
 #define R_NUM_H R_NUM
 #define R_NUM_D &kp RBKT &kp RBRC &kp SLASH &kp COLON &kp DOT 
 
-/* FUN */
-
-#define L_FUN_U NONE_5 
-#define L_FUN_H &kp F1  &kp F2  &kp F3  &kp F4  &kp F5 
-#define L_FUN_D &kp F11 &kp F12 &kp F13 &kp F14 &kp F15
-
-
-#define R_FUN_U NONE_5 
-#define R_FUN_H &kp F6  &kp F7  &kp F8  &kp F9  &kp F10 
-#define R_FUN_D &kp F16 &kp F17 &kp F18 &kp F19 &kp F20 
 
 /* NAV */
 
@@ -113,16 +102,6 @@ X Q M W Z   K F ' ; .
 #define L_DEF_BOT &kp HOME  &kp LEFT &kp RIGHT &kp END
 #define R_DEF_BOT &kp LBKT  &kp DOWN &kp UP    &kp RBKT
 
-/* MOD- sticky key mods */ 
-
-#define L_MOD_U L_SMOD NONE
-#define L_MOD_H L_SMOD NONE
-#define L_MOD_D L_SMOD NONE
-
-#define R_MOD_U NONE R_SMOD
-#define R_MOD_H NONE R_SMOD
-#define R_MOD_D NONE R_SMOD
-
 /* Glove80 SYS layer */
 
 #define L_SYS_U &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG 
@@ -132,15 +111,4 @@ X Q M W Z   K F ' ; .
 #define R_SYS_U NONE_5
 #define R_SYS_H NONE_5
 #define R_SYS_D NONE_5
-
-/* REC - window management */ 
-// the keycodes aren't important as long as they're unused by anything other than rectangle
-
-#define L_REC_U &hyper F1  &hyper F2  &hyper F3  &hyper F4  &hyper F5  
-#define L_REC_H &hyper F6  &hyper F7  &hyper F8  &hyper F9  &hyper F10 
-#define L_REC_D &hyper F11 &hyper F12 &hyper F13 &hyper F14 &hyper F15
-
-#define R_REC_U ___ &hyper F16 &hyper F17 &hyper F18 ___  
-#define R_REC_H ___ &hyper F19 &hyper F20 &hyper F21 ___
-#define R_REC_D ___ &hyper F22 &hyper F23 &hyper F24 ___ 
 

@@ -23,19 +23,18 @@
 
 // Default 
 //               LEFT                          <|>                 RIGHT
-#define TH_DEF_U MO_REC   ___        SL_FUN      ___      MO_REC   PTR_ENT 
-#define TH_DEF_D SPC_NUM  CMD_TAB    ESC_MOD     PTR_ENT  NAV_KEY  SFT_BSP 
+#define TH_DEF_U ___      ___        ___         ___      ___      PTR_ENT 
+#define TH_DEF_D SPC_NUM  CMD_TAB    OPT_ESC     PTR_ENT  NAV_KEY  SFT_BSP 
 
 #define TH_GAM_U &kp LSHFT &kp DEL   &kp LGUI    ___       ___     ___ 
 #define TH_GAM_D &kp SPC   &kp LCTRL &kp LALT    PTR_ENT  NAV_KEY  SFT_BSP 
 
-#define TH_SYS_U &bt_2     &bt_3     ___         NONE_3
+#define TH_SYS_U &bt_2     &bt_3     ___           NONE_3
 #define TH_SYS_D &bt_0     &bt_1     &out OUT_USB  NONE_3
 
-#define TH_NUM_D ___       ___       ___         &kp DOT  &kp DOT  ___ 
+#define TH_NUM_D ___       ___       ___         NONE     &kp DOT  ___ 
 #define TH_NAV_D &kp SPACE &kp TAB   &kp ESC     NONE     ___      DICTATION
-#define TH_PTR_D &kp TAB   &kp SPACE &kp ESC     U_MS_B3  U_MS_B1  U_MS_B2 
-
+#define TH_PTR_D &kp SPACE &kp TAB   &kp ESC     U_MS_B3  U_MS_B1  U_MS_B2 
 
 ZMK_LAYER(gal_layer, 
                L_FUN              R_FUN
@@ -55,15 +54,6 @@ ZMK_LAYER(cmk_layer,
     ___        L_DEF_BOT TH_DEF_D R_DEF_BOT  ___
 )
 
-ZMK_LAYER(num_layer, 
-              L_FUN              R_FUN
-    ___       L_NUM              R_NUM      ___
-    APPLE_FN  L_NUM_U            R_NUM_U    ___
-    ___       L_NUM_H            R_NUM_H    ___
-    ___       L_NUM_D   TH_DEF_U R_NUM_D    ___
-    ___       L_DEF_BOT TH_NUM_D R_DEF_BOT  ___
-)
-
 ZMK_LAYER(gam_layer, 
                L_FUN              R_FUN
     ___        L_NUM              R_NUM      ___
@@ -71,6 +61,15 @@ ZMK_LAYER(gam_layer,
     &kp ESC    L_GAM_H            R_GAM_H    &kp SQT
     ___        L_GAM_D   TH_GAM_U R_GAM_D    ___
     ___        L_DEF_BOT TH_GAM_D R_DEF_BOT  ___
+)
+
+ZMK_LAYER(num_layer, 
+              L_FUN              R_FUN
+    ___       L_NUM              R_NUM      ___
+    APPLE_FN  L_NUM_U            R_NUM_U    ___
+    ___       L_NUM_H            R_NUM_H    ___
+    ___       L_NUM_D   TH_DEF_U R_NUM_D    ___
+    DICTATION L_DEF_BOT TH_NUM_D R_DEF_BOT  ___
 )
 
 ZMK_LAYER(nav_layer, 
@@ -101,32 +100,32 @@ ZMK_LAYER(sys_layer,
     NONE        NONE_4   TH_SYS_D NONE_4  NONE
 )
 
-ZMK_LAYER(rec_layer, 
-         L_FUN                 R_FUN
-    ___  L_NUM                 R_NUM    ___
-    ___  L_REC_U               R_REC_U  ___
-    ___  L_REC_H               R_REC_H  ___
-    ___  L_REC_D TRAN_3 TRAN_3 R_REC_D  ___
-    ___  TRAN_4  TRAN_3 TRAN_3 TRAN_4   ___
-)
+// ZMK_LAYER(rec_layer, 
+//          L_FUN                 R_FUN
+//     ___  L_NUM                 R_NUM    ___
+//     ___  L_REC_U               R_REC_U  ___
+//     ___  L_REC_H               R_REC_H  ___
+//     ___  L_REC_D TRAN_3 TRAN_3 R_REC_D  ___
+//     ___  TRAN_4  TRAN_3 TRAN_3 TRAN_4   ___
+// )
 
-ZMK_LAYER(fun_layer, 
-         L_FUN                 R_FUN
-    ___  L_FUN                 R_FUN    ___
-    ___  L_FUN_U               R_FUN_U  ___
-    ___  L_FUN_H               R_FUN_H  ___
-    ___  L_FUN_D TRAN_3 TRAN_3 R_FUN_D  ___
-    ___  TRAN_4  TRAN_3 TRAN_3 TRAN_4   ___
-)
+// ZMK_LAYER(fun_layer, 
+//          L_FUN                 R_FUN
+//     ___  L_FUN                 R_FUN    ___
+//     ___  L_FUN_U               R_FUN_U  ___
+//     ___  L_FUN_H               R_FUN_H  ___
+//     ___  L_FUN_D TRAN_3 TRAN_3 R_FUN_D  ___
+//     ___  TRAN_4  TRAN_3 TRAN_3 TRAN_4   ___
+// )
 
-ZMK_LAYER(mod_layer, 
-         NONE_5                NONE_5 
-    ___  NONE_5                NONE_5  ___
-    ___  L_MOD_U               R_MOD_U ___
-    ___  L_MOD_H               R_MOD_H ___
-    ___  L_MOD_D NONE_3 NONE_3 R_MOD_D ___
-    ___  NONE_4  NONE_3 NONE_3 NONE_4  ___
-)
+// ZMK_LAYER(mod_layer, 
+//          NONE_5                NONE_5 
+//     ___  NONE_5                NONE_5  ___
+//     ___  L_MOD_U               R_MOD_U ___
+//     ___  L_MOD_H               R_MOD_H ___
+//     ___  L_MOD_D NONE_3 NONE_3 R_MOD_D ___
+//     ___  NONE_4  NONE_3 NONE_3 NONE_4  ___
+// )
 
 /* none 
     NONE_5               NONE_5 

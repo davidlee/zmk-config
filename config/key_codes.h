@@ -11,7 +11,7 @@
 #define TO_CMK &to CMK
 #define TO_GAL &to GAL
 #define TO_GAM &to GAM
-#define SL_FUN &sl FUN
+// #define SL_FUN &sl FUN
 
 // for custom shortcuts 
 #define MEH   LC(LA(LSHFT))
@@ -21,7 +21,8 @@
 #define CMD_TAB &mt LCMD TAB
 #define SPC_NUM &lt NUM SPACE
 #define ESC_PTR &lt PTR ESC
-#define ESC_MOD &lt MOD ESC
+#define OPT_ESC &mt LALT ESC
+// #define ESC_MOD &lt MOD ESC
 
 // R thumb
 #define NAV_KEY &mo NAV 
@@ -82,7 +83,7 @@
 /* keycodes for Glove80 side keys, etc */
 
 #define MO_SYS &mo SYS
-#define MO_REC &mo REC
+// #define MO_REC &mo REC
 #define PTR_ENT &lt PTR ENTER
 // #define SQT_MEH &mt MEH SQT
 #define SQT_MEH &hmr MEH SQT
