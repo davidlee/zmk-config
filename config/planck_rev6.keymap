@@ -14,18 +14,20 @@
 
 #include "ortholinear_keymap.h"
 
-ZMK_LAYER(def_layer,     
-    DEF_TOP 
-    DEF_MID 
-    DEF_LOW 
-    DEF_BOT
-)
+
 
 ZMK_LAYER(gal_layer,
     GAL_TOP  
     GAL_MID  
     GAL_LOW  
-    DEF_BOT
+    GAL_BOT
+)
+
+ZMK_LAYER(cmk_layer,     
+    CMK_TOP 
+    CMK_MID 
+    CMK_LOW 
+    CMK_BOT
 )
 
 ZMK_LAYER(num_layer,

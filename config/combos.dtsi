@@ -37,6 +37,10 @@ ZMK_COMBO(combo_brace_r,   &kp RBRC,  LB1 LB0, ALL)
 	ZMK_COMBO(combo_tab,     &kp TAB,   RM1 RB1, ALL)
 #endif
 
+#ifdef RT5 // glove80
+	ZMK_COMBO(combo_del,       &kp DEL,   RT4 RT5, ALL)
+#endif
+
 ZMK_COMBO(combo_ptr_lock,  &tog PTR,  RT2 RM1 RM3, ALL)
 ZMK_COMBO(combo_pause,     &kp C_PP,  RT0 RT1, ALL)
 ZMK_COMBO(combo_vol_up,    VOL_UP,    RM1 RT2, ALL)
@@ -44,7 +48,6 @@ ZMK_COMBO(combo_vol_dn,    VOL_DN,    RT2 RM3, ALL)
 ZMK_COMBO(combo_trk_prev,  TRK_PREV,  RM0 RT1, ALL)
 ZMK_COMBO(combo_trk_next,  TRK_NEXT,  RM4 RT3, ALL)
 
-ZMK_COMBO(combo_del,       &kp DEL,   RT4 RT5, ALL)
 ZMK_COMBO(combo_bs_word,   BSWORD,    RM1 RM2, ALL)
 ZMK_COMBO(combo_ent,       ENT_MEH,   RM3 RM4, ALL)
 
