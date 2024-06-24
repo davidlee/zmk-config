@@ -32,7 +32,7 @@ ZMK_COMBO(combo_brace_r,   &kp RBRC,  LB1 LB0, ALL)
 
 // RIGHT HAND
 
-#ifdef LH5 // glove80
+#ifdef RF2 // glove80
 	ZMK_COMBO(combo_enter_meh, ENT_MEH, RF2 RF3, ALL)
 	ZMK_COMBO(combo_tab,     &kp TAB,   RM1 RB1, ALL)
 #endif
@@ -73,7 +73,7 @@ ZMK_COMBO(combo_slash,     &kp SLASH, RM2 RM3, GAL)
              ╰────────────┴────────────╯                         ╰────────────┴────────────╯
 */
 
-#ifdef LH5 // glove80 
+#ifdef RC5 // glove80 
 	// outer two function keys
 	ZMK_COMBO(combo_boot_l, &bootloader, LC5 LC4, ALL)
 	ZMK_COMBO(combo_boot_r, &bootloader, RC5 RC4, ALL)

@@ -3,17 +3,15 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #include "../zmk-nodefree-config/helper.h"
+#include "../zmk-nodefree-config/keypos_def/keypos_48keys.h"
 
-#include "planck_keypos_def.h"
 #include "defines.h"
 #include "key_codes.h"
 #include "key_clusters.h"
+#include "ortholinear_keymap.h"
 #include "mouse.dtsi"
 #include "custom_behaviors.dtsi"
 #include "combos.dtsi"
-
-#include "ortholinear_keymap.h"
-
 
 
 ZMK_LAYER(gal_layer,
@@ -30,6 +28,12 @@ ZMK_LAYER(cmk_layer,
     CMK_BOT
 )
 
+ZMK_LAYER(gam_layer,
+    GAM_TOP  
+    GAM_MID  
+    GAM_LOW  
+    GAM_BOT  
+)
 ZMK_LAYER(num_layer,
     NUM_TOP  
     NUM_MID  

@@ -4,6 +4,7 @@
 #define TRAN_5 ___ ___ ___ ___ ___ 
 #define TRAN_4 ___ ___ ___ ___ 
 #define TRAN_3 ___ ___ ___  
+#define NONE_6 NONE NONE NONE NONE NONE NONE
 #define NONE_5 NONE NONE NONE NONE NONE 
 #define NONE_4 NONE NONE NONE NONE 
 #define NONE_3 NONE NONE NONE 
