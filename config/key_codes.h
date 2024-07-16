@@ -87,7 +87,7 @@
 #define PTR_ENT &lt PTR ENTER
 // #define SQT_MEH &mt MEH SQT
 #define SQT_MEH &hmr MEH SQT
-#define SLS_MEH &mt MEH SLASH
+#define SLS_MEH &hmr MEH SLASH
 #define BSL_HYP &mt HYPER BSLH
 #define TAB_HYP &mt HYPER TAB
 #define STATUS &rgb_ug_status_macro
