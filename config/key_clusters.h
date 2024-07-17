@@ -54,20 +54,22 @@ X Q M W Z   K F ' ; .
 #define R_CMK_D &kp K   &kp H   &kp COMMA &kp DOT &kp SLASH 
 
 
-/* NUM */
+/* NUM
 
-//  `    -    =    <    (       )    >    |    +    ,
-//  1    2    3    4    5       6    7    8    9    0
-//  ~    _    \    {    [       ]    }    /    :    .   
+ ! @ # = (  ) & * - +
+ 1 2 3 4 5  6 7 8 9 0
+ ` _ \ { [  ] } / : .
 
-#define L_NUM_U &kp GRAVE &kp MINUS &kp EQUAL &kp LT &kp LPAR 
+*/
+
+#define L_NUM_U &kp EXCL &kp AT &kp HASH &kp EQUAL &kp LPAR 
 #define L_NUM_H L_NUM 
-#define L_NUM_D &kp TILDE &kp UNDER &kp BSLH &kp LBRC &kp LBKT
+#define L_NUM_D &kp GRAVE &kp UNDER &kp BSLH &kp LBRC &kp LBKT
+// TODO make GRAVE into GRILDE w tap dance (`,~,``` on 1,2,3 taps)
 
-#define R_NUM_U &kp RPAR &kp GT &kp PIPE &kp PLUS &kp COMMA 
+#define R_NUM_U &kp RPAR &kp AMPS &kp STAR &kp MINUS &kp PLUS 
 #define R_NUM_H R_NUM
 #define R_NUM_D &kp RBKT &kp RBRC &kp SLASH &kp COLON &kp DOT 
-
 
 /* NAV */
 
